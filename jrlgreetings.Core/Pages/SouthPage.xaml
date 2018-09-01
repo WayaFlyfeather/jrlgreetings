@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvvmx:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:forms="using:Xamarin.Forms"
+                    xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
+                    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+                    xmlns:local="clr-namespace:jrlgreetings.Core"
+                    xmlns:fx="clr-namespace:jrlgreetings.Core.Effects"                    
+                    Style="{StaticResource RoomPageStyle}"
+                    mvx:Bi.nd="Title Title"
+                    x:Class="jrlgreetings.Core.Pages.SouthPage">
+    <mvvmx:MvxContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ContentView" x:Key="VeilContentViewStyle">
+                <Setter Property="VerticalOptions" Value="Fill" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+            </Style>
+            <local:GradientDescriptor x:Key="SemiTransparentRedOrangeGradientDescriptor" Direction="BottomLeft_TopRight" StartColor="#e0ff0000" EndColor="#ffffa500" />
+            <local:GradientDescriptor x:Key="OrangeYellowGradientDescriptor" Direction="BottomLeft_TopRight" StartColor="Orange" EndColor="Yellow" />
+            <local:GradientDescriptor x:Key="YellowGreenGradientDescriptor" Direction="BottomLeft_TopRight" StartColor="Yellow" EndColor="Green" />
+            <local:GradientDescriptor x:Key="GreenTurqoiseGradientDescriptor" Direction="BottomLeft_TopRight" StartColor="Green" EndColor="Turquoise" />
+            <local:GradientDescriptor x:Key="TurqoiseBlueGradientDescriptor" Direction="BottomLeft_TopRight" StartColor="Turquoise" EndColor="Blue" />
+            <local:GradientDescriptor x:Key="BluePurpleGradientDescriptor" Direction="BottomLeft_TopRight" StartColor="Blue" EndColor="Purple" />
+            <local:GradientDescriptor x:Key="PurpleVioletGradientDescriptor" Direction="BottomLeft_TopRight" StartColor="Purple" EndColor="Violet" />
+        </ResourceDictionary>
+    </mvvmx:MvxContentPage.Resources>
+    <Grid>
+        <ScrollView>
+            <Label mvx:Bi.nd="Text RoomContentText" Style="{StaticResource RoomContentLabelStyle}"/>
+        </ScrollView>
+        <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='7';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource SemiTransparentRedOrangeGradientDescriptor}"/>
+        <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='6';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource OrangeYellowGradientDescriptor}"/>
+        <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='5';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource YellowGreenGradientDescriptor}" />
+        <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='4';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource GreenTurqoiseGradientDescriptor}" />
+        <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='3';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource TurqoiseBlueGradientDescriptor}" />
+        <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='2';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource BluePurpleGradientDescriptor}" />
+        <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='1';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource PurpleVioletGradientDescriptor}" />
+    </Grid>
+</mvvmx:MvxContentPage>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/-:cnd -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <PackageTargetFallback>portable-net45+win8+wpa81</PackageTargetFallback>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="5.2.1" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.2.1" />
+    <PackageReference Include="MvvmCross.Core" Version="5.2.1" />
+    <PackageReference Include="MvvmCross.Forms" Version="5.2.1" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.3.4.270" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- https://bugzilla.xamarin.com/show_bug.cgi?id=55591 -->
+    <None Remove="**\*.xaml" />
+    <None Remove="click.mp3" />
+    <None Remove="footsteps.mp3" />
+    <None Remove="thunder.mp3" />
+    <None Remove="xamarin_mobile_developer.png" />
+    <EmbeddedResource Include="click.mp3" />
+    <EmbeddedResource Include="footsteps.mp3" />
+    <EmbeddedResource Include="thunder.mp3" />
+        
+    <EmbeddedResource Include="Pages\NorthWestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+        
+    <EmbeddedResource Include="xamarin_mobile_developer.png" />
+    <Compile Update="Pages\NorthWestPage.xaml.cs">
+      <DependentUpon>NorthWestPage.xaml</DependentUpon>
+    </Compile>
+        
+    <EmbeddedResource Include="Pages\NorthEastPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Update="Pages\NorthEastPage.xaml.cs">
+      <DependentUpon>NorthEastPage.xaml</DependentUpon>
+    </Compile>
+        
+    <EmbeddedResource Include="Pages\EastPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Update="Pages\EastPage.xaml.cs">
+      <DependentUpon>EastPage.xaml</DependentUpon>
+    </Compile>
+
+    <EmbeddedResource Include="Pages\SouthEastPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Update="Pages\SouthEastPage.xaml.cs">
+      <DependentUpon>SouthEastPage.xaml</DependentUpon>
+    </Compile>
+        
+    <EmbeddedResource Include="Pages\SouthPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Update="Pages\SouthPage.xaml.cs">
+      <DependentUpon>SouthPage.xaml</DependentUpon>
+    </Compile>
+        
+    <EmbeddedResource Include="Pages\SouthWestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Update="Pages\SouthWestPage.xaml.cs">
+      <DependentUpon>SouthWestPage.xaml</DependentUpon>
+    </Compile>
+
+    <EmbeddedResource Include="Pages\CentralPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Update="Pages\CentralPage.xaml.cs">
+      <DependentUpon>CentralPage.xaml</DependentUpon>
+    </Compile>
+
+    <EmbeddedResource Include="Pages\ExceptionalPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Update="Pages\ExceptionalPage.xaml.cs">
+      <DependentUpon>ExceptionalPage.xaml</DependentUpon>
+    </Compile>
+
+    <EmbeddedResource Include="Pages\WestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+        
+    <Compile Update="Pages\WestPage.xaml.cs">
+      <DependentUpon>WestPage.xaml</DependentUpon>
+    </Compile>
+        
+    <EmbeddedResource Include="Pages\NorthPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Update="Pages\NorthPage.xaml.cs">
+      <DependentUpon>NorthPage.xaml</DependentUpon>
+    </Compile>
+        
+    <EmbeddedResource Include="Application.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+        
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+        
+    <Compile Update="Application.xaml.cs">
+      <DependentUpon>Application.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+	
+</Project>
