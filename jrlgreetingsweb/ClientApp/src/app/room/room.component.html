@@ -1,0 +1,8 @@
+<ng-container *ngIf="room">
+  <p>{{ room.description }}</p>
+  <p>{{ room.contentText }}</p>
+  <button [disabled]="!canGoWest" (click)="goWest()">West</button>
+  <button [disabled]="!canGoNorth" (click)="goNorth()">North</button>
+  <button [disabled]="!canGoEast" (click)="goEast()">East</button>
+  <button [disabled]="!canGoSouth" (click)="goSouth()">South</button>
+</ng-container>
