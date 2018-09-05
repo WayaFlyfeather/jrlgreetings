@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { RoomsService } from '../rooms.service';
 import { Room } from '../room';
@@ -19,6 +20,7 @@ export class RoomComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location) {
     route.params.subscribe(value => {
+      this.room = null;
       this.getRoom();
     })
   }
