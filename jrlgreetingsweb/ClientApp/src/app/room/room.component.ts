@@ -4,31 +4,39 @@ import { Location } from '@angular/common';
 import { MatSliderModule } from '@angular/material/slider';
 
 import { RoomsService } from '../rooms.service';
+import { NorthWestChallengeComponent } from '../north-west-challenge/north-west-challenge.component';
 import { Room } from '../room';
 
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
-  styleUrls: ['./room.component.css']
+  styleUrls: ['./room.component.css'],
 })
 export class RoomComponent implements OnInit {  
-  private room: Room=null;
-  private roomId: number;
+  protected room: Room=null;
+  protected roomId: number;
   constructor(
-    private roomsService: RoomsService,
-    private router: Router,
-    private route: ActivatedRoute,
-    private location: Location) {
-    route.params.subscribe(value => {
-      this.room = null;
-      this.getRoom();
-    })
+    protected roomsService: RoomsService,
+    protected router: Router,
+    protected route: ActivatedRoute) {
+    this.roomId = route.snapshot.data.roomId;
+    console.log('RoomId: ' + this.roomId);
+    //route.params.subscribe(value => {
+    //  this.room = null;
+    //  this.getRoom();
+    //})
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getRoom();
+  }
+
+  protected updateAnnoyanceFactor(event: any) {
+    this.room.annoyanceFactor = event.value;
+  }
 
   getRoom(): void {
-    this.roomId = +this.route.snapshot.paramMap.get('roomId');
+    //this.roomId = +this.route.snapshot.paramMap.get('roomId');
     this.roomsService.getRoom(this.roomId)
       .subscribe(room => {
         this.room = room;

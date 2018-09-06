@@ -6,13 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MatSliderModule } from '@angular/material/slider';
 
-
 import { RoomsService } from './rooms.service';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { RoomComponent } from './room/room.component';
+import { NorthWestChallengeComponent } from './north-west-challenge/north-west-challenge.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,7 @@ import { RoomComponent } from './room/room.component';
     NavMenuComponent,
     HomeComponent,
     RoomComponent,
+    NorthWestChallengeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,6 +29,7 @@ import { RoomComponent } from './room/room.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'temple/northwest', component: RoomComponent, data: { roomId: 0 } },
       { path: 'temple/:roomId', component: RoomComponent },
     ]),
     MatSliderModule,
