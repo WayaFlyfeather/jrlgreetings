@@ -20,11 +20,6 @@ export class RoomComponent implements OnInit {
     protected router: Router,
     protected route: ActivatedRoute) {
     this.roomId = route.snapshot.data.roomId;
-    console.log('RoomId: ' + this.roomId);
-    //route.params.subscribe(value => {
-    //  this.room = null;
-    //  this.getRoom();
-    //})
   }
 
   ngOnInit() {
@@ -36,11 +31,26 @@ export class RoomComponent implements OnInit {
   }
 
   getRoom(): void {
-    //this.roomId = +this.route.snapshot.paramMap.get('roomId');
     this.roomsService.getRoom(this.roomId)
       .subscribe(room => {
         this.room = room;
       });
+  }
+
+  static roomNameFromRoomId(roomId: number): string {
+    switch (roomId) {
+      case 0: return 'northwest';
+      case 1: return 'north';
+      case 2: return 'northeast';
+      case 3: return 'west';
+      case 4: return 'central';
+      case 5: return 'east';
+      case 6: return 'southwest';
+      case 7: return 'south';
+      case 8: return 'southeast';
+      case 9: return 'exceptional';
+      default: return 'northwest';
+    }
   }
 
   get canGoNorth() :boolean {
@@ -73,21 +83,21 @@ export class RoomComponent implements OnInit {
 
   goNorth(): void {
     if (this.canGoNorth)
-      this.router.navigate(['temple', this.roomId - 3]);
+      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId - 3)]);
   }
 
   goWest(): void {
     if (this.canGoWest)
-      this.router.navigate(['temple', this.roomId - 1]);
+      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId - 1)]);
   }
 
   goSouth(): void {
     if (this.canGoSouth)
-      this.router.navigate(['temple', this.roomId + 3]);
+      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId + 3)]);
   }
 
   goEast(): void {
     if (this.canGoEast)
-      this.router.navigate(['temple', this.roomId + 1]);
+      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId + 1)]);
   }
 }
