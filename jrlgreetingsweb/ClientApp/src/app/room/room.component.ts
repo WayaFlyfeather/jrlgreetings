@@ -6,6 +6,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { RoomsService } from '../rooms.service';
 import { NorthWestChallengeComponent } from '../north-west-challenge/north-west-challenge.component';
 import { Room } from '../room';
+import { Temple } from '../temple';
 
 @Component({
   selector: 'app-room',
@@ -13,7 +14,8 @@ import { Room } from '../room';
   styleUrls: ['./room.component.css'],
 })
 export class RoomComponent implements OnInit {  
-  protected room: Room=null;
+  protected room: Room = null;
+  protected temple: Temple;
   protected roomId: number;
   constructor(
     protected roomsService: RoomsService,
@@ -24,16 +26,27 @@ export class RoomComponent implements OnInit {
 
   ngOnInit() {
     this.getRoom();
+    this.getTemple();
   }
 
   protected updateAnnoyanceFactor(event: any) {
     this.room.annoyanceFactor = event.value;
+    if (this.room.annoyanceFactor == 0.0)
+      this.room.completed = true;
+    this.roomsService.updateRoom(this.room);
   }
 
   getRoom(): void {
     this.roomsService.getRoom(this.roomId)
       .subscribe(room => {
         this.room = room;
+      });
+  }
+
+  getTemple(): void {
+    this.roomsService.getTemple()
+      .subscribe(temple => {
+        this.temple = temple;
       });
   }
 

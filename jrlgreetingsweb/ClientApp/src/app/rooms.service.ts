@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Room } from './room';
+import { Temple } from './temple';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, map, tap, count } from 'rxjs/operators';
 
 @Injectable()
 export class RoomsService {
 
   private fetchedRooms: Room[] = null;
+  private temple = new Temple();
   private roomsUrl = 'api/rooms';
   constructor(private http: HttpClient) { }
 
@@ -16,7 +18,7 @@ export class RoomsService {
     if (this.fetchedRooms == null)
       return this.http.get<Room[]>(this.roomsUrl)
         .pipe(
-          tap(rooms => { this.fetchedRooms = rooms; console.log('fetched rooms'); }),
+          tap(rooms => { this.fetchedRooms = rooms; this.countCompleted(); }),
           catchError(this.handleError('getRooms', []))
         );
     else
@@ -31,6 +33,34 @@ export class RoomsService {
       );
     else
       return of(this.fetchedRooms[roomId]);
+  }
+
+  updateRoom(room: Room): Observable<Room> {
+    if (room != null)
+      this.fetchedRooms[room.roomNo] = room;
+
+    this.countCompleted();
+    return of(room);
+  }
+
+  getTemple(): Observable<Temple> {
+   return of(this.temple);
+  }
+
+
+  countCompleted(): void {
+    let countComplete: number = 0;
+    let countNotComplete: number = 0;
+    if (this.fetchedRooms != null) {
+      for (let room of this.fetchedRooms) {
+        if (room.completed)
+          countComplete++;
+        else
+          countNotComplete++;
+      }
+    }
+    this.temple.completedRoomsCount = countComplete;
+    this.temple.notCompletedRoomsCount = countNotComplete;
   }
 
   /**

@@ -2,12 +2,18 @@
   <p>{{ room.description }}</p>
   <ng-container [ngSwitch]="roomId">
     <app-north-west-challenge *ngSwitchCase="0" [room]="room"></app-north-west-challenge>
+    <app-north-challenge *ngSwitchCase="1" [room]="room"></app-north-challenge>
     <p *ngSwitchDefault>No challenge: {{ room.contentText }}</p>
   </ng-container>
   <button [disabled]="!canGoWest" (click)="goWest()">West</button>
   <button [disabled]="!canGoNorth" (click)="goNorth()">North</button>
   <button [disabled]="!canGoEast" (click)="goEast()">East</button>
   <button [disabled]="!canGoSouth" (click)="goSouth()">South</button>
+  <p>Complete: {{ room.completed }} </p>
+  <ng-container *ngIf="temple">
+    <p>Completed: {{ temple.completedRoomsCount }}</p>
+    <p>Not Completed: {{ temple.notCompletedRoomsCount }}</p>
+  </ng-container>
   <p>Annoyance: {{ room.annoyanceFactor }}</p>
   <div class="mat-app-background">
     <mat-slider max="100" min="0" [value]="room.annoyanceFactor" (input)="updateAnnoyanceFactor($event)"></mat-slider>

@@ -13,6 +13,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { RoomComponent } from './room/room.component';
 import { NorthWestChallengeComponent } from './north-west-challenge/north-west-challenge.component';
+import { NorthChallengeComponent } from './north-challenge/north-challenge.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NorthWestChallengeComponent } from './north-west-challenge/north-west-c
     HomeComponent,
     RoomComponent,
     NorthWestChallengeComponent,
+    NorthChallengeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
