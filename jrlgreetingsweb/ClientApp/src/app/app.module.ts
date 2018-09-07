@@ -16,6 +16,7 @@ import { NorthWestChallengeComponent } from './north-west-challenge/north-west-c
 import { NorthChallengeComponent } from './north-challenge/north-challenge.component';
 import { NorthEastChallengeComponent } from './north-east-challenge/north-east-challenge.component';
 import { WestChallengeComponent } from './west-challenge/west-challenge.component';
+import { SouthWestChallengeComponent } from './south-west-challenge/south-west-challenge.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { WestChallengeComponent } from './west-challenge/west-challenge.componen
     NorthChallengeComponent,
     NorthEastChallengeComponent,
     WestChallengeComponent,
+    SouthWestChallengeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
