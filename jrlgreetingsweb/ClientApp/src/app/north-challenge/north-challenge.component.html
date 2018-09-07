@@ -1,4 +1,4 @@
 <ng-container *ngIf="room">
   <p>North</p>
-  <p [style.transform]="'rotate3d(1,1,1,' + rotationDegrees + ')'">{{ room.contentText }}</p>
+  <p class="room-content" [style.transform]="'rotate3d(1,1,1,' + rotationDegrees + ')'">{{ room.contentText }}</p>
 </ng-container>

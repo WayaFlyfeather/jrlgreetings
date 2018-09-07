@@ -19,3 +19,25 @@
   background-position: 50% 0;
   background-size: cover;
 }
+
+@font-face {
+  font-family: 'monospacetypewriterregular';
+  src: url('/assets/fonts/MonospaceTypewriter-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'immortalregular';
+  src: url('/assets/fonts/immortal-webfont.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.room-description {
+  font-family: immortalregular, 'Times New Roman', serif;
+}
+
+.room-content {
+  font-family: monospacetypewriterregular, 'Courier New', monospace;
+}

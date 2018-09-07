@@ -1,10 +1,10 @@
 <ng-container *ngIf="room">
-  <p>{{ room.description }}</p>
+  <p class="room-description">{{ room.description }}</p>
   <ng-container [ngSwitch]="roomId">
     <app-north-west-challenge *ngSwitchCase="0" [room]="room"></app-north-west-challenge>
     <app-north-challenge *ngSwitchCase="1" [room]="room"></app-north-challenge>
     <app-north-east-challenge *ngSwitchCase="2" [room]="room"></app-north-east-challenge>
-    <p *ngSwitchDefault>No challenge: {{ room.contentText }}</p>
+    <p class="room-content" *ngSwitchDefault>No challenge: {{ room.contentText }}</p>
   </ng-container>
   <button [disabled]="!canGoWest" (click)="goWest()">West</button>
   <button [disabled]="!canGoNorth" (click)="goNorth()">North</button>
