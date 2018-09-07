@@ -20,7 +20,7 @@ export class SouthWestChallengeComponent implements OnInit {
   }
 
   get annoyanceBackgroundColor(): string {
-    let colorPart: string = (128 + this.annoyanceOffset()).toString(16);
+    let colorPart: string = (127 + this.annoyanceOffset()).toString(16);
     return '#' + colorPart + colorPart + colorPart;
   }
 
