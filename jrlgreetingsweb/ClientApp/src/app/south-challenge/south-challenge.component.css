@@ -1,0 +1,44 @@
+[class*="veil-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.veil-purple-violet {
+  background-image: linear-gradient(to bottom left, violet, purple);
+  z-index: 7;
+}
+
+.veil-blue-purple {
+  background-image: linear-gradient(to bottom left, purple, blue);
+  z-index: 6;
+}
+
+.veil-turquoise-blue {
+  background-image: linear-gradient(to bottom left, blue, turquoise);
+  z-index: 5;
+}
+
+.veil-green-turquoise {
+  background-image: linear-gradient(to bottom left, turquoise, green);
+  z-index: 4;
+}
+
+.veil-yellow-green {
+  background-image: linear-gradient(to bottom left, green, yellow);
+  z-index: 3;
+}
+
+.veil-orange-yellow {
+  background-image: linear-gradient(to bottom left, yellow, orange);
+  z-index: 2;
+}
+
+.veil-red-orange-semi-transparent {
+  opacity: 0.95;
+  background-image: linear-gradient(to bottom left, orange, red);
+  z-index: 1;
+}
+
