@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { RoomComponent } from './room/room.component';
 import { NorthWestChallengeComponent } from './north-west-challenge/north-west-challenge.component';
 import { NorthChallengeComponent } from './north-challenge/north-challenge.component';
+import { NorthEastChallengeComponent } from './north-east-challenge/north-east-challenge.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NorthChallengeComponent } from './north-challenge/north-challenge.compo
     RoomComponent,
     NorthWestChallengeComponent,
     NorthChallengeComponent,
+    NorthEastChallengeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
