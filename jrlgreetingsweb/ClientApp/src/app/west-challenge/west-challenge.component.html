@@ -1,0 +1,11 @@
+<ng-container *ngIf="room">
+  <div style="position:relative; top:0; left:0" *ngIf="room.annoyanceFactor > 0.0; else noAnnoyance">
+    <p style="z-index:0" [style.transform]="'translate(-' + annoyanceOffset + ', -' + annoyanceOffset + ')'" class="room-content">{{ choppedContentTextOffset0 }}</p>
+    <p style="z-index:1; position: absolute; top:0; left:0" [style.transform]="'translate(-' + annoyanceOffset + ', ' + annoyanceOffset + ')'" class="room-content">{{ choppedContentTextOffset1 }}</p>
+    <p style="z-index:2; position: absolute; top:0; left:0" [style.transform]="'translate(' + annoyanceOffset + ', -' + annoyanceOffset + ')'" class="room-content">{{ choppedContentTextOffset2 }}</p>
+    <p style="z-index:3; position: absolute; top:0; left:0" [style.transform]="'translate(' + annoyanceOffset + ', ' + annoyanceOffset + ')'" class="room-content">{{ choppedContentTextOffset3 }}</p>
+  </div>
+  <ng-template #noAnnoyance>
+    <p class="room-content">{{ room.contentText }}</p>
+  </ng-template>
+</ng-container>
