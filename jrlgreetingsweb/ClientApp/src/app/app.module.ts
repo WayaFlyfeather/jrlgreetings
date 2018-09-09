@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { RoomsService } from './rooms.service';
 
@@ -20,6 +22,7 @@ import { SouthWestChallengeComponent } from './south-west-challenge/south-west-c
 import { SouthChallengeComponent } from './south-challenge/south-challenge.component';
 import { SouthEastChallengeComponent } from './south-east-challenge/south-east-challenge.component';
 import { EastChallengeComponent } from './east-challenge/east-challenge.component';
+import { CentralChallengeComponent } from './central-challenge/central-challenge.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { EastChallengeComponent } from './east-challenge/east-challenge.componen
     SouthChallengeComponent,
     SouthEastChallengeComponent,
     EastChallengeComponent,
+    CentralChallengeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -54,7 +58,9 @@ import { EastChallengeComponent } from './east-challenge/east-challenge.componen
       { path: 'temple/southeast', component: RoomComponent, data: { roomId: 8 } },
       { path: 'temple/exceptional', component: RoomComponent, data: { roomId: 9 } },
     ]),
+    MatFormFieldModule,
     MatSliderModule,
+    MatSelectModule,
   ],
   providers: [RoomsService],
   bootstrap: [AppComponent]

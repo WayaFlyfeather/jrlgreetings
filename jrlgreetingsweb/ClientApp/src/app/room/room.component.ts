@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-import { MatSliderModule } from '@angular/material/slider';
 
 import { RoomsService } from '../rooms.service';
-import { NorthWestChallengeComponent } from '../north-west-challenge/north-west-challenge.component';
 import { Room } from '../room';
 import { Temple } from '../temple';
 
@@ -50,7 +47,7 @@ export class RoomComponent implements OnInit {
       });
   }
 
-  static roomNameFromRoomId(roomId: number): string {
+  public static roomNameFromRoomId(roomId: number): string {
     switch (roomId) {
       case 0: return 'northwest';
       case 1: return 'north';

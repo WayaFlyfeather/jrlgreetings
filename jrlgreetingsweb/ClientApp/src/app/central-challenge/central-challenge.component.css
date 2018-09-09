@@ -1,0 +1,37 @@
+.number-input {
+  display: inline-block;
+}
+
+.numbers-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.number-min {
+  display: inline-block;
+  text-align: left;
+  vertical-align:top;
+  position: relative;
+  top:-1.2em;
+}
+
+.number-current {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.number-max {
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  position: relative;
+  top: -1.2em;
+}
+
+.operator {
+  font-weight: bold;
+  font-size: larger;
+}
