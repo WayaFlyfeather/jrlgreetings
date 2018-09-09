@@ -10,6 +10,7 @@
     <app-south-west-challenge *ngSwitchCase="6" [room]="room"></app-south-west-challenge>
     <app-south-challenge *ngSwitchCase="7" [room]="room"></app-south-challenge>
     <app-south-east-challenge *ngSwitchCase="8" [room]="room"></app-south-east-challenge>
+    <app-exceptional-challenge *ngSwitchCase="9" [room]="room"></app-exceptional-challenge>
     <p class="room-content" *ngSwitchDefault>No challenge: {{ room.contentText }}</p>
   </ng-container>
   <button [disabled]="!canGoWest" (click)="goWest()">West</button>

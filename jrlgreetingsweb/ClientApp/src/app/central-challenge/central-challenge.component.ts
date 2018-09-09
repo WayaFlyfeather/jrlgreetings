@@ -51,8 +51,7 @@ export class CentralChallengeComponent implements OnInit {
       if (this.timeGuard != null && (now.getTime() - this.timeGuard.getTime()) < 1000)
         return null;
       this.timeGuard = now;
-      console.log(error.message);
-      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(9)]);
+      setTimeout(() => this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(9)]), 500);
       return null;
     }
   }

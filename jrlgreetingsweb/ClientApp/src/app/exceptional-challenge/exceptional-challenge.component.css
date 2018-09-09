@@ -1,0 +1,10 @@
+.buttons-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.completed-room {
+  background-color: turquoise;
+}
+
