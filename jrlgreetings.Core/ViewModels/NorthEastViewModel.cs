@@ -23,7 +23,10 @@ namespace jrlgreetings.Core.ViewModels
                 StringBuilder sb = new StringBuilder();
                 foreach (char c in thisRoom.ContentText)
                 {
-                    sb.Append((char)(c ^ ((short)AnnoyanceFactor * (short)AnnoyanceFactor)));
+                    if (char.IsWhiteSpace(c))
+                        sb.Append(c);
+                    else
+                        sb.Append((char)(c ^ ((short)AnnoyanceFactor * (short)AnnoyanceFactor)));
                 }
 
                 return sb.ToString();
