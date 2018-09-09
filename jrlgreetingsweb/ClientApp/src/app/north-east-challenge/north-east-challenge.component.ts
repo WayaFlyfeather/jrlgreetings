@@ -18,7 +18,10 @@ export class NorthEastChallengeComponent implements OnInit {
     let outStr: string = '';
     let truncAnnoyance: number = Math.floor(this.room.annoyanceFactor);
     for (let oneChar of this.room.contentText) {
-      outStr += String.fromCharCode(oneChar.charCodeAt(0) ^ (truncAnnoyance * truncAnnoyance));
+      if (oneChar == ' ' || oneChar == '\n')
+        outStr += oneChar;
+      else
+        outStr += String.fromCharCode(oneChar.charCodeAt(0) ^ (truncAnnoyance * truncAnnoyance));
     }
     return outStr;
   }

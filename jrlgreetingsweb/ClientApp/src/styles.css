@@ -36,8 +36,10 @@
 
 .room-description {
   font-family: immortalregular, 'Times New Roman', serif;
+  white-space: pre-wrap;
 }
 
 .room-content {
   font-family: monospacetypewriterregular, 'Courier New', monospace;
+  white-space: pre-wrap;
 }
