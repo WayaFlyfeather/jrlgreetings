@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Room } from '../room';
 import { RoomComponent } from '../room/room.component';
 import { Router } from '@angular/router';
+import { TempleAudioService } from '../temple-audio.service';
+
 
 @Component({
   selector: 'app-central-challenge',
@@ -16,7 +18,10 @@ export class CentralChallengeComponent implements OnInit {
   operators: string[] = ['+', '-', '*', '/'];
   selectedOperator: string = '+';
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private templeAudioService: TempleAudioService
+  ) { }
 
   ngOnInit() {
   }
@@ -51,6 +56,7 @@ export class CentralChallengeComponent implements OnInit {
       if (this.timeGuard != null && (now.getTime() - this.timeGuard.getTime()) < 1000)
         return null;
       this.timeGuard = now;
+      this.templeAudioService.playThunder();
       setTimeout(() => this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(9)]), 500);
       return null;
     }

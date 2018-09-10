@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Room } from '../room';
 import { RoomsService } from '../rooms.service';
+import { TempleAudioService } from '../temple-audio.service';
 
 @Component({
   selector: 'app-east-challenge',
@@ -12,7 +13,10 @@ export class EastChallengeComponent implements OnInit, OnDestroy {
   interval: NodeJS.Timer = null;
   annoyanceRotationX: number = 0;
 
-  constructor(private roomsService: RoomsService) {}
+  constructor(
+    private roomsService: RoomsService,
+    private templeAudioService: TempleAudioService
+  ) { }
 
   ngOnInit() {
     this.interval = setInterval(() => this.timerTick(), 25);
@@ -31,6 +35,7 @@ export class EastChallengeComponent implements OnInit, OnDestroy {
       if (this.annoyanceRotationX != 0.0) {
         this.annoyanceRotationX = 0.0;
         this.room.annoyanceFactor = 0.0;
+        this.templeAudioService.playClick();
         this.room.completed = true;
         this.roomsService.updateRoom(this.room);
       }

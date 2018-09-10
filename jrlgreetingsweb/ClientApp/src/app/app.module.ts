@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { RoomsService } from './rooms.service';
+import { TempleAudioService } from './temple-audio.service';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -64,7 +65,7 @@ import { ExceptionalChallengeComponent } from './exceptional-challenge/exception
     MatSliderModule,
     MatSelectModule,
   ],
-  providers: [RoomsService],
+  providers: [RoomsService, TempleAudioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

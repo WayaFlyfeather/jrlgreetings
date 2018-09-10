@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TempleAudioService } from './temple-audio.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Greetings from JRL';
 
-  constructor() { }
+  constructor(private templeAudioService: TempleAudioService) {
+    this.templeAudioService.initialize();
+  }
 }

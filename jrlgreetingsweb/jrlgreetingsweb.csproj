@@ -28,6 +28,15 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\room.ts" />
     <None Remove="ClientApp\src\app\temple.ts" />
+    <None Remove="ClientApp\src\assets\click.mp3" />
+    <None Remove="ClientApp\src\assets\footsteps.mp3" />
+    <None Remove="ClientApp\src\assets\thunder.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ClientApp\src\assets\click.mp3" />
+    <EmbeddedResource Include="ClientApp\src\assets\footsteps.mp3" />
+    <EmbeddedResource Include="ClientApp\src\assets\thunder.mp3" />
   </ItemGroup>
 
   <ItemGroup>

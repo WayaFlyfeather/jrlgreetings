@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { RoomsService } from '../rooms.service';
+import { TempleAudioService } from '../temple-audio.service';
 import { Room } from '../room';
 import { Temple } from '../temple';
 
@@ -16,6 +17,7 @@ export class RoomComponent implements OnInit {
   protected roomId: number;
   constructor(
     protected roomsService: RoomsService,
+    private templeAudioService: TempleAudioService,
     protected router: Router,
     protected route: ActivatedRoute) {
     this.roomId = route.snapshot.data.roomId;
@@ -28,8 +30,10 @@ export class RoomComponent implements OnInit {
 
   protected updateAnnoyanceFactor(event: any) {
     this.room.annoyanceFactor = event.value;
-    if (this.room.annoyanceFactor == 0.0)
+    if (this.room.annoyanceFactor == 0.0) {
+      this.templeAudioService.playClick();
       this.room.completed = true;
+    }
     this.roomsService.updateRoom(this.room);
   }
 
@@ -92,22 +96,30 @@ export class RoomComponent implements OnInit {
   }
 
   goNorth(): void {
-    if (this.canGoNorth)
+    if (this.canGoNorth) {
+      this.templeAudioService.playFootsteps();
       this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId - 3)]);
+    }
   }
 
   goWest(): void {
-    if (this.canGoWest)
+    if (this.canGoWest) {
+      this.templeAudioService.playFootsteps();
       this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId - 1)]);
+    }
   }
 
   goSouth(): void {
-    if (this.canGoSouth)
+    if (this.canGoSouth) {
+      this.templeAudioService.playFootsteps();
       this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId + 3)]);
+    }
   }
 
   goEast(): void {
-    if (this.canGoEast)
+    if (this.canGoEast) {
+      this.templeAudioService.playFootsteps();
       this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId + 1)]);
+    }
   }
 }

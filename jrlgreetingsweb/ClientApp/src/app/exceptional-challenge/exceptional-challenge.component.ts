@@ -3,6 +3,7 @@ import { Room } from '../room';
 import { RoomsService } from '../rooms.service';
 import { RoomComponent } from '../room/room.component';
 import { Router } from '@angular/router';
+import { TempleAudioService } from '../temple-audio.service';
 
 @Component({
   selector: 'app-exceptional-challenge',
@@ -15,7 +16,9 @@ export class ExceptionalChallengeComponent implements OnInit {
   private rooms: Room[] = null;
   
   constructor(private roomsService: RoomsService,
-              private router: Router) { }
+    private templeAudioService: TempleAudioService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.roomsService.getRooms()
@@ -34,6 +37,7 @@ export class ExceptionalChallengeComponent implements OnInit {
 
   goToRoom(roomNo: number): void {
     if (this.canGoToRoom(roomNo)) {
+      this.templeAudioService.playThunder();
       setTimeout(() => this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(roomNo)]), 500);
     }
   }
