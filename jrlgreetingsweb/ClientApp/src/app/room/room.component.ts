@@ -97,29 +97,31 @@ export class RoomComponent implements OnInit {
 
   goNorth(): void {
     if (this.canGoNorth) {
-      this.templeAudioService.playFootsteps();
-      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId - 3)]);
+      this.goToRoom(this.roomId - 3);
     }
   }
 
   goWest(): void {
     if (this.canGoWest) {
-      this.templeAudioService.playFootsteps();
-      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId - 1)]);
+      this.goToRoom(this.roomId - 1);
     }
   }
 
   goSouth(): void {
     if (this.canGoSouth) {
-      this.templeAudioService.playFootsteps();
-      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId + 3)]);
+      this.goToRoom(this.roomId + 3);
     }
   }
 
   goEast(): void {
     if (this.canGoEast) {
-      this.templeAudioService.playFootsteps();
-      this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(this.roomId + 1)]);
+      this.goToRoom(this.roomId + 1);
     }
   }
+
+  goToRoom(roomNo: number): void {
+    this.templeAudioService.playFootsteps();
+    setTimeout(() => this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(roomNo)]), 500);
+  }
+
 }
