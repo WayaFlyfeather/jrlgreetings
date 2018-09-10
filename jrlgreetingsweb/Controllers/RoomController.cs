@@ -26,7 +26,7 @@ namespace jrlgreetingsweb.Controllers
                 "Please allow me to introduce myself, my name is Jon Robinson Levy.\n\n" +
                 "This app is a small presentation of me, and hopefully shows a few skills, while being entertaining and untraditional. It is not supposed to be beautiful - you hopefully have designers for that.\n\n" +
                 "You will learn more about me & the app in the other rooms — if you overcome the challenges. (It shouldn't be that difficult, though.)",
-                AnnoyanceFactor=80.0,
+                AnnoyanceFactor=90.0,
             };
             rooms[1] = new Room()
             {
