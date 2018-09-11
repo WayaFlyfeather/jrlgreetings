@@ -1,4 +1,7 @@
-<ng-container *ngIf="room">
+<div *ngIf="room" [ngClass]="{
+     'room': true,
+     'room-completed': room.completed
+     }">
   <h2 class="room-title">{{ roomTitle }}</h2>
   <p class="room-description">{{ room.description }}</p>
   <ng-container [ngSwitch]="roomId">
@@ -18,7 +21,7 @@
   <button [disabled]="!canGoNorth" (click)="goNorth()">North</button>
   <button [disabled]="!canGoEast" (click)="goEast()">East</button>
   <button [disabled]="!canGoSouth" (click)="goSouth()">South</button>
-  <div class="mat-app-background">
+  <div>
     <mat-slider max="100" min="0" [value]="room.annoyanceFactor" (input)="updateAnnoyanceFactor($event)"></mat-slider>
   </div>
-</ng-container>
+</div>
