@@ -38,7 +38,7 @@ export class RoomComponent implements OnInit {
   }
 
   get roomTitle(): string {
-    let name: string = this.room.roomNo == 9 ? 'The Exceptional Room' : 'Room Number ' + (this.room.roomNo + 1);
+    let name: string = this.room.roomNo == 9 ? 'The Exceptional Room' : 'Room Number ' + (this.room.roomNo + 1).toString();
 
     return name + ' (' + this.temple.notCompletedRoomsCount + ' to complete)';
   }
