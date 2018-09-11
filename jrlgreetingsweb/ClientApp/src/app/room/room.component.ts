@@ -37,6 +37,12 @@ export class RoomComponent implements OnInit {
     this.roomsService.updateRoom(this.room);
   }
 
+  get roomTitle(): string {
+    let name: string = this.room.roomNo == 9 ? 'The Exceptional Room' : 'Room Number ' + (this.room.roomNo + 1);
+
+    return name + ' (' + this.temple.notCompletedRoomsCount + ' to complete)';
+  }
+
   getRoom(): void {
     this.roomsService.getRoom(this.roomId)
       .subscribe(room => {
