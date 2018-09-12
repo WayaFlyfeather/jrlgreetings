@@ -3,25 +3,44 @@
      'room-completed': room.completed
      }">
   <h2 class="room-title">{{ roomTitle }}</h2>
-  <p class="room-description">{{ room.description }}</p>
-  <ng-container [ngSwitch]="roomId">
-    <app-north-west-challenge *ngSwitchCase="0" [room]="room"></app-north-west-challenge>
-    <app-north-challenge *ngSwitchCase="1" [room]="room"></app-north-challenge>
-    <app-north-east-challenge *ngSwitchCase="2" [room]="room"></app-north-east-challenge>
-    <app-west-challenge *ngSwitchCase="3" [room]="room"></app-west-challenge>
-    <app-central-challenge *ngSwitchCase="4" [room]="room"></app-central-challenge>
-    <app-east-challenge *ngSwitchCase="5" [room]="room"></app-east-challenge>
-    <app-south-west-challenge *ngSwitchCase="6" [room]="room"></app-south-west-challenge>
-    <app-south-challenge *ngSwitchCase="7" [room]="room"></app-south-challenge>
-    <app-south-east-challenge *ngSwitchCase="8" [room]="room"></app-south-east-challenge>
-    <app-exceptional-challenge *ngSwitchCase="9" [room]="room"></app-exceptional-challenge>
-    <p class="room-content" *ngSwitchDefault>No challenge: {{ room.contentText }}</p>
-  </ng-container>
-  <button [disabled]="!canGoWest" (click)="goWest()">West</button>
-  <button [disabled]="!canGoNorth" (click)="goNorth()">North</button>
-  <button [disabled]="!canGoEast" (click)="goEast()">East</button>
-  <button [disabled]="!canGoSouth" (click)="goSouth()">South</button>
-  <div>
-    <mat-slider max="100" min="0" [value]="room.annoyanceFactor" (input)="updateAnnoyanceFactor($event)"></mat-slider>
+  <div [ngClass]="{
+     'room-view': true,
+     'completed-room-view': room.completed
+     }">
+    <button [disabled]="!canGoNorth" (click)="goNorth()" [ngClass]="{
+     'button-north-south': true,
+     'completed-room-button': room.completed
+     }">N</button>
+    <div class="room-row">
+      <button [disabled]="!canGoWest" (click)="goWest()" [ngClass]="{
+     'button-east-west': true,
+     'completed-room-button': room.completed
+     }">W</button>
+      <div class="room-inner-view">
+        <div class="room-description">{{ room.description }}</div>
+        <div [ngSwitch]="roomId" class="room-content-container">
+          <app-north-west-challenge *ngSwitchCase="0" [room]="room"></app-north-west-challenge>
+          <app-north-challenge *ngSwitchCase="1" [room]="room"></app-north-challenge>
+          <app-north-east-challenge *ngSwitchCase="2" [room]="room"></app-north-east-challenge>
+          <app-west-challenge *ngSwitchCase="3" [room]="room"></app-west-challenge>
+          <app-central-challenge *ngSwitchCase="4" [room]="room"></app-central-challenge>
+          <app-east-challenge *ngSwitchCase="5" [room]="room"></app-east-challenge>
+          <app-south-west-challenge *ngSwitchCase="6" [room]="room"></app-south-west-challenge>
+          <app-south-challenge *ngSwitchCase="7" [room]="room"></app-south-challenge>
+          <app-south-east-challenge *ngSwitchCase="8" [room]="room"></app-south-east-challenge>
+          <app-exceptional-challenge *ngSwitchCase="9" [room]="room"></app-exceptional-challenge>
+          <p class="room-content" *ngSwitchDefault>No challenge: {{ room.contentText }}</p>
+        </div>
+        <mat-slider max="100" min="0" [value]="room.annoyanceFactor" (input)="updateAnnoyanceFactor($event)" class="room-lever"></mat-slider>
+      </div>
+      <button [disabled]="!canGoEast" (click)="goEast()" [ngClass]="{
+     'button-east-west': true,
+     'completed-room-button': room.completed
+     }">E</button>
+    </div>
+    <button [disabled]="!canGoSouth" (click)="goSouth()" [ngClass]="{
+     'button-north-south': true,
+     'completed-room-button': room.completed
+     }">S</button>
   </div>
 </div>

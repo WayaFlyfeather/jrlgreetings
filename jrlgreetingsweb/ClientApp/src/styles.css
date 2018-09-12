@@ -34,31 +34,7 @@
   font-style: normal;
 }
 
-.room {
-  color: #101010;
-}
-
-.room-completed {
-  color: #101080;
-}
-
-.room-description {
-  border:solid;
-  padding: 3px 3px 3px 3px;
-  width: 75%;
-  height:10em;
-  overflow: auto;
-  font-family: immortalregular, 'Times New Roman', serif;
-  white-space: pre-wrap;
-}
-
 .room-content {
-  border: dotted;
-  padding: 5px 5px 5px 5px;
-  width: 75%;
-  height: 15em;
-  overflow: auto;
   font-family: monospacetypewriterregular, 'Courier New', monospace;
   white-space: pre-wrap;
 }
-
