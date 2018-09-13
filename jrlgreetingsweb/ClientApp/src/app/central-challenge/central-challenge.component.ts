@@ -13,8 +13,8 @@ import { TempleAudioService } from '../temple-audio.service';
 export class CentralChallengeComponent implements OnInit {
   @Input() room: Room;
 
-  number1: number = 20;
-  number2: number = 20;
+  number1: number = 10;
+  number2: number = 10;
   operators: string[] = ['+', '-', '*', '/'];
   selectedOperator: string = '+';
 
