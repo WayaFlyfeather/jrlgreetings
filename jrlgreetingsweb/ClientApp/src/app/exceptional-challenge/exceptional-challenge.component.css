@@ -1,10 +1,24 @@
 .buttons-row {
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.completed-room {
-  background-color: turquoise;
+.teleport-button {
+  width: 25%;
+  height: 5%;
+  margin: .5% .5% .5% .5%;
 }
+
+.completed-room-teleport-button {
+  background-color: #40e0d0;
+}
+  .completed-room-teleport-button:focus, .completed-room-teleport-button:hover {
+    background-color: #28c8b8;
+  }
+  .completed-room-teleport-button:disabled {
+    background-color: #10b0a0;
+  } 
 

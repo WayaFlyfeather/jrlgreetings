@@ -6,9 +6,10 @@
 .room-view {
   border: thin solid grey;
   width: 90%;
-  height:33em;
+  height: 33em;
   margin: auto;
   background-color: #f4f4f4;
+  font-family: immortalregular, 'Times New Roman', serif;
 }
 
 .completed-room-view {
@@ -105,17 +106,13 @@
   margin: auto;
   margin-top: 1%;
   margin-bottom: 1%;
-  font-family: immortalregular, 'Times New Roman', serif;
   white-space: pre-wrap;
 }
 
 .room-content-container {
-  border: medium inset grey;
-  padding: 5px 5px 5px 5px;
   margin: auto;
   width: 96%;
   height: 55%;
-  overflow: auto;
 }
 
 .room-lever {

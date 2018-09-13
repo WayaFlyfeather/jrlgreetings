@@ -34,7 +34,17 @@
   font-style: normal;
 }
 
+.room-content-border {
+  height: 100%;
+  width: 100%;
+  border: medium inset grey;
+  padding: 5px 5px 5px 5px;
+  overflow: auto;
+}
+
 .room-content {
   font-family: monospacetypewriterregular, 'Courier New', monospace;
   white-space: pre-wrap;
+  height: 100%;
+  width: 100%;
 }

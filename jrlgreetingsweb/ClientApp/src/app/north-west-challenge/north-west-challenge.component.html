@@ -1,4 +1,4 @@
-<ng-container *ngIf="room">
-  <p class="room-content" [style.opacity]="opacityStyle">{{ room.contentText }}</p>
-</ng-container>
+<div *ngIf="room" class="room-content-border">
+  <div class="room-content" [style.opacity]="opacityStyle">{{ room.contentText }}</div>
+</div>
 

@@ -1,21 +1,23 @@
 <ng-container *ngIf="room">
   <div>
     <div class="buttons-row">
-      <button [ngClass]="{ 'completed-room': rooms[0].completed}" (click)="goToRoom(0)" [disabled]="!canGoToRoom(0)">Room 1</button>
-      <button [ngClass]="{ 'completed-room': rooms[1].completed}" (click)="goToRoom(1)" [disabled]="!canGoToRoom(1)">Room 2</button>
-      <button [ngClass]="{ 'completed-room': rooms[2].completed}" (click)="goToRoom(2)" [disabled]="!canGoToRoom(2)">Room 3</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[0].completed}" (click)="goToRoom(0)" [disabled]="!canGoToRoom(0)">Room 1</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[1].completed}" (click)="goToRoom(1)" [disabled]="!canGoToRoom(1)">Room 2</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[2].completed}" (click)="goToRoom(2)" [disabled]="!canGoToRoom(2)">Room 3</button>
     </div>
     <div class="buttons-row">
-      <button [ngClass]="{ 'completed-room': rooms[3].completed}" (click)="goToRoom(3)" [disabled]="!canGoToRoom(3)">Room 4</button>
-      <button [ngClass]="{ 'completed-room': rooms[4].completed}" (click)="goToRoom(4)" [disabled]="!canGoToRoom(4)">Room 5</button>
-      <button [ngClass]="{ 'completed-room': rooms[5].completed}" (click)="goToRoom(5)" [disabled]="!canGoToRoom(5)">Room 6</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[3].completed}" (click)="goToRoom(3)" [disabled]="!canGoToRoom(3)">Room 4</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[4].completed}" (click)="goToRoom(4)" [disabled]="!canGoToRoom(4)">Room 5</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[5].completed}" (click)="goToRoom(5)" [disabled]="!canGoToRoom(5)">Room 6</button>
     </div>
     <div class="buttons-row">
-      <button [ngClass]="{ 'completed-room': rooms[6].completed}" (click)="goToRoom(6)" [disabled]="!canGoToRoom(6)">Room 7</button>
-      <button [ngClass]="{ 'completed-room': rooms[7].completed}" (click)="goToRoom(7)" [disabled]="!canGoToRoom(7)">Room 8</button>
-      <button [ngClass]="{ 'completed-room': rooms[8].completed}" (click)="goToRoom(8)" [disabled]="!canGoToRoom(8)">Room 9</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[6].completed}" (click)="goToRoom(6)" [disabled]="!canGoToRoom(6)">Room 7</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[7].completed}" (click)="goToRoom(7)" [disabled]="!canGoToRoom(7)">Room 8</button>
+      <button [ngClass]="{ 'teleport-button': true, 'completed-room-teleport-button': rooms[8].completed}" (click)="goToRoom(8)" [disabled]="!canGoToRoom(8)">Room 9</button>
     </div>
   </div>
-  <p class="room-content">{{ room.contentText }}</p>
+  <div class="room-content-border" style="margin-top: 1%; height:46%">
+    <div class="room-content">{{ room.contentText }}</div>
+  </div>
 </ng-container>
 
