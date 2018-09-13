@@ -30,7 +30,7 @@ export class RoomComponent implements OnInit {
 
   protected updateAnnoyanceFactor(event: any) {
     this.room.annoyanceFactor = event.value;
-    if (this.room.annoyanceFactor == 0.0) {
+    if (this.room.annoyanceFactor == 0.0 && !this.room.completed) {
       this.templeAudioService.playClick();
       this.room.completed = true;
     }
