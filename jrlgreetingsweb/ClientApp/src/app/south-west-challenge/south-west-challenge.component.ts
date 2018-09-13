@@ -15,16 +15,28 @@ export class SouthWestChallengeComponent implements OnInit {
   }
 
   get annoyanceColor(): string {
-    let colorPart: string = (128 - this.annoyanceOffset()).toString(16);
-    return '#' + colorPart + colorPart + colorPart;
+    //move towards foreground color, which depends on whether room is completed or not
+    let targetR: number = this.room.completed ? 128 : 16; // 80 or 10
+    let targetG: number = 16;                             // 10
+    let targetB: number = 16;                             // 10
+    let colorR: string = (128 - this.annoyanceOffset(128-targetR)).toString(16);
+    let colorG: string = (128 - this.annoyanceOffset(128-targetG)).toString(16);
+    let colorB: string = (128 - this.annoyanceOffset(128-targetB)).toString(16);
+    return '#' + colorR + colorG + colorB;
   }
 
   get annoyanceBackgroundColor(): string {
-    let colorPart: string = (127 + this.annoyanceOffset()).toString(16);
-    return '#' + colorPart + colorPart + colorPart;
+    //move towards background color, which depends on whether room is completed or not
+    let targetR: number = this.room.completed ? 232 : 244; // e8 or f4
+    let targetG: number = this.room.completed ? 232 : 244; // e8 or f4
+    let targetB: number = this.room.completed ? 255 : 244; // ff or f4
+    let colorR: string = (128 + this.annoyanceOffset(targetR-128)).toString(16);
+    let colorG: string = (128 + this.annoyanceOffset(targetG-128)).toString(16);
+    let colorB: string = (128 + this.annoyanceOffset(targetB-128)).toString(16);
+    return '#' + colorR + colorG + colorB;
   }
 
-  annoyanceOffset(): number {
-    return Math.pow(100 - this.room.annoyanceFactor, 2) * 0.0128;
+  annoyanceOffset(target: number): number {
+    return Math.floor(Math.pow(100 - this.room.annoyanceFactor, 2) * target / 10000);
   }
 }
