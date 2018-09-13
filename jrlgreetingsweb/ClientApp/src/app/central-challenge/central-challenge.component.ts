@@ -27,10 +27,20 @@ export class CentralChallengeComponent implements OnInit {
   }
 
   get numberMin(): number {
-    return Math.floor(this.room.annoyanceFactor / 10.0);
+    let min: number = Math.floor(this.room.annoyanceFactor / 10.0);
+    if (this.number1 < min)
+      this.number1 = min;
+    if (this.number2 < min)
+      this.number2 = min;
+    return min;
   }
 
   get numberMax(): number {
+    let max: number = Math.floor(this.room.annoyanceFactor / 10.0) + 20;
+    if (this.number1 > max)
+      this.number1 = max;
+    if (this.number2 > max)
+      this.number2 = max;
     return Math.floor(this.room.annoyanceFactor / 10.0) + 20;
   }
 
