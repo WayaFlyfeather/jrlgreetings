@@ -16,6 +16,11 @@
   background-color: #e8e8ff; 
 }
 
+.temple-completed-room-view {
+  border-color: #8080a0;
+  background-image: linear-gradient(to bottom right, #ff0000, #00ff00);
+}
+
 .room-row {
   display: flex;
   justify-content:space-between;
@@ -49,6 +54,46 @@
   }
   .completed-room-button:disabled {
     background-color: #e8e8ff;
+  }
+
+.temple-completed-north-button {
+  background-image: linear-gradient(to right, #ff0000, #0000ff);
+}
+  .temple-completed-north-button:focus, .temple-completed-north-button:hover {
+    background-image: linear-gradient(to right, #d00000, #0000d0);
+  }
+  .temple-completed-north-button:disabled {
+    background-image: linear-gradient(to right, #b02020, #2020b0);
+  }
+
+.temple-completed-south-button {
+  background-image: linear-gradient(to right, #ffff00, #00ff00);
+}
+  .temple-completed-south-button:focus, .temple-completed-south-button:hover {
+    background-image: linear-gradient(to right, #d0d000, #00d000);
+  }
+  .temple-completed-south-button:disabled {
+    background-image: linear-gradient(to right, #b0b020, #20b020);
+  }
+
+.temple-completed-west-button {
+  background-image: linear-gradient(to bottom, #ff0000, #ffff00);
+}
+  .temple-completed-west-button:focus, .temple-completed-west-button:hover {
+    background-image: linear-gradient(to bottom, #d00000, #d0d000);
+  }
+  .temple-completed-west-button:disabled {
+    background-image: linear-gradient(to bottom, #b02020, #b0b020);
+  }
+
+.temple-completed-east-button {
+  background-image: linear-gradient(to bottom, #0000ff, #00ff00);
+}
+  .temple-completed-east-button:focus, .temple-completed-east-button:hover {
+    background-image: linear-gradient(to bottom, #0000d0, #00d000);
+  }
+  .temple-completed-east-button:disabled {
+    background-image: linear-gradient(to bottom, #2020b0, #20b020);
   }
 
 .room-description {

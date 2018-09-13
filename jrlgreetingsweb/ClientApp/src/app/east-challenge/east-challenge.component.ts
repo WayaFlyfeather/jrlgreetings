@@ -10,7 +10,7 @@ import { TempleAudioService } from '../temple-audio.service';
 })
 export class EastChallengeComponent implements OnInit, OnDestroy {
   @Input() room: Room;
-  interval: NodeJS.Timer = null;
+  interval: NodeJS.Timer = null;  
   annoyanceRotationX: number = 0;
 
   constructor(

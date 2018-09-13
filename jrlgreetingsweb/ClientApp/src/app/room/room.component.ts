@@ -130,4 +130,7 @@ export class RoomComponent implements OnInit {
     setTimeout(() => this.router.navigate(['temple', RoomComponent.roomNameFromRoomId(roomNo)]), 500);
   }
 
+  get templeCompleted(): boolean {
+    return this.temple.notCompletedRoomsCount == 0;
+  } 
 }

@@ -5,16 +5,19 @@
   <h2 class="room-title">{{ roomTitle }}</h2>
   <div [ngClass]="{
      'room-view': true,
-     'completed-room-view': room.completed
+     'completed-room-view': room.completed && !templeCompleted,
+     'temple-completed-room-view': templeCompleted
      }">
     <button [disabled]="!canGoNorth" (click)="goNorth()" [ngClass]="{
      'button-north-south': true,
-     'completed-room-button': room.completed
+     'completed-room-button': room.completed && !templeCompleted,
+     'temple-completed-north-button': templeCompleted
      }">N</button>
     <div class="room-row">
       <button [disabled]="!canGoWest" (click)="goWest()" [ngClass]="{
      'button-east-west': true,
-     'completed-room-button': room.completed
+     'completed-room-button': room.completed && !templeCompleted,
+     'temple-completed-west-button': templeCompleted
      }">W</button>
       <div class="room-inner-view">
         <div class="room-description">{{ room.description }}</div>
@@ -35,12 +38,14 @@
       </div>
       <button [disabled]="!canGoEast" (click)="goEast()" [ngClass]="{
      'button-east-west': true,
-     'completed-room-button': room.completed
+     'completed-room-button': room.completed && !templeCompleted,
+     'temple-completed-east-button': templeCompleted
      }">E</button>
     </div>
     <button [disabled]="!canGoSouth" (click)="goSouth()" [ngClass]="{
      'button-north-south': true,
-     'completed-room-button': room.completed
+     'completed-room-button': room.completed && !templeCompleted,
+     'temple-completed-south-button': templeCompleted
      }">S</button>
   </div>
 </div>
