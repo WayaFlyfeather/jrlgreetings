@@ -18,7 +18,7 @@
      'button-east-west': true,
      'completed-room-button': room.completed && !templeCompleted,
      'temple-completed-west-button': templeCompleted
-     }">W</button>
+     }"><span style="display: inline-block; transform: rotate(270deg)">W</span></button>
       <div class="room-inner-view">
         <div class="room-description">{{ room.description }}</div>
         <div [ngSwitch]="roomId" class="room-content-container">
@@ -40,12 +40,12 @@
      'button-east-west': true,
      'completed-room-button': room.completed && !templeCompleted,
      'temple-completed-east-button': templeCompleted
-     }">E</button>
+     }"><span style="display: inline-block; transform: rotate(90deg)">E</span></button>
     </div>
     <button [disabled]="!canGoSouth" (click)="goSouth()" [ngClass]="{
      'button-north-south': true,
      'completed-room-button': room.completed && !templeCompleted,
      'temple-completed-south-button': templeCompleted
-     }">S</button>
+     }"><span style="display: inline-block; transform: rotate(180deg)">S</span></button>
   </div>
 </div>
