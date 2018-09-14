@@ -25,6 +25,7 @@ import { SouthEastChallengeComponent } from './south-east-challenge/south-east-c
 import { EastChallengeComponent } from './east-challenge/east-challenge.component';
 import { CentralChallengeComponent } from './central-challenge/central-challenge.component';
 import { ExceptionalChallengeComponent } from './exceptional-challenge/exceptional-challenge.component';
+import { TempleEntranceComponent } from './temple-entrance/temple-entrance.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ExceptionalChallengeComponent } from './exceptional-challenge/exception
     EastChallengeComponent,
     CentralChallengeComponent,
     ExceptionalChallengeComponent,
+    TempleEntranceComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -50,6 +52,7 @@ import { ExceptionalChallengeComponent } from './exceptional-challenge/exception
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'temple', component: TempleEntranceComponent, pathMatch: 'full' },
       { path: 'temple/northwest', component: RoomComponent, data: { roomId: 0 } },
       { path: 'temple/north', component: RoomComponent, data: { roomId: 1 } },
       { path: 'temple/northeast', component: RoomComponent, data: { roomId: 2 } },
