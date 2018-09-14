@@ -12,8 +12,8 @@ import { Temple } from '../temple';
   styleUrls: ['./room.component.css'],
 })
 export class RoomComponent implements OnInit {  
-  protected room: Room = null;
-  protected temple: Temple;
+  public room: Room = null;
+  public temple: Temple;
   protected roomId: number;
   constructor(
     protected roomsService: RoomsService,
