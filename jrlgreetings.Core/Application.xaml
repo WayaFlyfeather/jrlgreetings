@@ -32,9 +32,11 @@
                     <Button Grid.Row="0" Grid.Column="1" Text="N" HeightRequest="50" mvx:Bi.nd="Command GoNorth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill"/>
                     <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Text="W" WidthRequest="50" mvx:Bi.nd="Command GoWest_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Fill" HorizontalOptions="Center"/>
                     <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Text="E" WidthRequest="50" mvx:Bi.nd="Command GoEast_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Fill" HorizontalOptions="Center"/>
-                    <ScrollView Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" Margin="20, 0, 20, 20">
-                        <Label mvx:Bi.nd="Text RoomDescription" fx:TypefaceEffect.TypefaceName="Immortal" VerticalTextAlignment="Center"/>
-                    </ScrollView>
+                    <Frame OutlineColor="Gray" Padding="2"  Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" Margin="20, 0, 20, 20">
+                        <ScrollView>
+                            <Label mvx:Bi.nd="Text RoomDescription" fx:TypefaceEffect.TypefaceName="Immortal" VerticalTextAlignment="Center"/>
+                        </ScrollView>
+                    </Frame>
                     <ContentPresenter Grid.Column="1" Grid.Row="2" />
                     <Slider Grid.Row="3" Grid.Column="1" Maximum="100" Minimum="0" mvx:Bi.nd="Value AnnoyanceFactor, Mode=TwoWay" Margin="40,0" />
                     <Button Grid.Row="4" Grid.Column="1" Text="S" HeightRequest="50" mvx:Bi.nd="Command GoSouth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill"/>
@@ -59,9 +61,11 @@
                     <Button Grid.Row="0" Grid.Column="1" Text="N" HeightRequest="50" mvx:Bi.nd="Command GoNorth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill" fx:GradientEffect.GradientDescriptor="{StaticResource LRRedBlueGradientDescriptor}" />
                     <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Text="W" WidthRequest="50" mvx:Bi.nd="Command GoWest_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Fill" HorizontalOptions="Center" fx:GradientEffect.GradientDescriptor="{StaticResource TBRedYellowGradientDescriptor}" />
                     <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Text="E" WidthRequest="50" mvx:Bi.nd="Command GoEast_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Fill" HorizontalOptions="Center" fx:GradientEffect.GradientDescriptor="{StaticResource TBBlueGreenGradientDescriptor}" />
-                    <ScrollView Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" Margin="20, 0, 20, 20">
-                        <Label Text="{Binding RoomDescription}" fx:TypefaceEffect.TypefaceName="Immortal" TextColor="Yellow" VerticalTextAlignment="Center"/>
-                    </ScrollView>
+                    <Frame OutlineColor="Gray" Padding="2"  Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" Margin="20, 0, 20, 20">
+                        <ScrollView>
+                            <Label Text="{Binding RoomDescription}" fx:TypefaceEffect.TypefaceName="Immortal" TextColor="Yellow" VerticalTextAlignment="Center"/>
+                        </ScrollView>
+                    </Frame>
                     <ContentPresenter Grid.Column="1" Grid.Row="2" />
                     <Slider Grid.Row="3" Grid.Column="1" Maximum="100" Minimum="0" mvx:Bi.nd="Value AnnoyanceFactor, Mode=TwoWay" Margin="40,0" />
                     <Button Grid.Row="4" Grid.Column="1" Text="S" HeightRequest="50" mvx:Bi.nd="Command GoSouth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill"  fx:GradientEffect.GradientDescriptor="{StaticResource LRYellowGreenGradientDescriptor}" />
