@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TempleAudioService } from '../temple-audio.service';
 
 @Component({
   selector: 'app-temple-entrance',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TempleEntranceComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private templeAudioService: TempleAudioService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  enterTemple(): void {
+    this.templeAudioService.playFootsteps();
+    setTimeout(() => this.router.navigate(['temple', 'northwest']), 500);
+  }
 }
