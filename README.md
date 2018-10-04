@@ -1,5 +1,4 @@
 # jrlgreetings
+## WindowsMobile Branch
 
-This is a Xamarin Forms App, presenting me. You can learn more about the App at [it's site](https://jrlgreetingsweb.azurewebsites.net/), where you can also find store links and an online version.
-
-The site (in ASP.NET and Angular) is also to be found in this repo.
+This branch is kept separate, as upgrading to Xamarin Form 3+ and MvvmCross 6+ requires netstandard 2.0, which is not available in the Windows SDKs for WindowsMobile.
