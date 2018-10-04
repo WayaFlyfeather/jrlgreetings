@@ -2,6 +2,7 @@
 <mvvmx:MvxFormsApplication xmlns="http://xamarin.com/schemas/2014/forms" 
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
+                         xmlns:mvvmv="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
                          xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
                          xmlns:local="clr-namespace:jrlgreetings.Core"
                          xmlns:ta="clr-namespace:jrlgreetings.Core.TriggerActions"
@@ -72,10 +73,10 @@
                 </Grid>
             </ControlTemplate>
 
-            <Style x:Key="RoomPageStyle" TargetType="mvvmx:MvxContentPage">
+            <Style x:Key="RoomPageStyle" TargetType="mvvmv:MvxContentPage">
                 <Setter Property="ControlTemplate" Value="{StaticResource DrabRoomPageTemplate}" />
             </Style>
-            <Style x:Key="AllCompleteRoomPageStyle" TargetType="mvvmx:MvxContentPage">
+            <Style x:Key="AllCompleteRoomPageStyle" TargetType="mvvmv:MvxContentPage">
                 <Setter Property="ControlTemplate" Value="{StaticResource ColorfulRoomPageTemplate}" />
             </Style>
 

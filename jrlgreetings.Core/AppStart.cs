@@ -19,10 +19,13 @@ namespace jrlgreetings.Core
             this.roomDataService = roomDataService;
         }
 
-        async protected override Task NavigateToFirstViewModel(object hint = null)
+        protected override Task NavigateToFirstViewModel(object hint = null)
         {
-            await roomDataService.InitAsync();
-            await NavigationService.Navigate(roomDataService.GetViewModelForRoomNo(0));
+            //seems this should be async and awaitable - but doesn't work
+            roomDataService.InitAsync().GetAwaiter().GetResult();
+            NavigationService.Navigate(roomDataService.GetViewModelForRoomNo(0)).GetAwaiter().GetResult();
+
+            return Task.CompletedTask;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using jrlgreetings.Core.Services;
+using jrlgreetings.Core.ViewModels;
 using MvvmCross;
 using MvvmCross.IoC;
 
@@ -14,7 +15,6 @@ namespace jrlgreetings.Core
                 .RegisterAsLazySingleton();
 
             Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IRoomDataService, WebRoomDataService>();
-
             RegisterCustomAppStart<AppStart>();
         }
     }
