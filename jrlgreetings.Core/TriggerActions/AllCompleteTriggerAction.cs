@@ -1,6 +1,6 @@
 ﻿using jrlgreetings.Core.ViewModels;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Forms.Core;
+using MvvmCross.Forms.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;

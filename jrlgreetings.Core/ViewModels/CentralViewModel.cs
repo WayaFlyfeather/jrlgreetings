@@ -1,5 +1,5 @@
 ﻿using jrlgreetings.Core.Services;
-using MvvmCross.Core.Navigation;
+using MvvmCross.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -117,13 +117,13 @@ namespace jrlgreetings.Core.ViewModels
                 selectedOperatorIndex = 0;
                 result = 20;
                 await goToRoomNoAsync(9);
-                RaisePropertyChanged(nameof(Operand2));
-                RaisePropertyChanged(nameof(Operand1));
-                RaisePropertyChanged(nameof(SelectedOperatorIndex));
+                await RaisePropertyChanged(nameof(Operand2));
+                await RaisePropertyChanged(nameof(Operand1));
+                await RaisePropertyChanged(nameof(SelectedOperatorIndex));
             }
             finally
             {
-                RaisePropertyChanged(nameof(Result));
+                await RaisePropertyChanged(nameof(Result));
             }
         }
 

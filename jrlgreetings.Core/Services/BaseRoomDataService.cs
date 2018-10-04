@@ -1,8 +1,8 @@
 ﻿using jrlgreetings.Core.Models;
 using jrlgreetings.Core.ViewModels;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
+using MvvmCross;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,17 +20,17 @@ namespace jrlgreetings.Core.Services
 
         protected void setViewModels()
         {
-            ISoundPlayerService sps = Mvx.Resolve<ISoundPlayerService>();
-            ViewModels[0] = new NorthWestViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[1] = new NorthViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[2] = new NorthEastViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[3] = new WestViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[4] = new CentralViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[5] = new EastViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[6] = new SouthWestViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[7] = new SouthViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[8] = new SouthEastViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
-            ViewModels[9] = new ExceptionalViewModel(this, sps, Mvx.Resolve<IMvxNavigationService>());
+            ISoundPlayerService sps = Mvx.IoCProvider.Resolve<ISoundPlayerService>();
+            ViewModels[0] = new NorthWestViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[1] = new NorthViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[2] = new NorthEastViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[3] = new WestViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[4] = new CentralViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[5] = new EastViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[6] = new SouthWestViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[7] = new SouthViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[8] = new SouthEastViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
+            ViewModels[9] = new ExceptionalViewModel(this, sps, Mvx.IoCProvider.Resolve<IMvxNavigationService>());
         }
 
         protected void makeLocalRooms()

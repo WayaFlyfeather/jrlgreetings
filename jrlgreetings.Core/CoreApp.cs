@@ -1,10 +1,10 @@
 ﻿using jrlgreetings.Core.Services;
-using MvvmCross.Platform;
-using MvvmCross.Platform.IoC;
+using MvvmCross;
+using MvvmCross.IoC;
 
 namespace jrlgreetings.Core
 {
-    public class CoreApp : MvvmCross.Core.ViewModels.MvxApplication
+    public class CoreApp : MvvmCross.ViewModels.MvxApplication
     {
         public override void Initialize()
         {
@@ -13,7 +13,7 @@ namespace jrlgreetings.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            Mvx.LazyConstructAndRegisterSingleton<IRoomDataService, WebRoomDataService>();
+            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IRoomDataService, WebRoomDataService>();
 
             RegisterCustomAppStart<AppStart>();
         }

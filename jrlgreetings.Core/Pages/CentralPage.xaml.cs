@@ -1,5 +1,6 @@
 ﻿using jrlgreetings.Core.ViewModels;
 using MvvmCross.Forms.Core;
+using MvvmCross.Forms.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;

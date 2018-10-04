@@ -1,6 +1,6 @@
 ﻿using jrlgreetings.Core.Services;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,29 +9,20 @@ using System.Threading.Tasks;
 
 namespace jrlgreetings.Core
 {
-    public class AppStart : IMvxAppStart
+    public class AppStart : MvxAppStart
     {
-        private readonly IMvxNavigationService navigationService;
         private readonly IRoomDataService roomDataService;
         
-        public AppStart(IRoomDataService roomDataService, IMvxNavigationService navigationService)
+        public AppStart(IMvxApplication application, IMvxNavigationService navigationService, IRoomDataService roomDataService)
+            : base(application, navigationService)
         {
             this.roomDataService = roomDataService;
-            this.navigationService = navigationService;
         }
 
-        
-        public void Start(object hint = null)
+        async protected override Task NavigateToFirstViewModel(object hint = null)
         {
-            try
-            {
-                roomDataService.InitAsync().GetAwaiter().GetResult();
-                navigationService.Navigate(roomDataService.GetViewModelForRoomNo(0)).GetAwaiter().GetResult();
-            }
-            catch (System.Exception e)
-            {
-                Debug.WriteLine("Exception in AppStart.Start: {0}", e.Message);
-            }
+            await roomDataService.InitAsync();
+            await NavigationService.Navigate(roomDataService.GetViewModelForRoomNo(0));
         }
     }
 }

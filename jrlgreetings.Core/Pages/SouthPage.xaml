@@ -2,7 +2,7 @@
 <mvvmx:MvxContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     xmlns:forms="using:Xamarin.Forms"
-                    xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
+                    xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
                     xmlns:local="clr-namespace:jrlgreetings.Core"
                     xmlns:fx="clr-namespace:jrlgreetings.Core.Effects"                    

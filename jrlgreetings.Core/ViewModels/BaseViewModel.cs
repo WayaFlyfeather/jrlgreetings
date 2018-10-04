@@ -1,7 +1,8 @@
 ﻿using jrlgreetings.Core.Models;
 using jrlgreetings.Core.Services;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;

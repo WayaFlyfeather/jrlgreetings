@@ -1,5 +1,5 @@
 ﻿using jrlgreetings.Core.Services;
-using MvvmCross.Core.Navigation;
+using MvvmCross.Navigation;
 using System.Text;
 
 namespace jrlgreetings.Core.ViewModels

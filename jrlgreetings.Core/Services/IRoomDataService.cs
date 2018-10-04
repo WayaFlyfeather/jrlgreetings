@@ -1,5 +1,5 @@
 ﻿using jrlgreetings.Core.Models;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
