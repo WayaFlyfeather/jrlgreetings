@@ -40,7 +40,7 @@ namespace jrlgreetings.Core.ViewModels
                         RaisePropertyChanged(nameof(Completed));
                         RaisePropertyChanged(nameof(TotalUnCompleted));
                         RaisePropertyChanged(nameof(Title));                            
-                        if (TotalUnCompleted==0)
+                        if (IsTempleCompleted)
                         {
                             roomDataService.SwitchRooms();
                             Task dummy=goToRoomNoAsync(roomNo);
@@ -49,6 +49,11 @@ namespace jrlgreetings.Core.ViewModels
                     OnAnnoyanceFactorChanged();
                 }
             }
+        }
+
+        public void NotifyTempleIsCompleted()
+        {
+            RaisePropertyChanged(nameof(IsTempleCompleted));
         }
 
         protected virtual void OnAnnoyanceFactorChanged()
@@ -60,7 +65,7 @@ namespace jrlgreetings.Core.ViewModels
             get
             {
                 string LeftToComplete = "";
-                if (TotalUnCompleted > 0)
+                if (!IsTempleCompleted)
                     LeftToComplete = String.Format($" ({TotalUnCompleted} to complete)");
 
                 if (roomNo < 9)
@@ -70,6 +75,7 @@ namespace jrlgreetings.Core.ViewModels
             }
         }
         public int TotalUnCompleted => roomDataService.UnCompleted;
+        public bool IsTempleCompleted => TotalUnCompleted == 0;
         public bool Completed => thisRoom.Completed;
 
         public BaseViewModel(int roomNo, IRoomDataService roomDataService, IMvxNavigationService navigationService)        
@@ -85,7 +91,7 @@ namespace jrlgreetings.Core.ViewModels
             base.ViewAppearing();
             RaisePropertyChanged(nameof(TotalUnCompleted));
             RaisePropertyChanged(nameof(Title));
-            if (TotalUnCompleted == 0)
+            if (IsTempleCompleted)
                 AnnoyanceFactor = 0.0;
         }
 

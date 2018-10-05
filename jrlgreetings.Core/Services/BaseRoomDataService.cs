@@ -140,7 +140,14 @@ namespace jrlgreetings.Core.Services
         {
             //Application.Current.Resources["RoomContentLabelStyle"] = Application.Current.Resources["ColorfulRoomContentLabelStyle"];
             //Application.Current.Resources["RoomPageStyle"] = Application.Current.Resources["AllCompleteRoomPageStyle"];
-            setViewModels();
+            //setViewModels();
+
+            foreach (IMvxViewModel viewModel in ViewModels)
+            {
+                BaseViewModel roomViewModel = viewModel as BaseViewModel;
+                if (!(roomViewModel is null))
+                    roomViewModel.NotifyTempleIsCompleted();
+            }
         }
 
         public IEnumerable<bool> RoomCompletionInfo => rooms.Values.OrderBy(r => r.RoomNo).Select(r => r.Completed);
