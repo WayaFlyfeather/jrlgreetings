@@ -10,7 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using jrlgreetings.Core.Effects;
+using jrlgreetings.FormsUI.Effects;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: Xamarin.Forms.ResolutionGroupName("JonRLevy")]

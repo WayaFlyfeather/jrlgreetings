@@ -11,7 +11,7 @@ using Xamarin.Forms;
 namespace jrlgreetings.Droid
 {
     [Activity(Label = "MainActivity", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class MainActivity : MvxFormsAppCompatActivity //<MvxFormsAndroidSetup<jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>, jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>
+    public class MainActivity : MvxFormsAppCompatActivity 
     {
         protected override void OnCreate(Bundle bundle)
         {

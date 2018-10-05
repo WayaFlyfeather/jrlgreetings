@@ -10,8 +10,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using jrlgreetings.Core;
-using jrlgreetings.Core.Effects;
+using jrlgreetings.FormsUI;
+using jrlgreetings.FormsUI.Effects;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: Xamarin.Forms.ExportEffect(typeof(jrlgreetings.Droid.Effects.GradientEffectImpl), "GradientEffect")]

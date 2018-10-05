@@ -15,7 +15,7 @@ namespace jrlgreetings.Droid
         , Theme = "@style/Theme.Splash"
         , NoHistory = true
         , ScreenOrientation = ScreenOrientation.Portrait)]
-    public class SplashScreen : MvxFormsSplashScreenActivity<Setup, jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>
+    public class SplashScreen : MvxFormsSplashScreenActivity<Setup, jrlgreetings.Core.CoreApp, jrlgreetings.FormsUI.Application>
     {
         public SplashScreen()
             : base(Resource.Layout.SplashScreen)

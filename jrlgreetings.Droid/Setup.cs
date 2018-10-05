@@ -14,7 +14,7 @@ using MvvmCross.Plugin;
 
 namespace jrlgreetings.Droid
 {
-    public class Setup : MvxFormsAndroidSetup<jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>
+    public class Setup : MvxFormsAndroidSetup<jrlgreetings.Core.CoreApp, jrlgreetings.FormsUI.Application>
     {
     }
 }
