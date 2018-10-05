@@ -1,23 +1,14 @@
-﻿using MvvmCross.Core.ViewModels;
-using MvvmCross.Forms.Core;
-using MvvmCross.Forms.iOS;
-using MvvmCross.iOS.Platform;
-using MvvmCross.Platform.Platform;
+﻿using MvvmCross.Forms.Core;
 using jrlgreetings.Core;
 using UIKit;
+using MvvmCross.Forms.Platforms.Ios.Core;
+using MvvmCross.Platforms.Ios.Core;
+using MvvmCross.ViewModels;
 
 namespace jrlgreetings.iOS
 {
-    public class Setup : MvxFormsIosSetup
+    public class Setup : MvxFormsIosSetup<jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>
     {
-        public Setup(IMvxApplicationDelegate applicationDelegate, UIWindow window)
-            : base(applicationDelegate, window)
-        {
-        }
-
-        protected override IMvxApplication CreateApp() => new CoreApp();
-        protected override MvxFormsApplication CreateFormsApplication() => new Core.Application();
-        protected override IMvxTrace CreateDebugTrace() => new DebugTrace();
     }
 }
 
