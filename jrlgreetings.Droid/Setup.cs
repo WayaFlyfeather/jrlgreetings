@@ -1,22 +1,19 @@
-﻿using Android.Content;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Forms.Core;
-using MvvmCross.Forms.Droid;
-using MvvmCross.Platform.Platform;
-using jrlgreetings.Core;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using MvvmCross.Forms.Platforms.Android.Core;
 
 namespace jrlgreetings.Droid
 {
-    public class Setup : MvxFormsAndroidSetup
+    public class Setup : MvxFormsAndroidSetup<jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>
     {
-        public Setup(Context applicationContext)
-            : base(applicationContext)
-        {
-        }
-
-        protected override IMvxApplication CreateApp() => new CoreApp();
-        protected override MvxFormsApplication CreateFormsApplication() => new Application();
-//        protected override IMvxTrace CreateDebugTrace() => new DebugTrace();
-
     }
 }

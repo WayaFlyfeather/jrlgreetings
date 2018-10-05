@@ -1,29 +1,23 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using MvvmCross.Droid.Views;
-using MvvmCross.Forms.Droid;
+using MvvmCross;
+using MvvmCross.Forms.Platforms.Android.Core;
+using MvvmCross.Forms.Platforms.Android.Views;
 using MvvmCross.Forms.Presenters;
-using MvvmCross.Platform;
+using MvvmCross.Platforms.Android.Presenters;
 using Xamarin.Forms;
 
 namespace jrlgreetings.Droid
 {
     [Activity(Label = "MainActivity", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class MainActivity
-        : MvxFormsAppCompatActivity
+    public class MainActivity : MvxFormsAppCompatActivity //<MvxFormsAndroidSetup<jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>, jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>
     {
         protected override void OnCreate(Bundle bundle)
         {
-            ToolbarResource = Resource.Layout.toolbar;
             TabLayoutResource = Resource.Layout.tabs;
-
+            ToolbarResource = Resource.Layout.toolbar;
             base.OnCreate(bundle);
-
-            Forms.Init(this, bundle);
-
-            var formsPresenter = (MvxFormsPagePresenter)Mvx.Resolve<IMvxAndroidViewPresenter>();
-            LoadApplication(formsPresenter.FormsApplication);
         }
     }
 }
