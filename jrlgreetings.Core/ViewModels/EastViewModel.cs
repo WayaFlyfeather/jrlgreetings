@@ -16,8 +16,8 @@ namespace jrlgreetings.Core.ViewModels
             set => SetProperty(ref rotationX, value % 360.0);
         }
 
-        public EastViewModel(IRoomDataService roomDataService, ISoundPlayerService soundPlayerService, IMvxNavigationService navigationService)
-            : base(5, roomDataService, soundPlayerService, navigationService)
+        public EastViewModel(IRoomDataService roomDataService, IMvxNavigationService navigationService)
+            : base(5, roomDataService, navigationService)
         {
         }
 

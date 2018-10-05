@@ -1,5 +1,6 @@
 ﻿using jrlgreetings.Core.Models;
 using jrlgreetings.Core.Services;
+using MvvmCross;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -16,7 +17,7 @@ namespace jrlgreetings.Core.ViewModels
     {
         protected readonly IMvxNavigationService navigationService;
         protected readonly IRoomDataService roomDataService;
-        readonly ISoundPlayerService soundPlayerService;
+//        readonly ISoundPlayerService soundPlayerService;
 
         protected readonly int roomNo;
         public int RoomNo
@@ -35,7 +36,7 @@ namespace jrlgreetings.Core.ViewModels
                     if (value == 0.0 && thisRoom.Completed==false)
                     {
                         thisRoom.Completed = true;
-                        soundPlayerService.PlayClick();
+                        Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayClick();
                         RaisePropertyChanged(nameof(Completed));
                         RaisePropertyChanged(nameof(TotalUnCompleted));
                         RaisePropertyChanged(nameof(Title));                            
@@ -71,11 +72,10 @@ namespace jrlgreetings.Core.ViewModels
         public int TotalUnCompleted => roomDataService.UnCompleted;
         public bool Completed => thisRoom.Completed;
 
-        public BaseViewModel(int roomNo, IRoomDataService roomDataService, ISoundPlayerService soundPlayerService, IMvxNavigationService navigationService)        
+        public BaseViewModel(int roomNo, IRoomDataService roomDataService, IMvxNavigationService navigationService)        
         {
             this.roomDataService = roomDataService;
             this.navigationService = navigationService;
-            this.soundPlayerService = soundPlayerService;
 
             this.roomNo = roomNo;
         }
@@ -102,9 +102,9 @@ namespace jrlgreetings.Core.ViewModels
             if (roomNo != destinationRoomNo)
             {
                 if (roomNo == 9 || destinationRoomNo == 9)
-                    soundPlayerService.PlayThunder();
+                    Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayThunder();
                 else
-                    soundPlayerService.PlayFootsteps();
+                    Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayFootsteps();
 
                 await Task.Delay(500);
             }

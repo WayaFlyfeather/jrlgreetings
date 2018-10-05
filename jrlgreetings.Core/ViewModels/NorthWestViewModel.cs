@@ -8,8 +8,8 @@ namespace jrlgreetings.Core.ViewModels
 {
     public class NorthWestViewModel : BaseViewModel
     {
-        public NorthWestViewModel(IRoomDataService roomDataService, ISoundPlayerService soundPlayerService, IMvxNavigationService navigationService)
-            : base(0, roomDataService, soundPlayerService, navigationService)
+        public NorthWestViewModel(IRoomDataService roomDataService, IMvxNavigationService navigationService)
+            : base(0, roomDataService, navigationService)
         {
             annoyanceFactor = 90.0;
         }

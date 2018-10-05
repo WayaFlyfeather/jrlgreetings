@@ -7,8 +7,8 @@ namespace jrlgreetings.Core.ViewModels
 {
     public class SouthEastViewModel : BaseViewModel
     {
-        public SouthEastViewModel(IRoomDataService roomDataService, ISoundPlayerService soundPlayerService, IMvxNavigationService navigationService)
-            : base(8, roomDataService, soundPlayerService, navigationService)
+        public SouthEastViewModel(IRoomDataService roomDataService, IMvxNavigationService navigationService)
+            : base(8, roomDataService, navigationService)
         {
 
         }

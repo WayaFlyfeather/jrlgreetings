@@ -10,8 +10,8 @@ namespace jrlgreetings.Core.ViewModels
 {
     public class CentralViewModel : BaseViewModel
     {
-        public CentralViewModel(IRoomDataService roomDataService, ISoundPlayerService soundPlayerService, IMvxNavigationService navigationService)
-            : base(4, roomDataService, soundPlayerService, navigationService)
+        public CentralViewModel(IRoomDataService roomDataService, IMvxNavigationService navigationService)
+            : base(4, roomDataService, navigationService)
         {
 
         }

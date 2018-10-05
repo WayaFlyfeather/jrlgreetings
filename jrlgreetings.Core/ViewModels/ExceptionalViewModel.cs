@@ -12,8 +12,8 @@ namespace jrlgreetings.Core.ViewModels
 {
     public class ExceptionalViewModel : BaseViewModel
     {
-        public ExceptionalViewModel(IRoomDataService roomDataService, ISoundPlayerService soundPlayerService, IMvxNavigationService navigationService)
-            : base(9, roomDataService, soundPlayerService, navigationService)
+        public ExceptionalViewModel(IRoomDataService roomDataService, IMvxNavigationService navigationService)
+            : base(9, roomDataService, navigationService)
         {
 
         }
