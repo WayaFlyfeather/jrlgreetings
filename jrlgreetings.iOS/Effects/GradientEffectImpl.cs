@@ -1,7 +1,7 @@
 ﻿using CoreAnimation;
 using CoreGraphics;
-using jrlgreetings.Core;
-using jrlgreetings.Core.Effects;
+using jrlgreetings.FormsUI;
+using jrlgreetings.FormsUI.Effects;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

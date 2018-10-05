@@ -7,7 +7,7 @@ using MvvmCross.ViewModels;
 
 namespace jrlgreetings.iOS
 {
-    public class Setup : MvxFormsIosSetup<jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>
+    public class Setup : MvxFormsIosSetup<jrlgreetings.Core.CoreApp, jrlgreetings.FormsUI.Application>
     {
     }
 }
