@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System.Threading.Tasks;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using MvvmCross.Forms.Platforms.Android.Core;
@@ -21,34 +22,10 @@ namespace jrlgreetings.Droid
         {
         }
 
-        protected override void RunAppStart(Bundle bundle)
+        protected override Task RunAppStartAsync(Bundle bundle)
         {
-            System.Diagnostics.Debug.WriteLine("In Run App Start");
-//            if (!Forms.IsInitialized)
-//            {
-////                Forms.SetFlags("FastRenderers_Experimental");
-//                Forms.Init(this, bundle);
-//            }
-
-            System.Diagnostics.Debug.WriteLine("In Run App Start");
             StartActivity(typeof(MainActivity));
-            System.Diagnostics.Debug.WriteLine("Started activty");
-            base.RunAppStart(bundle);
+            return Task.CompletedTask;
         }
-
-        //protected override void OnCreate(Android.OS.Bundle bundle)
-        //{
-        //    Forms.Init(this, bundle);
-        //    // Leverage controls' StyleId attrib. to Xamarin.UITest
-        //    Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) =>
-        //    {
-        //        if (!string.IsNullOrWhiteSpace(e.View.StyleId))
-        //        {
-        //            e.NativeView.ContentDescription = e.View.StyleId;
-        //        }
-        //    };
-
-        //    base.OnCreate(bundle);
-        //}
     }
 }

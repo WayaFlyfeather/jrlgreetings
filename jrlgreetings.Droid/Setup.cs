@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Forms.Platforms.Android.Core;
+using MvvmCross.Plugin;
 
 namespace jrlgreetings.Droid
 {
