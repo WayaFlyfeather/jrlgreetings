@@ -3,13 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using Xamarin.Forms;
 
 namespace jrlgreetings.Core.Converters
 {
-    public class MvxAnnoyanceToPaddingConverter : MvxValueConverter<double, Thickness>
+    public class MvxAnnoyanceToTranslationYConverter : MvxValueConverter<double, double>
     {
-        protected override Thickness Convert(double value, Type targetType, object parameter, CultureInfo culture)
+        protected override Double Convert(double value, Type targetType, object parameter, CultureInfo culture)
         {
             double offset = value / 5.0;
 
@@ -23,11 +22,11 @@ namespace jrlgreetings.Core.Converters
 
             switch (direction)
             {
-                case 1: return new Thickness(0, offset, 0, 0);
-                case 2: return new Thickness(0, 0, offset, 0);
-                case 3: return new Thickness(0, 0, 0, offset);
+                case 1: return offset;
+                case 2: return -offset;
+                case 3: return offset;
                 case 0:
-                default: return new Thickness(offset, 0, 0, 0);
+                default: return -offset;
             }
         }
     }

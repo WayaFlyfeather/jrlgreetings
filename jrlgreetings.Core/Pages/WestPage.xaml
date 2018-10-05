@@ -8,20 +8,12 @@
                     Style="{StaticResource RoomPageStyle}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.Core.Pages.WestPage">
-    <Grid>
+    <Grid Margin="20">
         <Grid mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=IfNotZero">
-            <ContentView mvx:Bi.nd="Padding AnnoyanceFactor, Converter=AnnoyanceToPadding, ConverterParameter='0'">
-                <Label mvx:Bi.nd="Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='0'" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
-            </ContentView>
-            <ContentView mvx:Bi.nd="Padding AnnoyanceFactor, Converter=AnnoyanceToPadding, ConverterParameter='1'">
-                <Label mvx:Bi.nd="Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='1'" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter"/>
-            </ContentView>
-            <ContentView mvx:Bi.nd="Padding AnnoyanceFactor, Converter=AnnoyanceToPadding, ConverterParameter='2'">
-                <Label mvx:Bi.nd="Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='2'" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
-            </ContentView>
-            <ContentView mvx:Bi.nd="Padding AnnoyanceFactor, Converter=AnnoyanceToPadding, ConverterParameter='3'">
-                <Label mvx:Bi.nd="Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='3'" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
-            </ContentView>
+            <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='0'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='0'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='0';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
+            <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='1'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='1'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='1';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
+            <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='2'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='2'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='2';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
+            <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='3'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='3'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='3';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
         </Grid>
         <Label mvx:Bi.nd="Text RoomContentText; IsVisible AnnoyanceFactor, Converter=IfZero" Style="{StaticResource RoomContentLabelStyle}" />
     </Grid>
