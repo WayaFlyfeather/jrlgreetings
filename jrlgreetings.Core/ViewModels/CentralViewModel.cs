@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace jrlgreetings.Core.ViewModels
 {
-    class CentralViewModel : BaseViewModel
+    public class CentralViewModel : BaseViewModel
     {
         public CentralViewModel(IRoomDataService roomDataService, ISoundPlayerService soundPlayerService, IMvxNavigationService navigationService)
             : base(4, roomDataService, soundPlayerService, navigationService)

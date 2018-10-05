@@ -1,4 +1,4 @@
-﻿using jrlgreetings.Core.Effects;
+﻿using jrlgreetings.FormsUI.Effects;
 using System;
 using System.Collections.Generic;
 using System.Linq;

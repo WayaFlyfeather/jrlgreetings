@@ -4,11 +4,11 @@
                     xmlns:forms="using:Xamarin.Forms"
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
-                    xmlns:local="clr-namespace:jrlgreetings.Core"
-                    xmlns:fx="clr-namespace:jrlgreetings.Core.Effects"                    
+                    xmlns:local="clr-namespace:jrlgreetings.FormsUI"
+                    xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"                    
                     Style="{StaticResource RoomPageStyle}"
                     mvx:Bi.nd="Title Title"
-                    x:Class="jrlgreetings.Core.Pages.SouthPage">
+                    x:Class="jrlgreetings.FormsUI.Pages.SouthPage">
     <mvvmx:MvxContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="ContentView" x:Key="VeilContentViewStyle">

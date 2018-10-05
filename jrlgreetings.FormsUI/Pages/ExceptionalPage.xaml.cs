@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace jrlgreetings.Core.Pages
+namespace jrlgreetings.FormsUI.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ExceptionalPage : MvxContentPage

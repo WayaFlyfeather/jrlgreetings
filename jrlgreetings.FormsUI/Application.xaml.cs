@@ -1,4 +1,4 @@
-﻿namespace jrlgreetings.Core
+﻿namespace jrlgreetings.FormsUI
 {
     public partial class Application
     {

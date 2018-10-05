@@ -1,6 +1,6 @@
 ﻿using MvvmCross.Forms.Core;
 
-namespace jrlgreetings.Core.Pages
+namespace jrlgreetings.FormsUI.Pages
 {
     public partial class WestPage
     {

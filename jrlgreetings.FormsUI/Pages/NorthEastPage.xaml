@@ -7,7 +7,7 @@
                     xmlns:fx="clr-namespace:jrlgreetings.Core.Effects"                    
                     Style="{StaticResource RoomPageStyle}"
                     mvx:Bi.nd="Title Title"
-               x:Class="jrlgreetings.Core.Pages.NorthEastPage">
+               x:Class="jrlgreetings.FormsUI.Pages.NorthEastPage">
     <StackLayout Orientation="Vertical">
         <ScrollView>
             <Label mvx:Bi.nd="Text RoomContentText" Style="{StaticResource RoomContentLabelStyle}"/>

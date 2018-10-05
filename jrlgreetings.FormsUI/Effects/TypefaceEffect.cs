@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
-namespace jrlgreetings.Core.Effects
+namespace jrlgreetings.FormsUI.Effects
 {
     public class TypefaceEffect : RoutingEffect
     {

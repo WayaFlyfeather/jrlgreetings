@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace jrlgreetings.Core.TriggerActions
+namespace jrlgreetings.FormsUI.TriggerActions
 {
     public class AllCompleteTriggerAction : TriggerAction<MvxContentPage>
     {

@@ -27,7 +27,7 @@ namespace jrlgreetings.UWP
         }
     }
 
-    public abstract class UWPApplication : MvxWindowsApplication<MvxFormsWindowsSetup<jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application>, jrlgreetings.Core.CoreApp, jrlgreetings.Core.Application, MainPage>
+    public abstract class UWPApplication : MvxWindowsApplication<MvxFormsWindowsSetup<jrlgreetings.Core.CoreApp, jrlgreetings.FormsUI.Application>, jrlgreetings.Core.CoreApp, jrlgreetings.FormsUI.Application, MainPage>
     {
     }
 }

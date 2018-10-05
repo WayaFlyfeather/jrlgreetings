@@ -4,11 +4,9 @@
                          xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms"
                          xmlns:mvvmv="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
                          xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
-                         xmlns:local="clr-namespace:jrlgreetings.Core"
-                         xmlns:ta="clr-namespace:jrlgreetings.Core.TriggerActions"
-                         xmlns:fx="clr-namespace:jrlgreetings.Core.Effects"
-                         xmlns:conv="clr-namespace:jrlgreetings.Core.Converters"
-                         x:Class="jrlgreetings.Core.Application">
+                         xmlns:local="clr-namespace:jrlgreetings.FormsUI"
+                         xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"
+                         x:Class="jrlgreetings.FormsUI.Application">
     <mvvmx:MvxFormsApplication.Resources>
         <ResourceDictionary>
             <local:GradientDescriptor x:Key="TLBRRedGreenGradientDescriptor" Direction="TopLeft_BottomRight" StartColor="Red" EndColor="Green" />

@@ -4,10 +4,9 @@
                     xmlns:forms="using:Xamarin.Forms"
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"        
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
-                    xmlns:fx="clr-namespace:jrlgreetings.Core.Effects"                    
                     Style="{StaticResource RoomPageStyle}"
                     mvx:Bi.nd="Title Title"
-                    x:Class="jrlgreetings.Core.Pages.CentralPage">
+                    x:Class="jrlgreetings.FormsUI.Pages.CentralPage">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

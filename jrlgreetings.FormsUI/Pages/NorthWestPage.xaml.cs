@@ -2,7 +2,7 @@
 using MvvmCross.Forms.Core;
 using Xamarin.Forms;
 
-namespace jrlgreetings.Core.Pages
+namespace jrlgreetings.FormsUI.Pages
 {
     public partial class NorthWestPage
     {

@@ -139,8 +139,8 @@ namespace jrlgreetings.Core.Services
         public IMvxViewModel GetViewModelForRoomNo(int roomNo) => ViewModels[roomNo];
         public void SwitchRooms()
         {
-            Application.Current.Resources["RoomContentLabelStyle"] = Application.Current.Resources["ColorfulRoomContentLabelStyle"];
-            Application.Current.Resources["RoomPageStyle"] = Application.Current.Resources["AllCompleteRoomPageStyle"];
+            //Application.Current.Resources["RoomContentLabelStyle"] = Application.Current.Resources["ColorfulRoomContentLabelStyle"];
+            //Application.Current.Resources["RoomPageStyle"] = Application.Current.Resources["AllCompleteRoomPageStyle"];
             setViewModels();
         }
 

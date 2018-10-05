@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace jrlgreetings.Core.Pages
+namespace jrlgreetings.FormsUI.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SouthWestPage : MvxContentPage
@@ -18,7 +18,7 @@ namespace jrlgreetings.Core.Pages
 		public SouthWestPage ()
 		{
 			InitializeComponent ();
-            certImage.Source = ImageSource.FromResource("jrlgreetings.Core.xamarin_mobile_developer.png", typeof(SouthWestPage).GetTypeInfo().Assembly);
+            certImage.Source = ImageSource.FromResource("jrlgreetings.FormsUI.xamarin_mobile_developer.png", typeof(SouthWestPage).GetTypeInfo().Assembly);
         }
 
         private void certImage_Tapped(object sender, EventArgs e)

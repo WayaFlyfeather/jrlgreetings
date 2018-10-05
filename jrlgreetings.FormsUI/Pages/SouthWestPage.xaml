@@ -4,10 +4,10 @@
                     xmlns:forms="using:Xamarin.Forms"
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"        
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
-                    xmlns:fx="clr-namespace:jrlgreetings.Core.Effects"                    
+                    xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"                    
                     Style="{StaticResource RoomPageStyle}"
                     mvx:Bi.nd="Title Title"
-                    x:Class="jrlgreetings.Core.Pages.SouthWestPage">
+                    x:Class="jrlgreetings.FormsUI.Pages.SouthWestPage">
     <ScrollView VerticalOptions="Fill">
         <StackLayout VerticalOptions="Fill">
             <Label mvx:Bi.nd="Text RoomContentText; TextColor AnnoyanceFactor, Converter=AnnoyanceToForegroundColor; BackgroundColor AnnoyanceFactor, Converter=AnnoyanceToBackgroundColor" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" VerticalOptions="FillAndExpand"/>

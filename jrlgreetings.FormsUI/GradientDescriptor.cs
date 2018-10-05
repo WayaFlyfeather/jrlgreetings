@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace jrlgreetings.Core
+namespace jrlgreetings.FormsUI
 {
     public enum GradientDirection
     {

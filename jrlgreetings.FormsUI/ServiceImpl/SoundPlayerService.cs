@@ -1,11 +1,12 @@
-﻿using Plugin.SimpleAudioPlayer;
+﻿using jrlgreetings.Core.Services;
+using Plugin.SimpleAudioPlayer;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace jrlgreetings.Core.Services
+namespace jrlgreetings.FormsUI.ServiceImpl
 {
     public class SoundPlayerService : ISoundPlayerService
     {
@@ -17,15 +18,15 @@ namespace jrlgreetings.Core.Services
         {
             var assembly = typeof(SoundPlayerService).GetTypeInfo().Assembly;
 
-            Stream thunderStream = assembly.GetManifestResourceStream("jrlgreetings.Core.thunder.mp3");
+            Stream thunderStream = assembly.GetManifestResourceStream("jrlgreetings.FormsUI.thunder.mp3");
             thunderPlayer = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
             thunderPlayer.Load(thunderStream);
 
-            Stream footstepsStream = assembly.GetManifestResourceStream("jrlgreetings.Core.footsteps.mp3");
+            Stream footstepsStream = assembly.GetManifestResourceStream("jrlgreetings.FormsUI.footsteps.mp3");
             footstepsPlayer = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
             footstepsPlayer.Load(footstepsStream);
 
-            Stream clickStream = assembly.GetManifestResourceStream("jrlgreetings.Core.click.mp3");
+            Stream clickStream = assembly.GetManifestResourceStream("jrlgreetings.FormsUI.click.mp3");
             clickPlayer = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
             clickPlayer.Load(clickStream);
         }

@@ -24,62 +24,10 @@
   <ItemGroup>
     <!-- https://bugzilla.xamarin.com/show_bug.cgi?id=55591 -->
     <None Remove="**\*.xaml" />
-    <None Remove="click.mp3" />
-    <None Remove="footsteps.mp3" />
-    <None Remove="thunder.mp3" />
-    <None Remove="xamarin_mobile_developer.png" />
-    <EmbeddedResource Include="click.mp3" />
-    <EmbeddedResource Include="footsteps.mp3" />
-    <EmbeddedResource Include="thunder.mp3" />
-        
-    <EmbeddedResource Include="xamarin_mobile_developer.png" />
-    <Compile Update="Pages\NorthWestPage.xaml.cs">
-      <DependentUpon>NorthWestPage.xaml</DependentUpon>
-    </Compile>
-        
-    <Compile Update="Pages\NorthEastPage.xaml.cs">
-      <DependentUpon>NorthEastPage.xaml</DependentUpon>
-    </Compile>
-        
-    <Compile Update="Pages\EastPage.xaml.cs">
-      <DependentUpon>EastPage.xaml</DependentUpon>
-    </Compile>
-
-    <Compile Update="Pages\SouthEastPage.xaml.cs">
-      <DependentUpon>SouthEastPage.xaml</DependentUpon>
-    </Compile>
-        
-    <Compile Update="Pages\SouthPage.xaml.cs">
-      <DependentUpon>SouthPage.xaml</DependentUpon>
-    </Compile>
-        
-    <Compile Update="Pages\SouthWestPage.xaml.cs">
-      <DependentUpon>SouthWestPage.xaml</DependentUpon>
-    </Compile>
-
-    <Compile Update="Pages\CentralPage.xaml.cs">
-      <DependentUpon>CentralPage.xaml</DependentUpon>
-    </Compile>
-
-    <Compile Update="Pages\ExceptionalPage.xaml.cs">
-      <DependentUpon>ExceptionalPage.xaml</DependentUpon>
-    </Compile>
-        
-    <Compile Update="Pages\WestPage.xaml.cs">
-      <DependentUpon>WestPage.xaml</DependentUpon>
-    </Compile>
-        
-    <Compile Update="Pages\NorthPage.xaml.cs">
-      <DependentUpon>NorthPage.xaml</DependentUpon>
-    </Compile>
                 
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
-        
-    <Compile Update="Application.xaml.cs">
-      <DependentUpon>Application.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 	
 </Project>
