@@ -6,7 +6,7 @@
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
                     xmlns:local="clr-namespace:jrlgreetings.FormsUI"
                     xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"                    
-                    Style="{StaticResource RoomPageStyle}"
+                    Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.FormsUI.Pages.SouthPage">
     <mvvmx:MvxContentPage.Resources>
@@ -26,7 +26,7 @@
     </mvvmx:MvxContentPage.Resources>
     <Grid>
         <ScrollView>
-            <Label mvx:Bi.nd="Text RoomContentText" Style="{StaticResource RoomContentLabelStyle}"/>
+            <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
         </ScrollView>
         <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='7';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource SemiTransparentRedOrangeGradientDescriptor}"/>
         <ContentView mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=AnnoyanceToVisibility, ConverterParameter='6';" Style="{StaticResource VeilContentViewStyle}" fx:GradientEffect.GradientDescriptor="{StaticResource OrangeYellowGradientDescriptor}"/>

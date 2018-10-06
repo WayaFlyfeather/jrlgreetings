@@ -6,9 +6,12 @@
                          xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
                          xmlns:local="clr-namespace:jrlgreetings.FormsUI"
                          xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"
+                         xmlns:dconv="clr-namespace:jrlgreetings.FormsUI.FormsDependentConverters"
                          x:Class="jrlgreetings.FormsUI.Application">
     <mvvmx:MvxFormsApplication.Resources>
         <ResourceDictionary>
+            <dconv:TempleCompletionToPageStyleConverter x:Key="TempleCompletionToPageStyle" />
+            <dconv:TempleCompletionToContentLabelStyleConverter x:Key="TempleCompletionToContentLabelStyle" />
             <local:GradientDescriptor x:Key="TLBRRedGreenGradientDescriptor" Direction="TopLeft_BottomRight" StartColor="Red" EndColor="Green" />
             <local:GradientDescriptor x:Key="LRRedBlueGradientDescriptor" Direction="LeftRight" StartColor="Red" EndColor="Blue" />
             <local:GradientDescriptor x:Key="TBRedYellowGradientDescriptor" Direction="TopBottom" StartColor="Red" EndColor="Yellow" />

@@ -17,6 +17,5 @@ namespace jrlgreetings.Core.Services
         IEnumerable<bool> RoomCompletionInfo { get; }
 
         IMvxViewModel GetViewModelForRoomNo(int roomNo);
-        void SwitchRooms();
     }
 }

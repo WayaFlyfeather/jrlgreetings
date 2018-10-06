@@ -5,7 +5,7 @@
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
                     xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"
-                    Style="{StaticResource RoomPageStyle}"
+                    Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.FormsUI.Pages.WestPage">
     <Grid Margin="20">
@@ -15,6 +15,6 @@
             <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='2'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='2'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='2';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
             <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='3'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='3'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='3';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
         </Grid>
-        <Label mvx:Bi.nd="Text RoomContentText; IsVisible AnnoyanceFactor, Converter=IfZero" Style="{StaticResource RoomContentLabelStyle}" />
+        <Label mvx:Bi.nd="Text RoomContentText; IsVisible AnnoyanceFactor, Converter=IfZero" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}" />
     </Grid>
 </mvvmx:MvxContentPage>

@@ -4,8 +4,8 @@
                     xmlns:forms="using:Xamarin.Forms"
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"        
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
-                    xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"                    
-                    Style="{StaticResource RoomPageStyle}"
+                    xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"
+                    Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.FormsUI.Pages.SouthWestPage">
     <ScrollView VerticalOptions="Fill">

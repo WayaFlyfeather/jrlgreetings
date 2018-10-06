@@ -36,14 +36,15 @@ namespace jrlgreetings.Core.ViewModels
                     if (value == 0.0 && thisRoom.Completed==false)
                     {
                         thisRoom.Completed = true;
+
                         Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayClick();
                         RaisePropertyChanged(nameof(Completed));
                         RaisePropertyChanged(nameof(TotalUnCompleted));
-                        RaisePropertyChanged(nameof(Title));                            
+                        RaisePropertyChanged(nameof(Title));
                         if (IsTempleCompleted)
                         {
-                            roomDataService.SwitchRooms();
-                            Task dummy=goToRoomNoAsync(roomNo);
+                            RaisePropertyChanged(nameof(IsTempleCompleted));
+                            navigationService.Navigate(this); // This is hacky
                         }
                     }
                     OnAnnoyanceFactorChanged();

@@ -5,12 +5,12 @@
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"        
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
                     xmlns:fx="clr-namespace:jrlgreetings.Core.Effects"                    
-                    Style="{StaticResource RoomPageStyle}"
+                    Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                x:Class="jrlgreetings.FormsUI.Pages.NorthEastPage">
     <StackLayout Orientation="Vertical">
         <ScrollView>
-            <Label mvx:Bi.nd="Text RoomContentText" Style="{StaticResource RoomContentLabelStyle}"/>
+            <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
         </ScrollView>
     </StackLayout>
  </mvvmx:MvxContentPage>

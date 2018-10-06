@@ -15,7 +15,7 @@ namespace jrlgreetings.Core.Services
     {
         protected readonly Dictionary<int, Room> rooms = new Dictionary<int, Room>();
         protected readonly IMvxViewModel[] ViewModels = new IMvxViewModel[10];
-
+        protected readonly List<IMvxViewModel> Flashbacks = new List<IMvxViewModel>();
         public abstract Task InitAsync();
 
         protected void setViewModels()
@@ -136,20 +136,6 @@ namespace jrlgreetings.Core.Services
         public int Completed => rooms.Values.Where(r => r.Completed == true).Count();
         public int UnCompleted => rooms.Values.Where(r => r.Completed == false).Count();
         public IMvxViewModel GetViewModelForRoomNo(int roomNo) => ViewModels[roomNo];
-        public void SwitchRooms()
-        {
-            //Application.Current.Resources["RoomContentLabelStyle"] = Application.Current.Resources["ColorfulRoomContentLabelStyle"];
-            //Application.Current.Resources["RoomPageStyle"] = Application.Current.Resources["AllCompleteRoomPageStyle"];
-            //setViewModels();
-
-            foreach (IMvxViewModel viewModel in ViewModels)
-            {
-                BaseViewModel roomViewModel = viewModel as BaseViewModel;
-                if (!(roomViewModel is null))
-                    roomViewModel.NotifyTempleIsCompleted();
-            }
-        }
-
         public IEnumerable<bool> RoomCompletionInfo => rooms.Values.OrderBy(r => r.RoomNo).Select(r => r.Completed);
     }
 }

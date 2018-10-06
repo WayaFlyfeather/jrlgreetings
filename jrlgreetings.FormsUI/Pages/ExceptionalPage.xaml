@@ -5,7 +5,7 @@
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"        
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
                     xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"                    
-                    Style="{StaticResource RoomPageStyle}"
+                    Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.FormsUI.Pages.ExceptionalPage">
     <Grid>
@@ -35,7 +35,7 @@
             <Button Grid.Row="2" Grid.Column="2" Text="Room 9" mvx:Bi.nd="Command GoToRoom_Command; BackgroundColor RoomCompletionList[8], Converter=CompletionToButtonBackgroundColor;" CommandParameter="8" fx:TypefaceEffect.TypefaceName="Immortal" />
         </Grid>
         <ScrollView Grid.Row="1">
-            <Label mvx:Bi.nd="Text RoomContentText" Style="{StaticResource RoomContentLabelStyle}"/>
+            <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
         </ScrollView>
     </Grid>
 </mvvmx:MvxContentPage>
