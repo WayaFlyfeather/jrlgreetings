@@ -40,7 +40,7 @@
                         </ScrollView>
                     </Frame>
                     <ContentPresenter Grid.Column="1" Grid.Row="2" />
-                    <Slider Grid.Row="3" Grid.Column="1" Maximum="100" Minimum="0" mvx:Bi.nd="Value AnnoyanceFactor, Mode=TwoWay" Margin="40,0" />
+                    <Slider Grid.Row="3" Grid.Column="1" mvx:Bi.nd="Value AnnoyanceFactor, Mode=TwoWay" Style="{StaticResource AnnoyanceSliderStyle}" />
                     <Button Grid.Row="4" Grid.Column="1" Text="S" HeightRequest="50" mvx:Bi.nd="Command GoSouth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill"/>
                     <Grid mvx:Bi.nd="IsVisible Completed" InputTransparent="True" VerticalOptions="Fill" HorizontalOptions="Fill" Grid.RowSpan="5" Grid.ColumnSpan="3" BackgroundColor="Aquamarine" Opacity="0.15" />
                 </Grid>
@@ -69,7 +69,7 @@
                         </ScrollView>
                     </Frame>
                     <ContentPresenter Grid.Column="1" Grid.Row="2" />
-                    <Slider Grid.Row="3" Grid.Column="1" Maximum="100" Minimum="0" mvx:Bi.nd="Value AnnoyanceFactor, Mode=TwoWay" Margin="40,0" />
+                    <Slider Grid.Row="3" mvx:Bi.nd="Value AnnoyanceFactor, Mode=TwoWay" Style="{StaticResource AnnoyanceSliderStyle}" />
                     <Button Grid.Row="4" Grid.Column="1" Text="S" HeightRequest="50" mvx:Bi.nd="Command GoSouth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill"  fx:GradientEffect.GradientDescriptor="{StaticResource LRYellowGreenGradientDescriptor}" />
                 </Grid>
             </ControlTemplate>
@@ -91,6 +91,13 @@
                 <Setter Property="fx:TypefaceEffect.TypefaceName" Value="MonospaceTypewriter" />
             </Style>
 
+            <Style x:Key="AnnoyanceSliderStyle" TargetType="Slider">
+                <Setter Property="Margin" Value="40,0" />
+                <Setter Property="Maximum" Value="100" />
+                <Setter Property="Minimum" Value="0" />
+                <Setter Property="MaximumTrackColor" Value="DarkGray" />
+                <Setter Property="MinimumTrackColor" Value="Black" />
+            </Style>
         </ResourceDictionary>
     </mvvmx:MvxFormsApplication.Resources>
 </mvvmx:MvxFormsApplication>
