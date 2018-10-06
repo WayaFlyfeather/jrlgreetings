@@ -22,11 +22,11 @@ namespace jrlgreetings.Core.Converters
 
             switch (direction)
             {
-                case 1: return offset;
-                case 2: return offset;
-                case 3: return -offset;
+                case 1: return -offset;
+                case 2: return -offset;
+                case 3: return +offset;
                 case 0:
-                default: return -offset;
+                default: return +offset;
             }
         }
     }
