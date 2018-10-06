@@ -7,9 +7,7 @@
                     Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.FormsUI.Pages.NorthWestPage">
-    <StackLayout Orientation="Vertical" mvx:Bi.nd="Opacity AnnoyanceFactor, Converter=AnnoyanceToTransparency">
-        <ScrollView>
-            <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
-        </ScrollView>
-    </StackLayout>
+    <ScrollView Opacity="{Binding AnnoyanceFactor, Converter={StaticResource ReversePercentToOpacity}}">
+        <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
+    </ScrollView>
 </mvvmx:MvxContentPage>
