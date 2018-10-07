@@ -40,7 +40,7 @@ namespace jrlgreetings.Core.Services
                 Description = "The world is a drab and colorless place. In a quest for colors you have come to this Temple of Colors, and entered it to the North West. But even here all seems grey.\n\n" +
                 "This room is boring, but for what might be an inscription.\n\n" +
                 "There is a lever at the bottom of the wall.",
-                ContentText = "Hi there!\n\n" +
+                ContentText = "Hello there!\n\n" +
                 "Please allow me to introduce myself, my name is Jon Robinson Levy.\n\n" +
                 "This app is a small presentation of me, and hopefully shows a few skills, while being entertaining and untraditional. It is not supposed to be beautiful - you hopefully have designers for that.\n\n" +
                 "You will learn more about me & the app in the other rooms — if you overcome the challenges. (It shouldn't be that difficult, though.)",
