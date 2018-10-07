@@ -21,7 +21,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Frame Grid.Row="0" BorderColor="Black">
+        <Frame Grid.Row="0" BorderColor="Black" BackgroundColor="Transparent">
             <StackLayout Orientation="Horizontal">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <Label mvx:Bi.nd="Text Operand1" FontSize="Medium" HorizontalOptions="Center" Margin="0"/>
