@@ -42,7 +42,22 @@
             <Button Grid.Row="2" Grid.Column="2" Text="Room 9" mvx:Bi.nd="Command GoToRoom_Command; BackgroundColor RoomCompletionList[8], Converter=CompletionToButtonBackgroundColor;" CommandParameter="8" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
         </Grid>
         <ScrollView Grid.Row="1">
-            <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
+            <StackLayout>
+                <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
+                <Label Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="See the source for the app in " />
+                            <Span Text="this GitHub repo" TextColor="Blue">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="RepoLink_TapGestureRecognizer_Tapped" />
+                                </Span.GestureRecognizers>        
+                            </Span>
+                            <Span Text="." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label> 
+            </StackLayout>
         </ScrollView>
     </Grid>
 </mvvmx:MvxContentPage>

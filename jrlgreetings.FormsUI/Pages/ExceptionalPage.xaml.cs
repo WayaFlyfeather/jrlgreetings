@@ -19,5 +19,10 @@ namespace jrlgreetings.FormsUI.Pages
 		{
 			InitializeComponent ();
 		}
+
+        private void RepoLink_TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://github.com/WayaFlyfeather/jrlgreetings"));
+        }
     }
 }
