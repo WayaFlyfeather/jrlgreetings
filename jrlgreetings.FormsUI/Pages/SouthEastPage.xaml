@@ -8,9 +8,7 @@
                     Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.FormsUI.Pages.SouthEastPage">
-    <StackLayout Orientation="Vertical">
-        <ScrollView>
-            <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
-        </ScrollView>
-    </StackLayout>
+    <ScrollView>
+        <Label mvx:Bi.nd="Text RoomContentText" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}"/>
+    </ScrollView>
 </mvvmx:MvxContentPage>
