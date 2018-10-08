@@ -64,11 +64,18 @@ namespace jrlgreetings.Droid.Effects
         {
             if (prevTypeface!=null)
             {
-                switch (Control)
+                try
                 {
-                    case TextView lbl:
-                        lbl.Typeface = prevTypeface;
-                        break;
+                    switch (Control)
+                    {
+                        case TextView lbl:
+                            lbl.Typeface = prevTypeface;
+                            break;
+                    }
+                }
+                catch (ObjectDisposedException)
+                {
+                    //do nothing, ok
                 }
                 prevTypeface = null;
             }

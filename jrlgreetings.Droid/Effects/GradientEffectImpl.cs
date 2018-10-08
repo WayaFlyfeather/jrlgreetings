@@ -59,10 +59,17 @@ namespace jrlgreetings.Droid.Effects
 
         protected override void OnDetached()
         {
-            if (Control == null)
-                Container.Background = prevBackground;
-            else
-                Control.Background = prevBackground;
+            try
+            {
+                if (Control == null)
+                    Container.Background = prevBackground;
+                else
+                    Control.Background = prevBackground;
+            }
+            catch (ObjectDisposedException)
+            {
+                //do nothing, ok
+            }
 
             prevBackground = null;
         }
