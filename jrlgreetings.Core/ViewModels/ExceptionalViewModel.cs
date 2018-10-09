@@ -18,7 +18,8 @@ namespace jrlgreetings.Core.ViewModels
 
         }
 
-        private List<bool> roomCompletionList = new List<bool>();
+        private List<bool> roomCompletionList = Enumerable.Repeat<bool>(false, 10).ToList();
+
         public List<bool> RoomCompletionList
         {
             get => roomCompletionList;
