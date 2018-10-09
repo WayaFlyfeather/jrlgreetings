@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace jrlgreetings.Core.Pages
+namespace jrlgreetings.Core.Converters
 {
     public class MvxStringToBrokenStringConverter : MvxValueConverter<string, string>
     {
