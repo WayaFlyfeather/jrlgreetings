@@ -13,28 +13,28 @@
         <ScrollViewer >
             <Grid Margin="20">
                 <Grid Visibility="{Binding AnnoyanceFactor, Converter={StaticResource NonZeroToVisibility}}">
-                    <Label Content="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='0'}">
-                        <Label.RenderTransform>
+                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='0'}" Style="{StaticResource RoomContentTextStyle}">
+                        <TextBlock.RenderTransform>
                             <TranslateTransform X="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationX}, ConverterParameter='0'}" Y="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationY}, ConverterParameter='0'}" />
-                        </Label.RenderTransform>
-                    </Label>
-                    <Label Content="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='1'}">
-                        <Label.RenderTransform>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='1'}" Style="{StaticResource RoomContentTextStyle}">
+                        <TextBlock.RenderTransform>
                             <TranslateTransform X="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationX}, ConverterParameter='1'}" Y="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationY}, ConverterParameter='1'}" />
-                        </Label.RenderTransform>
-                    </Label>
-                    <Label Content="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='2'}">
-                        <Label.RenderTransform>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='2'}" Style="{StaticResource RoomContentTextStyle}">
+                        <TextBlock.RenderTransform>
                             <TranslateTransform X="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationX}, ConverterParameter='2'}" Y="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationY}, ConverterParameter='2'}" />
-                        </Label.RenderTransform>
-                    </Label>
-                    <Label Content="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='3'}">
-                        <Label.RenderTransform>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='3'}" Style="{StaticResource RoomContentTextStyle}">
+                        <TextBlock.RenderTransform>
                             <TranslateTransform X="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationX}, ConverterParameter='3'}" Y="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationY}, ConverterParameter='3'}" />
-                        </Label.RenderTransform>
-                    </Label>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
                 </Grid>
-                <Label Content="{Binding RoomContentText}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource ZeroToVisibility}}"/>
+                <TextBlock Text="{Binding RoomContentText}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource ZeroToVisibility}}" Style="{StaticResource RoomContentTextStyle}"/>
             </Grid>
         </ScrollViewer>
     </local:BaseRoomControl>

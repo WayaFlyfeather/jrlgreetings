@@ -22,6 +22,14 @@
                 <Setter Property="Maximum" Value="100" />
                 <Setter Property="Minimum" Value="0" />
             </Style>
+            <Style x:Key="RoomContentTextStyle" TargetType="TextBlock">
+                <Setter Property="TextElement.FontFamily" Value="Resources/Fonts/#MonospaceTypewriter"/>
+                <Setter Property="TextWrapping" Value="Wrap" />
+            </Style>
+            <Style x:Key="RoomDescriptionStyle" TargetType="TextBlock">
+                <Setter Property="TextElement.FontFamily" Value="Resources/Fonts/#Immortal"/>
+                <Setter Property="TextWrapping" Value="Wrap" />
+            </Style>
         </ResourceDictionary>
     </views:MvxApplication.Resources>
 </views:MvxApplication>

@@ -11,7 +11,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <local:BaseRoomControl>
         <ScrollViewer >
-            <Label Content="{Binding RoomContentText}" />
+            <TextBlock Text="{Binding RoomContentText}" Style="{StaticResource RoomContentTextStyle}"/>
         </ScrollViewer>
     </local:BaseRoomControl>
 </views:MvxWpfView>
