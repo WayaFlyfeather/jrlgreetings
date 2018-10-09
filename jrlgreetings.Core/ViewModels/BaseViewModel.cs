@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Xamarin.Forms;
 
 namespace jrlgreetings.Core.ViewModels
 {
@@ -17,7 +16,6 @@ namespace jrlgreetings.Core.ViewModels
     {
         protected readonly IMvxNavigationService navigationService;
         protected readonly IRoomDataService roomDataService;
-//        readonly ISoundPlayerService soundPlayerService;
 
         protected readonly int roomNo;
         public int RoomNo
