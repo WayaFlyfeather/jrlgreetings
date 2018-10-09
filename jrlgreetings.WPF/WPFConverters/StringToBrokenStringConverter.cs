@@ -1,4 +1,4 @@
-﻿using jrlgreetings.Core.Pages;
+﻿using jrlgreetings.Core.Converters;
 using MvvmCross.Platforms.Wpf.Converters;
 using System;
 using System.Collections.Generic;
