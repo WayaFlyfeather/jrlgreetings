@@ -29,6 +29,7 @@
             </ScrollViewer>
         </Border>
         <ContentPresenter Grid.Column="1" Grid.Row="2" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
+        <Slider Grid.Row="3" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
         <Button Grid.Row="4" Grid.Column="1" Content="S" Style="{StaticResource DirectionButtonStyle}" />
     </Grid>
 </UserControl>
