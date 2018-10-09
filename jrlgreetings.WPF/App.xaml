@@ -8,6 +8,8 @@
     <views:MvxApplication.Resources>
         <ResourceDictionary>
             <conv:PercentToOpacityConverter Reversed="True" x:Key="ReversePercentToOpacity" />
+            <conv:ZeroToVisibilityConverter x:Key="ZeroToVisibility" />
+            <conv:ZeroToVisibilityConverter Reversed="True" x:Key="NonZeroToVisibility" />
             <Style x:Key="DirectionButtonStyle" TargetType="Button">
 
             </Style>
