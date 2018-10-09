@@ -102,6 +102,8 @@
     <Compile Include="Views\WestView.xaml.cs">
       <DependentUpon>WestView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WPFConverters\AnnoyanceToTranslationXConverter.cs" />
+    <Compile Include="WPFConverters\AnnoyanceToTranslationYConverter.cs" />
     <Compile Include="WPFConverters\PercentToOpacityConverter.cs" />
     <Compile Include="WPFConverters\ZeroToVisibilityConverter.cs" />
     <Page Include="MainWindow.xaml">
