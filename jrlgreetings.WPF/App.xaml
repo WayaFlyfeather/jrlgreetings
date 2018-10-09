@@ -12,6 +12,7 @@
             <conv:ZeroToVisibilityConverter Reversed="True" x:Key="NonZeroToVisibility" />
             <conv:AnnoyanceToTranslationXConverter x:Key="AnnoyanceToTranslationX" />
             <conv:AnnoyanceToTranslationYConverter x:Key="AnnoyanceToTranslationY" />
+            <conv:StringToBrokenStringConverter x:Key="StringToBrokenString" />
             <Style x:Key="DirectionButtonStyle" TargetType="Button">
 
             </Style>
