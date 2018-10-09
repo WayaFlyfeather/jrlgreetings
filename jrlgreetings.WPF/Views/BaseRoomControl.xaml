@@ -20,9 +20,9 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="0" Grid.Column="1" Content="N" Style="{StaticResource DirectionButtonStyle}" />
-        <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Content="W" Style="{StaticResource DirectionButtonStyle}" />
-        <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Content="E" Style="{StaticResource DirectionButtonStyle}" />
+        <Button Grid.Row="0" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource DirectionButtonStyle}" />
+        <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource DirectionButtonStyle}" />
+        <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource DirectionButtonStyle}" />
         <Border BorderBrush="Gray" BorderThickness="1" Padding="2"  Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Margin="20, 0, 20, 20">
             <ScrollViewer>
                 <Label Content="{Binding RoomDescription}"/>
@@ -30,6 +30,6 @@
         </Border>
         <ContentPresenter Grid.Column="1" Grid.Row="2" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
         <Slider Grid.Row="3" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
-        <Button Grid.Row="4" Grid.Column="1" Content="S" Style="{StaticResource DirectionButtonStyle}" />
+        <Button Grid.Row="4" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource DirectionButtonStyle}" />
     </Grid>
 </UserControl>
