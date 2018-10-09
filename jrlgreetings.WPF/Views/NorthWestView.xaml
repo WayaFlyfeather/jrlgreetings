@@ -9,7 +9,7 @@
              Style="{StaticResource RoomViewStyle}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <local:BaseRoomControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <local:BaseRoomControl>
         <ScrollViewer Opacity="{Binding AnnoyanceFactor, Converter={StaticResource ReversePercentToOpacity}}">
             <Label Content="{Binding RoomContentText}" />
         </ScrollViewer>
