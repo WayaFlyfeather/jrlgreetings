@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmCross.Platforms.Wpf.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace jrlgreetings.WPF.Views
     /// <summary>
     /// Interaction logic for NorthView.xaml
     /// </summary>
-    public partial class NorthView : UserControl
+    public partial class NorthView : MvxWpfView
     {
         public NorthView()
         {
