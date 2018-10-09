@@ -11,6 +11,9 @@
     <mvvmx:MvxFormsApplication.Resources>
         <ResourceDictionary>
             <dconv:PercentToOpacityConverter Reversed="True" x:Key="ReversePercentToOpacity" />
+            <dconv:AnnoyanceToBackgroundColorConverter x:Key="AnnoyanceToBackgroundColor" />
+            <dconv:AnnoyanceToForegroundColorConverter x:Key="AnnoyanceToForegroundColor" />
+            <dconv:CompletionToButtonBackgroundColorConverter x:Key="CompletionToButtonBackgroundColor" />
             <dconv:TempleCompletionToPageStyleConverter x:Key="TempleCompletionToPageStyle" />
             <dconv:TempleCompletionToContentLabelStyleConverter x:Key="TempleCompletionToContentLabelStyle" />
             <local:GradientDescriptor x:Key="TLBRRedGreenGradientDescriptor" Direction="TopLeft_BottomRight" StartColor="Red" EndColor="Green" />

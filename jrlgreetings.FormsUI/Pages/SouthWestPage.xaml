@@ -10,7 +10,7 @@
                     x:Class="jrlgreetings.FormsUI.Pages.SouthWestPage">
     <ScrollView VerticalOptions="Fill">
         <StackLayout VerticalOptions="Fill">
-            <Label mvx:Bi.nd="Text RoomContentText; TextColor AnnoyanceFactor, Converter=AnnoyanceToForegroundColor; BackgroundColor AnnoyanceFactor, Converter=AnnoyanceToBackgroundColor" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" VerticalOptions="FillAndExpand"/>
+            <Label mvx:Bi.nd="Text RoomContentText" TextColor="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToForegroundColor}}" BackgroundColor="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToBackgroundColor}}"  fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" VerticalOptions="FillAndExpand"/>
             <Image x:Name="certImage" mvx:Bi.nd="IsVisible Completed" HorizontalOptions="Center">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="certImage_Tapped"/>
