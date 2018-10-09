@@ -5,6 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     StartupUri="MainWindow.xaml">
     <views:MvxApplication.Resources>
-        
+        <ResourceDictionary>
+            <Style x:Key="DirectionButtonStyle" TargetType="Button">
+
+            </Style>
+            <Style x:Key="RoomViewStyle" TargetType="views:MvxWpfView">
+            </Style>
+        </ResourceDictionary>
     </views:MvxApplication.Resources>
 </views:MvxApplication>
