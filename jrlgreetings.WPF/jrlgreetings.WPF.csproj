@@ -72,8 +72,35 @@
     <Compile Include="Views\BaseRoomControl.xaml.cs">
       <DependentUpon>BaseRoomControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CentralView.xaml.cs">
+      <DependentUpon>CentralView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EastView.xaml.cs">
+      <DependentUpon>EastView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExceptionalView.xaml.cs">
+      <DependentUpon>ExceptionalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NorthEastView.xaml.cs">
+      <DependentUpon>NorthEastView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NorthView.xaml.cs">
+      <DependentUpon>NorthView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NorthWestView.xaml.cs">
       <DependentUpon>NorthWestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SouthEastView.xaml.cs">
+      <DependentUpon>SouthEastView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SouthView.xaml.cs">
+      <DependentUpon>SouthView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SouthWestView.xaml.cs">
+      <DependentUpon>SouthWestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WestView.xaml.cs">
+      <DependentUpon>WestView.xaml</DependentUpon>
     </Compile>
     <Compile Include="WPFConverters\PercentToOpacityConverter.cs" />
     <Page Include="MainWindow.xaml">
@@ -92,7 +119,43 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CentralView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EastView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExceptionalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NorthEastView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NorthView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\NorthWestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SouthEastView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SouthView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SouthWestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
