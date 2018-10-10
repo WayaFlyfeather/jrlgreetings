@@ -102,6 +102,8 @@
     <Compile Include="Views\WestView.xaml.cs">
       <DependentUpon>WestView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WPFConverters\AnnoyanceToBackgroundBrushConverter.cs" />
+    <Compile Include="WPFConverters\AnnoyanceToForegroundBrushConverter.cs" />
     <Compile Include="WPFConverters\AnnoyanceToTranslationXConverter.cs" />
     <Compile Include="WPFConverters\AnnoyanceToTranslationYConverter.cs" />
     <Compile Include="WPFConverters\PercentToOpacityConverter.cs" />
