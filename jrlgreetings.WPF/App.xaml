@@ -14,6 +14,7 @@
             <conv:AnnoyanceToTranslationYConverter x:Key="AnnoyanceToTranslationY" />
             <conv:AnnoyanceToForegroundBrushConverter x:Key="AnnoyanceToForegroundBrush" />
             <conv:AnnoyanceToBackgroundBrushConverter x:Key="AnnoyanceToBackgroundBrush" />
+            <conv:AnnoyanceToVisibilityConverter x:Key="AnnoyanceToVisibility" />
             <conv:StringToBrokenStringConverter x:Key="StringToBrokenString" />
             <Style x:Key="DirectionButtonStyle" TargetType="Button">
 
