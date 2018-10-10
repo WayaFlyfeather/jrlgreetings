@@ -109,6 +109,7 @@
     <Compile Include="WPFConverters\AnnoyanceToVisibilityConverter.cs" />
     <Compile Include="WPFConverters\PercentToOpacityConverter.cs" />
     <Compile Include="WPFConverters\StringToBrokenStringConverter.cs" />
+    <Compile Include="WPFConverters\TrueToVisibilityConverter.cs" />
     <Compile Include="WPFConverters\ZeroToVisibilityConverter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
