@@ -31,5 +31,6 @@
         <ContentPresenter Grid.Column="1" Grid.Row="2" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
         <Slider Grid.Row="3" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
         <Button Grid.Row="4" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource DirectionButtonStyle}" />
+        <UserControl Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3" Background="Aquamarine" Opacity="0.15" Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}" IsHitTestVisible="False" />
     </Grid>
 </UserControl>
