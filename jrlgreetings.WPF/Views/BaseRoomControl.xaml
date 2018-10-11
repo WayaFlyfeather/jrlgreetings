@@ -30,7 +30,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Title}" />
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Title}" Style="{StaticResource TitleStyle}"/>
             <Button Grid.Row="1" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource DirectionButtonStyle}" />
             <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource DirectionButtonStyle}" />
             <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource DirectionButtonStyle}" />
@@ -58,7 +58,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Title}" />
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Title}" Style="{StaticResource CompletedTempleTitleStyle}"/>
             <Button Grid.Row="1" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource DirectionButtonStyle}" />
             <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource DirectionButtonStyle}" />
             <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource DirectionButtonStyle}" />
