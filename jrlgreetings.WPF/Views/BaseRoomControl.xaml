@@ -64,7 +64,7 @@
             <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource DirectionButtonStyle}" />
             <Border BorderBrush="Gray" BorderThickness="1" Padding="2"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Margin="20, 0, 20, 20">
                 <ScrollViewer>
-                    <TextBlock Text="{Binding RoomDescription}" Style="{StaticResource RoomDescriptionStyle}"/>
+                    <TextBlock Text="{Binding RoomDescription}" Style="{StaticResource TempleCompletedRoomDescriptionStyle}"/>
                 </ScrollViewer>
             </Border>
             <ContentPresenter Grid.Column="1" Grid.Row="3" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />

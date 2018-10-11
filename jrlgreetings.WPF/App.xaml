@@ -35,6 +35,9 @@
                 <Setter Property="TextElement.FontFamily" Value="Resources/Fonts/#Immortal"/>
                 <Setter Property="TextWrapping" Value="Wrap" />
             </Style>
+            <Style x:Key="TempleCompletedRoomDescriptionStyle" TargetType="TextBlock" BasedOn="{StaticResource RoomDescriptionStyle}">
+                <Setter Property="Foreground" Value="Yellow"/>
+            </Style>
         </ResourceDictionary>
     </views:MvxApplication.Resources>
 </views:MvxApplication>
