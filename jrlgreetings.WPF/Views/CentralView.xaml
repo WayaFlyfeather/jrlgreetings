@@ -10,8 +10,57 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <local:BaseRoomControl>
-        <ScrollViewer >
-            <TextBlock Text="{Binding RoomContentText}" Style="{StaticResource RoomContentTextStyle}"/>
-        </ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Width="100">
+                        <TextBlock Text="{Binding Operand1}" HorizontalAlignment="Center" />
+                        <Slider Maximum="{Binding OperandMax}" Minimum="{Binding OperandMin}" Value="{Binding Operand1, Mode=TwoWay}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="{Binding OperandMin}" />
+                            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding OperandMax}" />
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Width="50">
+                        <ComboBox ItemsSource="{Binding Operators}" SelectedIndex="{Binding SelectedOperatorIndex, Mode=TwoWay}" HorizontalAlignment="Center" >
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding}" />
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <TextBlock HorizontalAlignment="Center">
+                            <TextBlock.Inlines>
+                                <Run Text="=" />
+                                <Run Text="{Binding Result, Mode=OneWay}" />
+                            </TextBlock.Inlines>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Width="100">
+                        <TextBlock Text="{Binding Operand2}" HorizontalAlignment="Center" />
+                        <Slider Maximum="{Binding OperandMax}" Minimum="{Binding OperandMin}" Value="{Binding Operand2, Mode=TwoWay}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="{Binding OperandMin}" />
+                            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding OperandMax}" />
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <ScrollViewer Grid.Row="1">
+                <TextBlock Text="{Binding RoomContentText}" Style="{StaticResource RoomContentTextStyle}"/>
+            </ScrollViewer>
+        </Grid>
     </local:BaseRoomControl>
 </views:MvxWpfView>
