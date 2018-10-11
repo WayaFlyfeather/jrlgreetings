@@ -47,6 +47,12 @@
             <Style x:Key="CompletedTempleTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource TitleStyle}">
                 <Setter Property="Foreground" Value="Yellow" />
             </Style>
+
+            <Style x:Key="TeleportButtonStyle" TargetType="Button">
+                <Setter Property="TextElement.FontFamily" Value="Resources/Fonts/#Immortal"/>
+            </Style>
+            <Style x:Key="CompletedRoomTeleportButtonStyle" TargetType="Button" BasedOn="{StaticResource TeleportButtonStyle}">
+            </Style>
         </ResourceDictionary>
     </views:MvxApplication.Resources>
 </views:MvxApplication>
