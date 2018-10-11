@@ -11,6 +11,7 @@
             <conv:ZeroToVisibilityConverter x:Key="ZeroToVisibility" />
             <conv:ZeroToVisibilityConverter Reversed="True" x:Key="NonZeroToVisibility" />
             <conv:TrueToVisibilityConverter x:Key="TrueToVisibility" />
+            <conv:TrueToVisibilityConverter Reversed="True" x:Key="NotTrueToVisibility" />
             <conv:AnnoyanceToTranslationXConverter x:Key="AnnoyanceToTranslationX" />
             <conv:AnnoyanceToTranslationYConverter x:Key="AnnoyanceToTranslationY" />
             <conv:AnnoyanceToForegroundBrushConverter x:Key="AnnoyanceToForegroundBrush" />
