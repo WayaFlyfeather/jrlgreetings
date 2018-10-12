@@ -18,9 +18,8 @@
             <conv:AnnoyanceToBackgroundBrushConverter x:Key="AnnoyanceToBackgroundBrush" />
             <conv:AnnoyanceToVisibilityConverter x:Key="AnnoyanceToVisibility" />
             <conv:StringToBrokenStringConverter x:Key="StringToBrokenString" />
-            <Style x:Key="DirectionButtonStyle" TargetType="Button">
+            
 
-            </Style>
             <Style x:Key="RoomViewStyle" TargetType="views:MvxWpfView">
             </Style>
             <Style x:Key="AnnoyanceSliderStyle" TargetType="Slider">

@@ -13,6 +13,54 @@
                 <GradientStop Color="Red" Offset="0.0" />
                 <GradientStop Color="Green" Offset="1.0" />
             </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="LRRedBlueGradientBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+                <GradientStop Color="Red" Offset="0.0" />
+                <GradientStop Color="Blue" Offset="1.0" />
+            </LinearGradientBrush>
+            <LinearGradientBrush x:Key="LRYellowGreenGradientBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+                <GradientStop Color="Yellow" Offset="0.0" />
+                <GradientStop Color="Green" Offset="1.0" />
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="TBRedYellowGradientBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="Red" Offset="0.0" />
+                <GradientStop Color="Yellow" Offset="1.0" />
+            </LinearGradientBrush>
+            <LinearGradientBrush x:Key="TBBlueGreenGradientBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="Blue" Offset="0.0" />
+                <GradientStop Color="Green" Offset="1.0" />
+            </LinearGradientBrush>
+
+            <Style x:Key="DirectionButtonStyle" TargetType="Button">
+                <Setter Property="FontFamily" Value="Resources/Fonts/#Immortal"/>
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="Padding" Value="2" />
+            </Style>
+
+            <Style x:Key="NorthSouthDirectionStyle" TargetType="Button" BasedOn="{StaticResource DirectionButtonStyle}">
+                <Setter Property="Height" Value="20" />
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+            </Style>
+
+            <Style x:Key="EastWestDirectionStyle" TargetType="Button" BasedOn="{StaticResource DirectionButtonStyle}">
+                <Setter Property="Width" Value="20" />
+                <Setter Property="VerticalAlignment" Value="Stretch" />
+            </Style>
+
+            <Style x:Key="CompletedTempleNorthDirectionStyle" TargetType="Button" BasedOn="{StaticResource NorthSouthDirectionStyle}">
+                <Setter Property="Background" Value="{StaticResource LRRedBlueGradientBrush}" />
+            </Style>
+            <Style x:Key="CompletedTempleSouthDirectionStyle" TargetType="Button" BasedOn="{StaticResource NorthSouthDirectionStyle}">
+                <Setter Property="Background" Value="{StaticResource LRYellowGreenGradientBrush}" />
+            </Style>
+            <Style x:Key="CompletedTempleWestDirectionStyle" TargetType="Button" BasedOn="{StaticResource EastWestDirectionStyle}">
+                <Setter Property="Background" Value="{StaticResource TBRedYellowGradientBrush}" />
+            </Style>
+            <Style x:Key="CompletedTempleEastDirectionStyle" TargetType="Button" BasedOn="{StaticResource EastWestDirectionStyle}">
+                <Setter Property="Background" Value="{StaticResource TBBlueGreenGradientBrush}" />
+            </Style>
+
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -31,9 +79,9 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Title}" Style="{StaticResource TitleStyle}"/>
-            <Button Grid.Row="1" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource DirectionButtonStyle}" />
-            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource DirectionButtonStyle}" />
-            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource DirectionButtonStyle}" />
+            <Button Grid.Row="1" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource NorthSouthDirectionStyle}" />
+            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource EastWestDirectionStyle}" />
+            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource EastWestDirectionStyle}" />
             <Border BorderBrush="Gray" BorderThickness="1" Padding="2"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Margin="20, 0, 20, 20">
                 <ScrollViewer>
                     <TextBlock Text="{Binding RoomDescription}" Style="{StaticResource RoomDescriptionStyle}"/>
@@ -41,7 +89,7 @@
             </Border>
             <ContentPresenter Grid.Column="1" Grid.Row="3" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
             <Slider Grid.Row="4" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
-            <Button Grid.Row="5" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource DirectionButtonStyle}" />
+            <Button Grid.Row="5" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource NorthSouthDirectionStyle}" />
             <UserControl Grid.Row="1" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3" Background="Aquamarine" Opacity="0.15" Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}" IsHitTestVisible="False" />
         </Grid>
         <Grid Visibility="{Binding IsTempleCompleted, Converter={StaticResource TrueToVisibility}}" Background="{StaticResource TLBRRedGreenGradientBrush}">
@@ -59,9 +107,9 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Title}" Style="{StaticResource CompletedTempleTitleStyle}"/>
-            <Button Grid.Row="1" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource DirectionButtonStyle}" />
-            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource DirectionButtonStyle}" />
-            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource DirectionButtonStyle}" />
+            <Button Grid.Row="1" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource CompletedTempleNorthDirectionStyle}" />
+            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource CompletedTempleWestDirectionStyle}" />
+            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource CompletedTempleEastDirectionStyle}" />
             <Border BorderBrush="Gray" BorderThickness="1" Padding="2"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Margin="20, 0, 20, 20">
                 <ScrollViewer>
                     <TextBlock Text="{Binding RoomDescription}" Style="{StaticResource TempleCompletedRoomDescriptionStyle}"/>
@@ -69,7 +117,7 @@
             </Border>
             <ContentPresenter Grid.Column="1" Grid.Row="3" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
             <Slider Grid.Row="4" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
-            <Button Grid.Row="5" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource DirectionButtonStyle}" />
+            <Button Grid.Row="5" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource CompletedTempleSouthDirectionStyle}" />
         </Grid>
     </Grid>
 </UserControl>
