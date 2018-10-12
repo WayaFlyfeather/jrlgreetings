@@ -110,6 +110,7 @@
     <Compile Include="WPFConverters\CompletionToButtonStyleConverter.cs" />
     <Compile Include="WPFConverters\PercentToOpacityConverter.cs" />
     <Compile Include="WPFConverters\StringToBrokenStringConverter.cs" />
+    <Compile Include="WPFConverters\TempleCompletionToContentTextBlockStyleConverter.cs" />
     <Compile Include="WPFConverters\TrueToVisibilityConverter.cs" />
     <Compile Include="WPFConverters\ZeroToVisibilityConverter.cs" />
     <Page Include="MainWindow.xaml">
