@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Blend for Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jrlgreetingsweb", "jrlgreetingsweb\jrlgreetingsweb.csproj", "{0D849DA0-B401-4C06-8E5D-E3A3F7DA5C0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetingsweb", "jrlgreetingsweb\jrlgreetingsweb.csproj", "{0D849DA0-B401-4C06-8E5D-E3A3F7DA5C0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jrlgreetings.Core", "jrlgreetings.Core\jrlgreetings.Core.csproj", "{061B15B0-3CBF-408D-937B-AFFF772547FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetings.Core", "jrlgreetings.Core\jrlgreetings.Core.csproj", "{061B15B0-3CBF-408D-937B-AFFF772547FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetings.UWP", "jrlgreetings.UWP\jrlgreetings.UWP.csproj", "{2430BF59-BAFC-4841-9C75-C749ED2F6CC3}"
 EndProject
@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetings.Droid", "jrlgr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetings.iOS", "jrlgreetings.iOS\jrlgreetings.iOS.csproj", "{6A8F6E7F-AE57-4CC0-A899-20CBDB3E0C7A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jrlgreetings.FormsUI", "jrlgreetings.FormsUI\jrlgreetings.FormsUI.csproj", "{C06E7207-9C77-485D-A299-67F0BC33240C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetings.FormsUI", "jrlgreetings.FormsUI\jrlgreetings.FormsUI.csproj", "{C06E7207-9C77-485D-A299-67F0BC33240C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 MvvmCross Core", "1 MvvmCross Core", "{1DA01C74-BB7A-4A7B-8A6B-39D62BED1BE4}"
 EndProject

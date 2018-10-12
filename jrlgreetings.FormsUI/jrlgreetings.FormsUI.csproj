@@ -1,14 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-
   <ItemGroup>
     <None Remove="Application.xaml" />
     <None Remove="click.mp3" />
@@ -16,25 +18,21 @@
     <None Remove="thunder.mp3" />
     <None Remove="xamarin_mobile_developer.png" />
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Include="click.mp3" />
     <EmbeddedResource Include="footsteps.mp3" />
     <EmbeddedResource Include="thunder.mp3" />
     <EmbeddedResource Include="xamarin_mobile_developer.png" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.2.0" />
     <PackageReference Include="MvvmCross.Forms" Version="6.2.0" />
     <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\jrlgreetings.Core\jrlgreetings.Core.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Update="Pages\CentralPage.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
@@ -67,5 +65,4 @@
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
-
 </Project>
