@@ -31,8 +31,10 @@
                 <Setter Property="TextElement.FontFamily" Value="Resources/Fonts/#MonospaceTypewriter"/>
                 <Setter Property="TextWrapping" Value="Wrap" />
             </Style>
+            <Color x:Key="TempleCompletedContentTextBackgroundColor">#40D0D0D0</Color>
+            <SolidColorBrush x:Key="TempleCompletedContentTextBackgroundBrush" Color="{StaticResource TempleCompletedContentTextBackgroundColor}" />
             <Style x:Key="TempleCompletedRoomContentTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource RoomContentTextBlockStyle}">
-                <Setter Property="Background" Value="LightGray" />
+                <Setter Property="Background" Value="{StaticResource TempleCompletedContentTextBackgroundBrush}" />
             </Style>
             <Style x:Key="RoomDescriptionStyle" TargetType="TextBlock">
                 <Setter Property="TextElement.FontFamily" Value="Resources/Fonts/#Immortal"/>
