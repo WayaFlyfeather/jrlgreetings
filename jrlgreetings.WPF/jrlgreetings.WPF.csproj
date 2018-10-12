@@ -107,6 +107,7 @@
     <Compile Include="WPFConverters\AnnoyanceToTranslationXConverter.cs" />
     <Compile Include="WPFConverters\AnnoyanceToTranslationYConverter.cs" />
     <Compile Include="WPFConverters\AnnoyanceToVisibilityConverter.cs" />
+    <Compile Include="WPFConverters\CompletionToButtonStyleConverter.cs" />
     <Compile Include="WPFConverters\PercentToOpacityConverter.cs" />
     <Compile Include="WPFConverters\StringToBrokenStringConverter.cs" />
     <Compile Include="WPFConverters\TrueToVisibilityConverter.cs" />
