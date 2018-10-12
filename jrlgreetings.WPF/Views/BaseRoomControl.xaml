@@ -64,6 +64,33 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
+        <Grid Visibility="{Binding IsTempleCompleted, Converter={StaticResource TrueToVisibility}}" Background="{StaticResource TLBRRedGreenGradientBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Title}" Style="{StaticResource CompletedTempleTitleStyle}"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource CompletedTempleNorthDirectionStyle}" />
+            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource CompletedTempleWestDirectionStyle}" />
+            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource CompletedTempleEastDirectionStyle}" />
+            <Border BorderBrush="Gray" BorderThickness="1" Padding="2"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Margin="20, 0, 20, 20">
+                <ScrollViewer>
+                    <TextBlock Text="{Binding RoomDescription}" Style="{StaticResource TempleCompletedRoomDescriptionStyle}"/>
+                </ScrollViewer>
+            </Border>
+            <ContentPresenter Grid.Column="1" Grid.Row="3" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
+            <Slider Grid.Row="4" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
+            <Button Grid.Row="5" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource CompletedTempleSouthDirectionStyle}" />
+        </Grid>
         <Grid Visibility="{Binding IsTempleCompleted, Converter={StaticResource NotTrueToVisibility}}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -91,33 +118,6 @@
             <Slider Grid.Row="4" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
             <Button Grid.Row="5" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource NorthSouthDirectionStyle}" />
             <UserControl Grid.Row="1" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3" Background="Aquamarine" Opacity="0.15" Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}" IsHitTestVisible="False" />
-        </Grid>
-        <Grid Visibility="{Binding IsTempleCompleted, Converter={StaticResource TrueToVisibility}}" Background="{StaticResource TLBRRedGreenGradientBrush}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding Title}" Style="{StaticResource CompletedTempleTitleStyle}"/>
-            <Button Grid.Row="1" Grid.Column="1" Content="N" Command="{Binding GoNorth_Command}" Style="{StaticResource CompletedTempleNorthDirectionStyle}" />
-            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Content="W" Command="{Binding GoWest_Command}" Style="{StaticResource CompletedTempleWestDirectionStyle}" />
-            <Button Grid.Row="2" Grid.RowSpan="3" Grid.Column="2" Content="E" Command="{Binding GoEast_Command}" Style="{StaticResource CompletedTempleEastDirectionStyle}" />
-            <Border BorderBrush="Gray" BorderThickness="1" Padding="2"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Margin="20, 0, 20, 20">
-                <ScrollViewer>
-                    <TextBlock Text="{Binding RoomDescription}" Style="{StaticResource TempleCompletedRoomDescriptionStyle}"/>
-                </ScrollViewer>
-            </Border>
-            <ContentPresenter Grid.Column="1" Grid.Row="3" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
-            <Slider Grid.Row="4" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
-            <Button Grid.Row="5" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource CompletedTempleSouthDirectionStyle}" />
         </Grid>
     </Grid>
 </UserControl>
