@@ -59,7 +59,7 @@
                 </StackPanel>
             </Border>
             <ScrollViewer Grid.Row="1">
-                <TextBlock Text="{Binding RoomContentText}" Style="{StaticResource RoomContentTextStyle}"/>
+                <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
             </ScrollViewer>
         </Grid>
     </local:BaseRoomControl>

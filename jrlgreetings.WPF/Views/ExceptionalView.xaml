@@ -33,7 +33,7 @@
                 <Button Grid.Row="2" Grid.Column="2" Content="Room 9" Command="{Binding GoToRoom_Command}" CommandParameter="8" Style="{Binding RoomCompletionList[8], Converter={StaticResource CompletionToButtonStyle}}" />
             </Grid>
             <ScrollViewer >
-                <TextBlock Text="{Binding RoomContentText}" Style="{StaticResource RoomContentTextStyle}"/>
+                <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
             </ScrollViewer>
         </StackPanel>
     </local:BaseRoomControl>

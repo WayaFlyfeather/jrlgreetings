@@ -44,7 +44,7 @@
     <local:BaseRoomControl>
         <Grid>
             <ScrollViewer >
-                <TextBlock Text="{Binding RoomContentText}" Style="{StaticResource RoomContentTextStyle}"/>
+                <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
             </ScrollViewer>
             <UserControl Background="{StaticResource SemiTransparentRedOrangeGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='7'}" />
             <UserControl Background="{StaticResource OrangeYellowGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='6'}" />
