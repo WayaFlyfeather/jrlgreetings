@@ -46,13 +46,13 @@
             <ScrollViewer >
                 <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
             </ScrollViewer>
-            <UserControl Background="{StaticResource SemiTransparentRedOrangeGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='7'}" />
-            <UserControl Background="{StaticResource OrangeYellowGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='6'}" />
-            <UserControl Background="{StaticResource YellowGreenGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='5'}" />
-            <UserControl Background="{StaticResource GreenTurquoiseGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='4'}" />
-            <UserControl Background="{StaticResource TurquoiseBlueGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='3'}" />
-            <UserControl Background="{StaticResource BluePurpleGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='2'}" />
-            <UserControl Background="{StaticResource PurpleVioletGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='1'}" />
+            <Rectangle Fill="{StaticResource SemiTransparentRedOrangeGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='7'}" />
+            <Rectangle Fill="{StaticResource OrangeYellowGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='6'}" />
+            <Rectangle Fill="{StaticResource YellowGreenGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='5'}" />
+            <Rectangle Fill="{StaticResource GreenTurquoiseGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='4'}" />
+            <Rectangle Fill="{StaticResource TurquoiseBlueGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='3'}" />
+            <Rectangle Fill="{StaticResource BluePurpleGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='2'}" />
+            <Rectangle Fill="{StaticResource PurpleVioletGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='1'}" />
         </Grid>
     </local:BaseRoomControl>
 </views:MvxWpfView>

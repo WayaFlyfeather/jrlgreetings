@@ -95,7 +95,6 @@
                 <Setter Property="Foreground" Value="White" />
                 <Setter Property="Template" Value="{StaticResource CompletedTempleDirectionButtonControlTemplate}" />
             </Style>
-
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -152,7 +151,7 @@
             <ContentPresenter Grid.Column="1" Grid.Row="3" Content="{Binding RoomChallengeContent, ElementName=baseRoomControl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  />
             <Slider Grid.Row="4" Grid.Column="1" Value="{Binding AnnoyanceFactor, Mode=TwoWay}" Style="{StaticResource AnnoyanceSliderStyle}" />
             <Button Grid.Row="5" Grid.Column="1" Content="S" Command="{Binding GoSouth_Command}" Style="{StaticResource NorthSouthDirectionStyle}" />
-            <UserControl Grid.Row="1" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3" Background="Aquamarine" Opacity="0.15" Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}" IsHitTestVisible="False" />
+            <Rectangle Grid.Row="1" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3" Fill="Aquamarine" Opacity="0.15" Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}" IsHitTestVisible="False" />
         </Grid>
     </Grid>
 </UserControl>
