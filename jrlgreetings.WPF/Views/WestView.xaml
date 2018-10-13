@@ -13,28 +13,28 @@
         <ScrollViewer >
             <Grid>
                 <Grid Visibility="{Binding AnnoyanceFactor, Converter={StaticResource NonZeroToVisibility}}">
-                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='0'}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}">
+                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='0'}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}" Margin="20">
                         <TextBlock.RenderTransform>
                             <TranslateTransform X="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationX}, ConverterParameter='0'}" Y="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationY}, ConverterParameter='0'}" />
                         </TextBlock.RenderTransform>
                     </TextBlock>
-                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='1'}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}">
+                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='1'}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}" Margin="20">
                         <TextBlock.RenderTransform>
                             <TranslateTransform X="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationX}, ConverterParameter='1'}" Y="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationY}, ConverterParameter='1'}" />
                         </TextBlock.RenderTransform>
                     </TextBlock>
-                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='2'}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}">
+                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='2'}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}" Margin="20">
                         <TextBlock.RenderTransform>
                             <TranslateTransform X="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationX}, ConverterParameter='2'}" Y="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationY}, ConverterParameter='2'}" />
                         </TextBlock.RenderTransform>
                     </TextBlock>
-                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='3'}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}">
+                    <TextBlock Text="{Binding RoomContentText, Converter={StaticResource StringToBrokenString}, ConverterParameter='3'}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}" Margin="20">
                         <TextBlock.RenderTransform>
                             <TranslateTransform X="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationX}, ConverterParameter='3'}" Y="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToTranslationY}, ConverterParameter='3'}" />
                         </TextBlock.RenderTransform>
                     </TextBlock>
                 </Grid>
-                <TextBlock Text="{Binding RoomContentText}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource ZeroToVisibility}}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
+                <TextBlock Text="{Binding RoomContentText}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource ZeroToVisibility}}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}" Margin="20"/>
             </Grid>
         </ScrollViewer>
     </local:BaseRoomControl>

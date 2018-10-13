@@ -10,7 +10,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <local:BaseRoomControl>
-        <ScrollViewer >
+        <ScrollViewer Style="{StaticResource ChallengeScrollViewStyle}">
             <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
         </ScrollViewer>
     </local:BaseRoomControl>

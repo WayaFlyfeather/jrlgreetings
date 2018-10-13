@@ -43,7 +43,7 @@
     </views:MvxWpfView.Resources>
     <local:BaseRoomControl>
         <Grid>
-            <ScrollViewer >
+            <ScrollViewer Style="{StaticResource ChallengeScrollViewStyle}">
                 <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
             </ScrollViewer>
             <Rectangle Fill="{StaticResource SemiTransparentRedOrangeGradientBrush}" Visibility="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToVisibility}, ConverterParameter='7'}" />

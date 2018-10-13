@@ -89,7 +89,7 @@
                     </StackPanel>
                 </StackPanel>
             </Border>
-            <ScrollViewer Grid.Row="1">
+            <ScrollViewer Grid.Row="1" Style="{StaticResource ChallengeScrollViewStyle}">
                 <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
             </ScrollViewer>
         </Grid>

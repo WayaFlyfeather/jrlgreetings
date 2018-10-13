@@ -10,7 +10,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <local:BaseRoomControl>
-        <ScrollViewer >
+        <ScrollViewer Style="{StaticResource ChallengeScrollViewStyle}">
             <StackPanel>
                 <TextBlock Text="{Binding RoomContentText}" Foreground="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToForegroundBrush}}" Background="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToBackgroundBrush}}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
                 <Image Source="/Resources/xamarin_mobile_developer.png" HorizontalAlignment="Center" Width="160" Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}" MouseDown="XamarinImageClicked" />

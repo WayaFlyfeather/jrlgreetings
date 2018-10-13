@@ -36,10 +36,10 @@
                 <Button Grid.Row="2" Grid.Column="1" Content="Room 8" Command="{Binding GoToRoom_Command}" CommandParameter="7" Style="{Binding RoomCompletionList[7], Converter={StaticResource CompletionToButtonStyle}}" />
                 <Button Grid.Row="2" Grid.Column="2" Content="Room 9" Command="{Binding GoToRoom_Command}" CommandParameter="8" Style="{Binding RoomCompletionList[8], Converter={StaticResource CompletionToButtonStyle}}" />
             </Grid>
-            <ScrollViewer Grid.Row="1">
+            <ScrollViewer Grid.Row="1" Style="{StaticResource ChallengeScrollViewStyle}">
                 <StackPanel>
                     <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
-                    <TextBlock Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}"  Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}">
+                    <TextBlock Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}"  Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}" Margin="0,4,0,0">
                     See The source code for the application in <Hyperlink NavigateUri="https://devconnect.xamarin.com/profile/861" RequestNavigate="GitHubLinkClicked">this GitHub repo</Hyperlink>.
                     </TextBlock>
                 </StackPanel>
