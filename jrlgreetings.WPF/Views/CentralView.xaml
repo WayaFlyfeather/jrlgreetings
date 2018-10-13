@@ -9,35 +9,66 @@
              Style="{StaticResource RoomViewStyle}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <views:MvxWpfView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="OperandTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="/Resources/Fonts/#Immortal" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style x:Key="OperandMinMaxTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="/Resources/Fonts/#Immortal" />
+                <Setter Property="FontSize" Value="8" />
+            </Style>
+            <Style x:Key="ResultTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="/Resources/Fonts/#Immortal" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Margin" Value="0,2,0,0" />
+            </Style>
+            <Style x:Key="OperatorComboBoxStyle" TargetType="ComboBox">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="/Resources/Fonts/#Immortal" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Margin" Value="0,0,0,2" />
+            </Style>
+            <Style x:Key="OperatorComboBoxItemTextBlockStyle" TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="/Resources/Fonts/#Immortal" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+        </ResourceDictionary>
+    </views:MvxWpfView.Resources>
     <local:BaseRoomControl>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Border BorderBrush="Black" BorderThickness="1">
+            <Border BorderBrush="Black" BorderThickness="1" Padding="20,10" HorizontalAlignment="Center" CornerRadius="3">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <StackPanel Orientation="Vertical" Width="100">
-                        <TextBlock Text="{Binding Operand1}" HorizontalAlignment="Center" />
+                        <TextBlock Text="{Binding Operand1}" Style="{StaticResource OperandTextBlockStyle}" />
                         <Slider Maximum="{Binding OperandMax}" Minimum="{Binding OperandMin}" Value="{Binding Operand1, Mode=TwoWay}" />
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="{Binding OperandMin}" />
-                            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding OperandMax}" />
+                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="{Binding OperandMin}" Style="{StaticResource OperandMinMaxTextBlockStyle}"/>
+                            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding OperandMax}"  Style="{StaticResource OperandMinMaxTextBlockStyle}"/>
                         </Grid>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Width="50">
-                        <ComboBox ItemsSource="{Binding Operators}" SelectedIndex="{Binding SelectedOperatorIndex, Mode=TwoWay}" HorizontalAlignment="Center" >
+                        <ComboBox ItemsSource="{Binding Operators}" SelectedIndex="{Binding SelectedOperatorIndex, Mode=TwoWay}" Style="{StaticResource OperatorComboBoxStyle}" >
                             <ComboBox.ItemTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding}" />
+                                    <TextBlock Text="{Binding}" Style="{StaticResource OperatorComboBoxItemTextBlockStyle}"/>
                                 </DataTemplate>
                             </ComboBox.ItemTemplate>
                         </ComboBox>
-                        <TextBlock HorizontalAlignment="Center">
+                        <TextBlock Style="{StaticResource ResultTextBlockStyle}" >
                             <TextBlock.Inlines>
                                 <Run Text="=" />
                                 <Run Text="{Binding Result, Mode=OneWay}" />
@@ -45,15 +76,15 @@
                         </TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Width="100">
-                        <TextBlock Text="{Binding Operand2}" HorizontalAlignment="Center" />
+                        <TextBlock Text="{Binding Operand2}" Style="{StaticResource OperandTextBlockStyle}" />
                         <Slider Maximum="{Binding OperandMax}" Minimum="{Binding OperandMin}" Value="{Binding Operand2, Mode=TwoWay}" />
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="{Binding OperandMin}" />
-                            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding OperandMax}" />
+                            <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="{Binding OperandMin}" Style="{StaticResource OperandMinMaxTextBlockStyle}"/>
+                            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding OperandMax}" Style="{StaticResource OperandMinMaxTextBlockStyle}"/>
                         </Grid>
                     </StackPanel>
                 </StackPanel>
