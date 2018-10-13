@@ -25,5 +25,10 @@ namespace jrlgreetings.WPF.Views
         {
             InitializeComponent();
         }
+
+        private void GitHubLinkClicked(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://devconnect.xamarin.com/profile/861");
+        }
     }
 }
