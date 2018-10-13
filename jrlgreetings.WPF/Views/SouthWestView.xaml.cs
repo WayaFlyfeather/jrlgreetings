@@ -25,5 +25,10 @@ namespace jrlgreetings.WPF.Views
         {
             InitializeComponent();
         }
+
+        private void XamarinImageClicked(object sender, MouseEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://devconnect.xamarin.com/profile/861");
+        }
     }
 }
