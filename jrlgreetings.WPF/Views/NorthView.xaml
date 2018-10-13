@@ -20,9 +20,41 @@
                         <DirectionalLight Color="White" Direction="0,0,-1"/>
                     </ModelVisual3D.Content>
                 </ModelVisual3D>
-                <Viewport2DVisual3D >
+                <Viewport2DVisual3D>
                     <Viewport2DVisual3D.Geometry>
                         <MeshGeometry3D Positions="-1,1,0 -1,-1,0 1,-1,0 1,1,0" TriangleIndices="0 1 2 0 2 3" TextureCoordinates="0,0 0,1 1,1 1,0"/>
+                    </Viewport2DVisual3D.Geometry>
+                    <Viewport2DVisual3D.Material>
+                        <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True" Brush="White"/>
+                    </Viewport2DVisual3D.Material>
+                    <Viewport2DVisual3D.Transform>
+                        <Transform3DGroup>
+                            <RotateTransform3D>
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D Angle="{Binding AnnoyanceFactor}" Axis="1, 0, 0" />
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D>
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D Angle="{Binding AnnoyanceFactor}" Axis="0, 1, 0" />
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D>
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D Angle="{Binding AnnoyanceFactor}" Axis="0, 0, 1" />
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                        </Transform3DGroup>
+                    </Viewport2DVisual3D.Transform>
+                    <Viewport2DVisual3D.Visual>
+                        <StackPanel Width="500">
+                            <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}" />
+                        </StackPanel>
+                    </Viewport2DVisual3D.Visual>
+                </Viewport2DVisual3D>
+                <Viewport2DVisual3D>
+                    <Viewport2DVisual3D.Geometry>
+                        <MeshGeometry3D Positions="-1,1,0 -1,-1,0 1,-1,0 1,1,0" TriangleIndices="0 2 1 0 3 2" TextureCoordinates="0,0 0,1 1,1 1,0"/>
                     </Viewport2DVisual3D.Geometry>
                     <Viewport2DVisual3D.Material>
                         <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True" Brush="White"/>
