@@ -28,7 +28,7 @@ namespace jrlgreetings.WPF.Views
 
         private void GitHubLinkClicked(object sender, RequestNavigateEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://devconnect.xamarin.com/profile/861");
+            System.Diagnostics.Process.Start("https://github.com/WayaFlyfeather/jrlgreetings");
         }
     }
 }
