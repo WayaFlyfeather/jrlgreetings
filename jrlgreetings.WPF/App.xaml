@@ -26,9 +26,10 @@
             <Style x:Key="AnnoyanceSliderStyle" TargetType="Slider">
                 <Setter Property="Maximum" Value="100" />
                 <Setter Property="Minimum" Value="0" />
+                <Setter Property="Margin" Value="20, 2, 30, 2" />
             </Style>
             <Style x:Key="RoomContentTextBlockStyle" TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="Resources/Fonts/#MonospaceTypewriter"/>
+                <Setter Property="FontFamily" Value="/Resources/Fonts/#MonospaceTypewriter"/>
                 <Setter Property="FontSize" Value="13" />
                 <Setter Property="TextWrapping" Value="Wrap" />
                 <Setter Property="Margin" Value="20" />
@@ -38,7 +39,7 @@
                 <Setter Property="Background" Value="{StaticResource TempleCompletedContentTextBackgroundBrush}" />
             </Style>
             <Style x:Key="RoomDescriptionStyle" TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="Resources/Fonts/#Immortal"/>
+                <Setter Property="FontFamily" Value="/Resources/Fonts/#Immortal"/>
                 <Setter Property="FontSize" Value="14" />
                 <Setter Property="TextWrapping" Value="Wrap" />
                 <Setter Property="Margin" Value="2, 2, 6, 2" />
@@ -48,9 +49,10 @@
             </Style>
 
             <Style x:Key="TitleStyle" TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="Resources/Fonts/#Immortal"/>
+                <Setter Property="FontFamily" Value="/Resources/Fonts/#Immortal"/>
                 <Setter Property="FontSize" Value="20" />
-                <Setter Property="Margin" Value="26, 4, 0, 4" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="Margin" Value="30, 4, 0, 4" />
             </Style>
 
             <Style x:Key="CompletedTempleTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource TitleStyle}">
@@ -85,8 +87,9 @@
                 </ControlTemplate.Triggers>
             </ControlTemplate>
             <Style x:Key="TeleportButtonStyle" TargetType="Button">
-                <Setter Property="TextElement.FontFamily" Value="Resources/Fonts/#Immortal"/>
+                <Setter Property="TextElement.FontFamily" Value="/Resources/Fonts/#Immortal"/>
                 <Setter Property="Background" Value="Gray" />
+                <Setter Property="Margin" Value="3" />
             </Style>
             <Style x:Key="CompletedRoomTeleportButtonStyle" TargetType="Button" BasedOn="{StaticResource TeleportButtonStyle}">
                 <Setter Property="Background" Value="Aquamarine" />
