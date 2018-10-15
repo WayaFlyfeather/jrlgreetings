@@ -43,7 +43,7 @@ namespace jrlgreetingsweb.Controllers
                 RoomNo = 2,
                 Description = "You are in a room to the North East of the temple. There is an inscription, but it doesn't make sense at all.\n\n" +
                 "There is a lever on the wall near the floor.",
-                ContentText = "I landed my first job foing programming when I was 19, with som help from my dad. After that I got to DSB, where I worked in COBOL on their mainframe for a number of years. After a short adventure trying to make an adventure game, I was at Rigshospitalet for 5 years (my former boss at DSB had gone there.)\n\n" +
+                ContentText = "I landed my first job doing programming when I was 19, with som help from my dad. After that I got to DSB, where I worked in COBOL on their mainframe for a number of years. After a short adventure trying to make an adventure game, I was at Rigshospitalet for 5 years (my former boss at DSB had gone there.)\n\n" +
                 "In 2000 I got a job doing C++ (which I had been using in my spare time since the early nineties), designing and programming a CMS. The CMS had limited success, and the company couldn't get capital after the dotcom-bust, but I continued doing jobs for the CEO for a number of years.",
                 AnnoyanceFactor = 100.0,
             };
