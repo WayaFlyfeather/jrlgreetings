@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -40,6 +41,12 @@ namespace jrlgreetingsweb
                 app.UseExceptionHandler("/Error");
             }
 
+            //var provider = new FileExtensionContentTypeProvider();
+            //provider.Mappings.Add(".msi", "application/x-ole-storage"); //file ext, ContentType
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    ContentTypeProvider = provider,
+            //});
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 

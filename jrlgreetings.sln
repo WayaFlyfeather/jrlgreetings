@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio 15
+# Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetingsweb", "jrlgreetingsweb\jrlgreetingsweb.csproj", "{0D849DA0-B401-4C06-8E5D-E3A3F7DA5C0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jrlgreetingsweb", "jrlgreetingsweb\jrlgreetingsweb.csproj", "{0D849DA0-B401-4C06-8E5D-E3A3F7DA5C0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetings.Core", "jrlgreetings.Core\jrlgreetings.Core.csproj", "{061B15B0-3CBF-408D-937B-AFFF772547FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jrlgreetings.Core", "jrlgreetings.Core\jrlgreetings.Core.csproj", "{061B15B0-3CBF-408D-937B-AFFF772547FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetings.UWP", "jrlgreetings.UWP\jrlgreetings.UWP.csproj", "{2430BF59-BAFC-4841-9C75-C749ED2F6CC3}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 WPF", "3 WPF", "{D5E66159-20DE-46D0-826C-43FC82E5BDC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jrlgreetings.WPF", "jrlgreetings.WPF\jrlgreetings.WPF.csproj", "{2C03CD2C-85EE-4702-B21E-24C7A1E45A37}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "jrlgreetings.WPF.Setup", "jrlgreetings.WPF.Setup\jrlgreetings.WPF.Setup.wixproj", "{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -215,6 +217,20 @@ Global
 		{2C03CD2C-85EE-4702-B21E-24C7A1E45A37}.Release|x64.Build.0 = Release|Any CPU
 		{2C03CD2C-85EE-4702-B21E-24C7A1E45A37}.Release|x86.ActiveCfg = Release|Any CPU
 		{2C03CD2C-85EE-4702-B21E-24C7A1E45A37}.Release|x86.Build.0 = Release|Any CPU
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Debug|ARM.ActiveCfg = Debug|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Debug|iPhone.ActiveCfg = Debug|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Debug|x64.ActiveCfg = Debug|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Debug|x86.ActiveCfg = Debug|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Debug|x86.Build.0 = Debug|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Release|Any CPU.ActiveCfg = Release|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Release|ARM.ActiveCfg = Release|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Release|iPhone.ActiveCfg = Release|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Release|iPhoneSimulator.ActiveCfg = Release|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Release|x64.ActiveCfg = Release|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Release|x86.ActiveCfg = Release|x86
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -228,6 +244,7 @@ Global
 		{C06E7207-9C77-485D-A299-67F0BC33240C} = {6A8B8A13-A310-45DD-9314-51DBFF907014}
 		{FED3C6E1-7488-42EB-BB7B-CC94E6DF6F38} = {6A8B8A13-A310-45DD-9314-51DBFF907014}
 		{2C03CD2C-85EE-4702-B21E-24C7A1E45A37} = {D5E66159-20DE-46D0-826C-43FC82E5BDC5}
+		{FFE27414-3E57-4C46-AAB1-E47C65DEE8CC} = {D5E66159-20DE-46D0-826C-43FC82E5BDC5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C036CD10-507F-4ED3-9EF7-3EAA9F92DF78}
