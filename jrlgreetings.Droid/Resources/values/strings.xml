@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="VersionName">1.2.0</string>
+	<string name="VersionName">1.2.2</string>
 	<string name="ApplicationName">Greetings from JRL</string>
 </resources>
