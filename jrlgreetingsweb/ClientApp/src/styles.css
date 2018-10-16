@@ -13,7 +13,7 @@
   width: 100%;
   height: 100%;
   z-index: 0;
-  opacity: 0.10;
+  opacity: 0.06;
   background-image: url("/images/jrl.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -47,4 +47,10 @@
   white-space: pre-wrap;
   height: 100%;
   width: 100%;
+}
+
+@supports (-ms-ime-align:auto) {
+  .bgimg:before {
+    opacity: 0.24;
+  }
 }
