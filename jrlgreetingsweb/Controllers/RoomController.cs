@@ -43,7 +43,7 @@ namespace jrlgreetingsweb.Controllers
                 RoomNo = 2,
                 Description = "You are in a room to the North East of the temple. There is an inscription, but it doesn't make sense at all.\n\n" +
                 "There is a lever on the wall near the floor.",
-                ContentText = "I landed my first job doing programming when I was 19, with som help from my dad. After that I got to DSB, where I worked in COBOL on their mainframe for a number of years. After a short adventure trying to make an adventure game, I was at Rigshospitalet for 5 years (my former boss at DSB had gone there.)\n\n" +
+                ContentText = "I landed my first job doing programming when I was 19, with some help from my father. After that I moved on to DSB (Danish Rail), where I worked in COBOL on their mainframe for a number of years. After a short adventure trying to make an adventure game, I was at Rigshospitalet for 5 years (my former boss at DSB had gone there.)\n\n" +
                 "In 2000 I got a job doing C++ (which I had been using in my spare time since the early nineties), designing and programming a CMS. The CMS had limited success, and the company couldn't get capital after the dotcom-bust, but I continued doing jobs for the CEO for a number of years.",
                 AnnoyanceFactor = 100.0,
             };
@@ -81,7 +81,7 @@ namespace jrlgreetingsweb.Controllers
                 RoomNo = 6,
                 Description = "This room in the South West part of the Temple seems even more drab than the others. There aren't even any inscriptions, it seems.\n\n" +
                 "There's a lever, but that is hardly interesting.",
-                ContentText = "So even while I also like to work with back ends and Databases, I came to conclusion that I wanted to do more with Xamarin, and in February I did the certifications (after discovering you didn't have to sign up for a year anymore, but could do it within a month. I ended up doing it in 12 days.)\n\n",
+                ContentText = "So even while I also like to work with back ends and Databases, I came to the conclusion that I wanted to do more with Xamarin, and in February I did the certifications (after discovering you didn't have to sign up for a year anymore, but could do it within a month. I ended up doing it in 12 days.)\n\n",
                 AnnoyanceFactor = 100.0,
             };
             rooms[7] = new Room()
@@ -115,7 +115,7 @@ namespace jrlgreetingsweb.Controllers
                 "I'm not claiming it's particularly ingenious, but I hope it's enough to show that I know what Xamarin is about.\n\n" +
                 "It's also my first app (except for the tutorial TipCalc) that I have made using MvvmCross. As I would like to do more in Xamarin Native, but also stay with MVVM and it's possibilities for code re-use, MvvmCross seems an interesting way to explore.\n\n" +
                 "I originally made the app for a particular job, to impress the people at that company; and apparently it worked as they did hire me. Almost. As it happened it fell through, due to in-house problems.\n\n" +
-                "So this version is a more general version of that one. I have also made it into an Angular-app online, and an oldschool Windows WPF Application — and may add other platforms." +
+                "So this version is a more general version of that one. I have also made it into an Angular-app online, and later also an old school Windows WPF Application — and may add other platforms." +
                 "Anyways, I hope you enjoyed the app — and got some impression of me…!\n\n" +
                 "Best regards,\n" +
                 "Jon",
