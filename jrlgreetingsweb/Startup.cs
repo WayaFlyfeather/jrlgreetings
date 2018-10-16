@@ -41,12 +41,6 @@ namespace jrlgreetingsweb
                 app.UseExceptionHandler("/Error");
             }
 
-            //var provider = new FileExtensionContentTypeProvider();
-            //provider.Mappings.Add(".msi", "application/x-ole-storage"); //file ext, ContentType
-            //app.UseStaticFiles(new StaticFileOptions
-            //{
-            //    ContentTypeProvider = provider,
-            //});
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
