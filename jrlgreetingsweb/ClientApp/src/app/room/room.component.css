@@ -103,6 +103,7 @@
 
 .room-description {
   border: medium outset grey;
+  border-radius: 5px;
   padding: 3px 3px 3px 3px;
   width: 90%;
   height: 38%;
