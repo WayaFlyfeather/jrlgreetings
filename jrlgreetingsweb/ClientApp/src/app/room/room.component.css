@@ -39,6 +39,7 @@
   margin: auto;
   width: 90%;
   height: 5%;
+  border-radius: 4px;
 }
 
 .button-east-west {
@@ -47,6 +48,7 @@
   height: 100%;
   padding-left: .1%;
   padding-right: .1%;
+  border-radius: 4px;
 }
 
 .completed-room-button {
