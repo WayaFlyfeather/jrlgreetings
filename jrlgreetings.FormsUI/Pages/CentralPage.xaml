@@ -4,6 +4,7 @@
                     xmlns:forms="using:Xamarin.Forms"
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"        
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
+                    xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"
                     Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.FormsUI.Pages.CentralPage">
@@ -25,7 +26,11 @@
             <StackLayout Orientation="Horizontal">
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <Label mvx:Bi.nd="Text Operand1" FontSize="Medium" HorizontalOptions="Center" Margin="0"/>
-                    <Slider x:Name="Operand1Slider" mvx:Bi.nd="Maximum OperandMax; Minimum OperandMin; Value Operand1, Mode=TwoWay" Style="{StaticResource OperandSliderStyle}" Margin="0"/>
+                    <Slider x:Name="Operand1Slider" mvx:Bi.nd="Maximum OperandMax; Minimum OperandMin; Value Operand1, Mode=TwoWay" Style="{StaticResource OperandSliderStyle}">
+                        <Slider.Effects>
+                            <fx:ThumbToolTipEffect Suppressed="True" />
+                        </Slider.Effects>
+                    </Slider>
                     <StackLayout Orientation="Horizontal" Margin="0">
                         <Label mvx:Bi.nd="Text OperandMin" FontSize="Micro" HorizontalOptions="StartAndExpand" Margin="15,0,0,0" />
                         <Label mvx:Bi.nd="Text OperandMax" FontSize="Micro" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" />
@@ -40,7 +45,11 @@
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                     <Label mvx:Bi.nd="Text Operand2" FontSize="Medium" HorizontalOptions="Center" />
-                    <Slider x:Name="Operand2Slider" mvx:Bi.nd="Maximum OperandMax; Minimum OperandMin; Value Operand2, Mode=TwoWay" Style="{StaticResource OperandSliderStyle}" />
+                    <Slider x:Name="Operand2Slider" mvx:Bi.nd="Maximum OperandMax; Minimum OperandMin; Value Operand2, Mode=TwoWay" Style="{StaticResource OperandSliderStyle}">
+                        <Slider.Effects>
+                            <fx:ThumbToolTipEffect Suppressed="True" />
+                        </Slider.Effects>
+                    </Slider>
                     <StackLayout Orientation="Horizontal">
                         <Label mvx:Bi.nd="Text OperandMin" FontSize="Micro" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Margin="15,0,0,0" />
                         <Label mvx:Bi.nd="Text OperandMax" FontSize="Micro" VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" />

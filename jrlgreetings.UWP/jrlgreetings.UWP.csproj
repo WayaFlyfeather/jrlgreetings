@@ -103,6 +103,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Effects\GradientEffectImpl.cs" />
+    <Compile Include="Effects\ThumbToolTipEffectImpl.cs" />
     <Compile Include="Effects\TypefaceEffectImpl.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
