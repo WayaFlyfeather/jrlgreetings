@@ -12,7 +12,7 @@ namespace jrlgreetings.Core.Services
     public class WebRoomDataService : BaseRoomDataService
     {
         readonly HttpClient client;
-        readonly string baseURL = "http://jrlgreetingsweb.azurewebsites.net";
+        readonly string baseURL = "https://greetingsfromjrl.azurewebsites.net";
         public WebRoomDataService()
         {
             client = new HttpClient();
