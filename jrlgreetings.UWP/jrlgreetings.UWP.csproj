@@ -182,10 +182,10 @@
       <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross">
-      <Version>6.2.1</Version>
+      <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Forms">
-      <Version>6.2.1</Version>
+      <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.SimpleAudioPlayer">
       <Version>1.1.0</Version>
