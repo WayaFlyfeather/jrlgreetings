@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Room } from './room';
 import { Temple } from './temple';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+import { Observable ,  of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap, count } from 'rxjs/operators';
 
