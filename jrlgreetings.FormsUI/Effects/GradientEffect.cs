@@ -50,9 +50,9 @@ namespace jrlgreetings.FormsUI.Effects
         public static readonly BindableProperty GradientDescriptorProperty =
         BindableProperty.CreateAttached("GradientDescriptor", typeof(GradientDescriptor), typeof(GradientEffect), null, propertyChanged: OnGradientDescriptorChanged);
 
-        public static Color GetGradientDescriptor(BindableObject view)
+        public static GradientDescriptor GetGradientDescriptor(BindableObject view)
         {
-            return (Color)view.GetValue(GradientDescriptorProperty);
+            return (GradientDescriptor)view.GetValue(GradientDescriptorProperty);
         }
 
         public static void SetGradientDescriptor(BindableObject view, GradientDescriptor value)

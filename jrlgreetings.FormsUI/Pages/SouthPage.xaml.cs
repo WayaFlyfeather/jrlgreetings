@@ -16,7 +16,7 @@ namespace jrlgreetings.FormsUI.Pages
 	{
 		public SouthPage ()
 		{
-			InitializeComponent ();
-		}
+            InitializeComponent();
+        }
 	}
 }
