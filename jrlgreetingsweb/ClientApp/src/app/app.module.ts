@@ -27,6 +27,7 @@ import { CentralChallengeComponent } from './central-challenge/central-challenge
 import { ExceptionalChallengeComponent } from './exceptional-challenge/exceptional-challenge.component';
 import { TempleEntranceComponent } from './temple-entrance/temple-entrance.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TempleComponent } from './temple/temple.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AppRoutingModule } from './app-routing.module';
     CentralChallengeComponent,
     ExceptionalChallengeComponent,
     TempleEntranceComponent,
+    TempleComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
