@@ -7,7 +7,7 @@ import { TempleComponent } from './temple.component';
 
 const templeRoutes: Routes = [
     {
-        path: 'temple', component: TempleComponent, children: [
+        path: '', component: TempleComponent, children: [
             { path: '', component: TempleEntranceComponent, pathMatch: 'full' },
             { path: 'northwest', component: RoomComponent, data: { roomId: 0 } },
             { path: 'north', component: RoomComponent, data: { roomId: 1 } },
