@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Room } from '../room';
+import { Room } from '../../room';
 import { RoomComponent } from '../room/room.component';
 import { Router } from '@angular/router';
-import { TempleAudioService } from '../temple-audio.service';
+import { TempleAudioService } from '../../temple-audio.service';
 
 
 @Component({

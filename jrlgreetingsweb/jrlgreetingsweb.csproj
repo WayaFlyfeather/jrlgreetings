@@ -29,6 +29,7 @@
     <None Remove="ClientApp\src\app\app-routing.module.ts" />
     <None Remove="ClientApp\src\app\room.ts" />
     <None Remove="ClientApp\src\app\temple.ts" />
+    <None Remove="ClientApp\src\app\temple\temple-routing.module.ts" />
     <None Remove="ClientApp\src\app\temple\temple.component.ts" />
     <None Remove="ClientApp\src\app\temple\temple.module.ts" />
     <None Remove="ClientApp\src\assets\click.mp3" />
@@ -48,6 +49,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\room.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\temple.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\temple\temple-routing.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\temple\temple.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\temple\temple.module.ts" />
   </ItemGroup>

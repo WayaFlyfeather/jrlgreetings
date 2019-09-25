@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Room } from '../room';
+import { Room } from '../../room';
 
 
 @Component({

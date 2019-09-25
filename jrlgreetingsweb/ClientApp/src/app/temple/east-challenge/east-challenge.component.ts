@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
-import { Room } from '../room';
-import { RoomsService } from '../rooms.service';
-import { TempleAudioService } from '../temple-audio.service';
+import { Room } from '../../room';
+import { RoomsService } from '../../rooms.service';
+import { TempleAudioService } from '../../temple-audio.service';
 
 @Component({
   selector: 'app-east-challenge',

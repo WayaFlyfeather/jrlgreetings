@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TempleAudioService } from '../temple-audio.service';
+import { TempleAudioService } from '../../temple-audio.service';
 
 @Component({
   selector: 'app-temple-entrance',

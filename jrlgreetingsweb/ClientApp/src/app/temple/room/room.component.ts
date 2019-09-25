@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { RoomsService } from '../rooms.service';
-import { TempleAudioService } from '../temple-audio.service';
-import { Room } from '../room';
-import { Temple } from '../temple';
+import { RoomsService } from '../../rooms.service';
+import { TempleAudioService } from '../../temple-audio.service';
+import { Room } from '../../room';
+import { Temple } from '../../temple';
 
 @Component({
   selector: 'app-room',
