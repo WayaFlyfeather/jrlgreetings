@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web" ToolsVersion="15.0">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
@@ -28,9 +28,14 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\room.ts" />
     <None Remove="ClientApp\src\app\temple.ts" />
+    <None Remove="ClientApp\src\app\temple\temple.module.ts" />
     <None Remove="ClientApp\src\assets\click.mp3" />
     <None Remove="ClientApp\src\assets\footsteps.mp3" />
     <None Remove="ClientApp\src\assets\thunder.mp3" />
+    <None Remove="ClientApp\tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientApp\tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ClientApp\src\assets\click.mp3" />
@@ -40,6 +45,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\room.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\temple.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\temple\temple.module.ts" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
