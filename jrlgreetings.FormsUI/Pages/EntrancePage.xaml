@@ -16,9 +16,25 @@
         </Grid.RowDefinitions>
         <Frame OutlineColor="Gray" Padding="2" Grid.Row="0" HorizontalOptions="Fill" VerticalOptions="Fill" Margin="20" BackgroundColor="Transparent">
             <ScrollView>
-                <Label mvx:Bi.nd="Text EntranceText" fx:TypefaceEffect.TypefaceName="Immortal" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="10"/>
+                <Label FontSize="Medium" mvx:Bi.nd="Text EntranceText" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="10">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Immortal" />
+                            <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                            <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
             </ScrollView>
         </Frame>
-        <Button Grid.Row="1" Text="Enter Temple" HeightRequest="50" mvx:Bi.nd="Command EnterTemple_Command; IsEnabled IsTempleReady" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill" Style="{StaticResource DirectionButtonStyle}" />
+        <Button Grid.Row="1" Text="Enter Temple" HeightRequest="50" mvx:Bi.nd="Command EnterTemple_Command; IsEnabled IsTempleReady" VerticalOptions="Center" HorizontalOptions="Fill" Style="{StaticResource DirectionButtonStyle}">
+            <Button.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="Immortal" />
+                    <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                    <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                </OnPlatform>
+            </Button.FontFamily>
+        </Button>
     </Grid>
 </mvvmx:MvxContentPage>
