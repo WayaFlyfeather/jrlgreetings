@@ -35,12 +35,44 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Row="0" Grid.Column="1" Text="N" HeightRequest="50" mvx:Bi.nd="Command GoNorth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill" Style="{StaticResource DirectionButtonStyle}" />
-                    <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Text="W" WidthRequest="50" mvx:Bi.nd="Command GoWest_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Fill" HorizontalOptions="Center" Style="{StaticResource DirectionButtonStyle}" />
-                    <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Text="E" WidthRequest="50" mvx:Bi.nd="Command GoEast_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Fill" HorizontalOptions="Center" Style="{StaticResource DirectionButtonStyle}" />
+                    <Button Grid.Row="0" Grid.Column="1" Text="N" HeightRequest="50" mvx:Bi.nd="Command GoNorth_Command" VerticalOptions="Center" HorizontalOptions="Fill" Style="{StaticResource DirectionButtonStyle}">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Immortal" />
+                                <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
+                    <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Text="W" WidthRequest="50" mvx:Bi.nd="Command GoWest_Command" VerticalOptions="Fill" HorizontalOptions="Center" Style="{StaticResource DirectionButtonStyle}">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Immortal" />
+                                <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
+                    <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Text="E" WidthRequest="50" mvx:Bi.nd="Command GoEast_Command" VerticalOptions="Fill" HorizontalOptions="Center" Style="{StaticResource DirectionButtonStyle}">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Immortal" />
+                                <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
                     <Frame OutlineColor="Gray" Padding="2"  Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" Margin="20, 0, 20, 20" BackgroundColor="Transparent">
                         <ScrollView>
-                            <Label mvx:Bi.nd="Text RoomDescription" fx:TypefaceEffect.TypefaceName="Immortal" VerticalTextAlignment="Center"/>
+                            <Label mvx:Bi.nd="Text RoomDescription" VerticalTextAlignment="Center">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="Immortal" />
+                                        <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                        <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
                         </ScrollView>
                     </Frame>
                     <ContentPresenter Grid.Column="1" Grid.Row="2" />
@@ -49,7 +81,15 @@
                             <fx:ThumbToolTipEffect Suppressed="True" />
                         </Slider.Effects>
                     </Slider>
-                    <Button Grid.Row="4" Grid.Column="1" Text="S" HeightRequest="50" mvx:Bi.nd="Command GoSouth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill" Style="{StaticResource DirectionButtonStyle}" />
+                    <Button Grid.Row="4" Grid.Column="1" Text="S" HeightRequest="50" mvx:Bi.nd="Command GoSouth_Command" VerticalOptions="Center" HorizontalOptions="Fill" Style="{StaticResource DirectionButtonStyle}">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Immortal" />
+                                <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
                     <Grid mvx:Bi.nd="IsVisible Completed" InputTransparent="True" VerticalOptions="Fill" HorizontalOptions="Fill" Grid.RowSpan="5" Grid.ColumnSpan="3" BackgroundColor="Aquamarine" Opacity="0.15" />
                 </Grid>
             </ControlTemplate>
@@ -68,12 +108,44 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Row="0" Grid.Column="1" Text="N" HeightRequest="50" mvx:Bi.nd="Command GoNorth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill" fx:GradientEffect.GradientDescriptor="{StaticResource LRRedBlueGradientDescriptor}" Style="{StaticResource ColorfulDirectionButtonStyle}" />
-                    <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Text="W" WidthRequest="50" mvx:Bi.nd="Command GoWest_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Fill" HorizontalOptions="Center" fx:GradientEffect.GradientDescriptor="{StaticResource TBRedYellowGradientDescriptor}" Style="{StaticResource ColorfulDirectionButtonStyle}" />
-                    <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Text="E" WidthRequest="50" mvx:Bi.nd="Command GoEast_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Fill" HorizontalOptions="Center" fx:GradientEffect.GradientDescriptor="{StaticResource TBBlueGreenGradientDescriptor}" Style="{StaticResource ColorfulDirectionButtonStyle}" />
+                    <Button Grid.Row="0" Grid.Column="1" Text="N" HeightRequest="50" mvx:Bi.nd="Command GoNorth_Command" VerticalOptions="Center" HorizontalOptions="Fill" fx:GradientEffect.GradientDescriptor="{StaticResource LRRedBlueGradientDescriptor}" Style="{StaticResource ColorfulDirectionButtonStyle}">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Immortal" />
+                                <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
+                    <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Text="W" WidthRequest="50" mvx:Bi.nd="Command GoWest_Command" VerticalOptions="Fill" HorizontalOptions="Center" fx:GradientEffect.GradientDescriptor="{StaticResource TBRedYellowGradientDescriptor}" Style="{StaticResource ColorfulDirectionButtonStyle}">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Immortal" />
+                                <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
+                    <Button Grid.Row="1" Grid.RowSpan="3" Grid.Column="2" Text="E" WidthRequest="50" mvx:Bi.nd="Command GoEast_Command" VerticalOptions="Fill" HorizontalOptions="Center" fx:GradientEffect.GradientDescriptor="{StaticResource TBBlueGreenGradientDescriptor}" Style="{StaticResource ColorfulDirectionButtonStyle}">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Immortal" />
+                                <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
                     <Frame OutlineColor="Gray" Padding="2"  Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" Margin="20, 0, 20, 20" BackgroundColor="Transparent">
                         <ScrollView>
-                            <Label Text="{Binding RoomDescription}" fx:TypefaceEffect.TypefaceName="Immortal" TextColor="Yellow" VerticalTextAlignment="Center"/>
+                            <Label Text="{Binding RoomDescription}" TextColor="Yellow" VerticalTextAlignment="Center">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="Immortal" />
+                                        <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                        <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
                         </ScrollView>
                     </Frame>
                     <ContentPresenter Grid.Column="1" Grid.Row="2" />
@@ -82,7 +154,15 @@
                             <fx:ThumbToolTipEffect Suppressed="True" />
                         </Slider.Effects>
                     </Slider>
-                    <Button Grid.Row="4" Grid.Column="1" Text="S" HeightRequest="50" mvx:Bi.nd="Command GoSouth_Command" fx:TypefaceEffect.TypefaceName="Immortal" VerticalOptions="Center" HorizontalOptions="Fill"  fx:GradientEffect.GradientDescriptor="{StaticResource LRYellowGreenGradientDescriptor}" Style="{StaticResource ColorfulDirectionButtonStyle}" />
+                    <Button Grid.Row="4" Grid.Column="1" Text="S" HeightRequest="50" mvx:Bi.nd="Command GoSouth_Command" VerticalOptions="Center" HorizontalOptions="Fill"  fx:GradientEffect.GradientDescriptor="{StaticResource LRYellowGreenGradientDescriptor}" Style="{StaticResource ColorfulDirectionButtonStyle}">
+                        <Button.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="Immortal" />
+                                <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                                <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                            </OnPlatform>
+                        </Button.FontFamily>
+                    </Button>
                 </Grid>
             </ControlTemplate>
 
