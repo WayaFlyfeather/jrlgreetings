@@ -1,4 +1,6 @@
 ﻿using jrlgreetings.Core.Services;
+using jrlgreetings.Core.ViewModels;
+using MvvmCross;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using System;
@@ -23,7 +25,8 @@ namespace jrlgreetings.Core
         {
             //seems this should be async and awaitable - but doesn't work
             roomDataService.InitAsync().GetAwaiter().GetResult();
-            NavigationService.Navigate(roomDataService.GetViewModelForRoomNo(0)).GetAwaiter().GetResult();
+            //            NavigationService.Navigate(roomDataService.GetViewModelForRoomNo(0)).GetAwaiter().GetResult();
+            NavigationService.Navigate(new EntranceViewModel("hello", roomDataService, Mvx.IoCProvider.Resolve<IMvxNavigationService>()));
 
             return Task.CompletedTask;
         }
