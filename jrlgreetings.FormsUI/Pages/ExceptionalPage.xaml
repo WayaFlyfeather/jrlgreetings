@@ -4,7 +4,6 @@
                     xmlns:forms="using:Xamarin.Forms"
                     xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"        
                     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
-                    xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"                    
                     Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToPageStyle}}"
                     mvx:Bi.nd="Title Title"
                     x:Class="jrlgreetings.FormsUI.Pages.ExceptionalPage">
@@ -12,6 +11,15 @@
         <ResourceDictionary>
             <Style x:Key="TeleportButtonStyle" TargetType="Button" BasedOn="{StaticResource DirectionButtonStyle}">
                 <Setter Property="Padding" Value="0" />
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Immortal" />
+                            <On Platform="Android" Value="IMMORTAL.ttf#Immortal" />
+                            <On Platform="UWP" Value="Assets/Fonts/IMMORTAL.ttf#Immortal" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
             </Style>
         </ResourceDictionary>
     </mvvmx:MvxContentPage.Resources>
@@ -31,15 +39,15 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Text="Room 1" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[0], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="0" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
-            <Button Grid.Row="0" Grid.Column="1" Text="Room 2" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[1], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="1" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
-            <Button Grid.Row="0" Grid.Column="2" Text="Room 3" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[2], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="2" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
-            <Button Grid.Row="1" Grid.Column="0" Text="Room 4" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[3], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="3" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
-            <Button Grid.Row="1" Grid.Column="1" Text="Room 5" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[4], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="4" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
-            <Button Grid.Row="1" Grid.Column="2" Text="Room 6" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[5], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="5" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
-            <Button Grid.Row="2" Grid.Column="0" Text="Room 7" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[6], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="6" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
-            <Button Grid.Row="2" Grid.Column="1" Text="Room 8" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[7], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="7" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
-            <Button Grid.Row="2" Grid.Column="2" Text="Room 9" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[8], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="8" fx:TypefaceEffect.TypefaceName="Immortal" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="0" Grid.Column="0" Text="Room 1" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[0], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="0" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Room 2" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[1], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="1" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="0" Grid.Column="2" Text="Room 3" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[2], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="2" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="1" Grid.Column="0" Text="Room 4" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[3], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="3" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="1" Grid.Column="1" Text="Room 5" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[4], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="4" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="1" Grid.Column="2" Text="Room 6" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[5], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="5" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="2" Grid.Column="0" Text="Room 7" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[6], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="6" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="2" Grid.Column="1" Text="Room 8" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[7], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="7" Style="{StaticResource TeleportButtonStyle}"/>
+            <Button Grid.Row="2" Grid.Column="2" Text="Room 9" mvx:Bi.nd="Command GoToRoom_Command;" BackgroundColor="{Binding RoomCompletionList[8], Converter={StaticResource CompletionToButtonBackgroundColor}}" CommandParameter="8" Style="{StaticResource TeleportButtonStyle}"/>
         </Grid>
         <ScrollView Grid.Row="1">
             <StackLayout>

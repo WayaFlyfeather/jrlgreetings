@@ -10,7 +10,15 @@
                     x:Class="jrlgreetings.FormsUI.Pages.SouthWestPage">
     <ScrollView VerticalOptions="Fill">
         <StackLayout VerticalOptions="Fill">
-            <Label mvx:Bi.nd="Text RoomContentText" TextColor="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToForegroundColor}}" BackgroundColor="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToBackgroundColor}}"  fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" VerticalOptions="FillAndExpand"/>
+            <Label mvx:Bi.nd="Text RoomContentText" TextColor="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToForegroundColor}}" BackgroundColor="{Binding AnnoyanceFactor, Converter={StaticResource AnnoyanceToBackgroundColor}}" VerticalOptions="FillAndExpand">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="MonospaceTypewriter" />
+                        <On Platform="Android" Value="MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                        <On Platform="UWP" Value="Assets/Fonts/MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
             <ImageButton x:Name="certImageButton" mvx:Bi.nd="IsVisible Completed" HorizontalOptions="Center" BackgroundColor="#60E0E0E0" Clicked="certImageButton_Clicked">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup x:Name="CommonStates">

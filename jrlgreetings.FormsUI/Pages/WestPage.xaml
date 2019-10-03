@@ -11,10 +11,42 @@
     <ScrollView>
         <Grid Margin="20">
             <Grid mvx:Bi.nd="IsVisible AnnoyanceFactor, Converter=IfNotZero">
-                <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='0'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='0'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='0';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
-                <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='1'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='1'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='1';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
-                <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='2'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='2'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='2';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
-                <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='3'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='3'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='3';" fx:TypefaceEffect.TypefaceName="MonospaceTypewriter" />
+                <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='0'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='0'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='0';">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="MonospaceTypewriter" />
+                            <On Platform="Android" Value="MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                            <On Platform="UWP" Value="Assets/Fonts/MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='1'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='1'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='1';">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="MonospaceTypewriter" />
+                            <On Platform="Android" Value="MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                            <On Platform="UWP" Value="Assets/Fonts/MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='2'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='2'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='2';">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="MonospaceTypewriter" />
+                            <On Platform="Android" Value="MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                            <On Platform="UWP" Value="Assets/Fonts/MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label mvx:Bi.nd="TranslationX AnnoyanceFactor, Converter=AnnoyanceToTranslationX, ConverterParameter='3'; TranslationY AnnoyanceFactor, Converter=AnnoyanceToTranslationY, ConverterParameter='3'; Text RoomContentText, Converter=StringToBrokenString, ConverterParameter='3';">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="MonospaceTypewriter" />
+                            <On Platform="Android" Value="MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                            <On Platform="UWP" Value="Assets/Fonts/MonospaceTypewriter.ttf#MonospaceTypewriter" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
             </Grid>
             <Label mvx:Bi.nd="Text RoomContentText; IsVisible AnnoyanceFactor, Converter=IfZero" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentLabelStyle}}" />
         </Grid>
