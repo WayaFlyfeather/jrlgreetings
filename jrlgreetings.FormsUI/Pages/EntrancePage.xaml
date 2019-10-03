@@ -5,7 +5,6 @@
                       xmlns:mvvmx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"  
                       xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"  
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                      xmlns:fx="clr-namespace:jrlgreetings.FormsUI.Effects"
                       mvx:Bi.nd="Title Title"                      
                       mc:Ignorable="d"
                       x:Class="jrlgreetings.FormsUI.Pages.EntrancePage">
