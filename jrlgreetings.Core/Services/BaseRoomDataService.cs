@@ -16,6 +16,10 @@ namespace jrlgreetings.Core.Services
         protected readonly Dictionary<int, Room> rooms = new Dictionary<int, Room>();
         protected readonly IMvxViewModel[] ViewModels = new IMvxViewModel[10];
         protected readonly List<IMvxViewModel> Flashbacks = new List<IMvxViewModel>();
+
+        protected bool isReady = false;
+        public bool IsReady => isReady;
+
         public abstract Task InitAsync();
 
         protected void setViewModels()

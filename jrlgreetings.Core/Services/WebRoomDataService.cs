@@ -41,6 +41,7 @@ namespace jrlgreetings.Core.Services
             }
 
             setViewModels();
+            isReady = true;
         }
     }
 }

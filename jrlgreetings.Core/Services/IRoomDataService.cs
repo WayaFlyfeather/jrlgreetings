@@ -11,6 +11,8 @@ namespace jrlgreetings.Core.Services
     {
         Task InitAsync();
 
+        bool IsReady { get; }
+
         Room GetRoomForRoomNo(int roomNo);
         int Completed { get; }
         int UnCompleted { get; }

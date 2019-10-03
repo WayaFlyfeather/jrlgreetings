@@ -6,6 +6,7 @@ using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,14 +22,11 @@ namespace jrlgreetings.Core
             this.roomDataService = roomDataService;
         }
 
-        protected override Task NavigateToFirstViewModel(object hint = null)
-        {
-            //seems this should be async and awaitable - but doesn't work
-            roomDataService.InitAsync().GetAwaiter().GetResult();
-            //            NavigationService.Navigate(roomDataService.GetViewModelForRoomNo(0)).GetAwaiter().GetResult();
-            NavigationService.Navigate(new EntranceViewModel("hello", roomDataService, Mvx.IoCProvider.Resolve<IMvxNavigationService>()));
-
-            return Task.CompletedTask;
+        protected async override Task NavigateToFirstViewModel(object hint = null)
+        {            
+            var init = roomDataService.InitAsync().ConfigureAwait(false);
+            
+            await NavigationService.Navigate(new EntranceViewModel(roomDataService, Mvx.IoCProvider.Resolve<IMvxNavigationService>()));
         }
     }
 }

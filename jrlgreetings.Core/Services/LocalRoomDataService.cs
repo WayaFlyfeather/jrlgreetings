@@ -19,6 +19,7 @@ namespace jrlgreetings.Core.Services
             Debug.WriteLine("In local init");
             makeLocalRooms();
             setViewModels();
+            isReady = true;
 
             return Task.CompletedTask;
         }
