@@ -28,7 +28,14 @@ namespace jrlgreetings.Native.Droid.ServiceImpl
 
         public AndroidSoundPlayerService()
         {
-            soundPool = new SoundPool.Builder().SetMaxStreams(2).Build();
+            soundPool = new SoundPool.Builder()
+                .SetMaxStreams(2)
+                .SetAudioAttributes(
+                    new AudioAttributes.Builder()
+                    .SetUsage(AudioUsageKind.Game)
+                    .SetContentType(AudioContentType.Sonification)
+                    .Build())
+                .Build();
             footstepsSound = soundPool.Load(Application.Context, footstepsResource, 1);
             thunderSound = soundPool.Load(Application.Context, thunderResource, 1);
             clickSound = soundPool.Load(Application.Context, clickResource, 1);
