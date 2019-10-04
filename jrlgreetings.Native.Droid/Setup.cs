@@ -10,17 +10,20 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using jrlgreetings.Core;
+using jrlgreetings.Core.Services;
+using jrlgreetings.Native.Droid.ServiceImpl;
+using MvvmCross;
 using MvvmCross.Platforms.Android.Core;
-using MvvmCross.Platforms.Android.Views;
 
 namespace jrlgreetings.Native.Droid
 {
-    [Application]
-    public class MainApplication : MvxAndroidApplication<Setup, CoreApp>
+    public class Setup : MvxAndroidSetup<CoreApp>
     {
-        public MainApplication(IntPtr javaReference, JniHandleOwnership transfer)
-            : base(javaReference, transfer)
+        protected override void InitializeFirstChance()
         {
+            base.InitializeFirstChance();
+
+            Mvx.IoCProvider.RegisterSingleton<ISoundPlayerService>(new AndroidSoundPlayerService());
         }
     }
 }
