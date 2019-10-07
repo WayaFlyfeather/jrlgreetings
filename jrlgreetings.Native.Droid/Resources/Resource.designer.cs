@@ -4130,6 +4130,9 @@ namespace jrlgreetings.Native.Droid
 			// aapt resource value: 0x7F0C003C
 			public const int TempleView = 2131492924;
 			
+			// aapt resource value: 0x7F0C003D
+			public const int WestView = 2131492925;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

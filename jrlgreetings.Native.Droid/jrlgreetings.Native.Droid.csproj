@@ -71,6 +71,7 @@
     <Compile Include="Views\TempleView.cs" />
     <Compile Include="Views\EntranceView.cs" />
     <Compile Include="Views\NorthWestView.cs" />
+    <Compile Include="Views\WestView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -154,6 +155,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\NorthEastView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\WestView.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
