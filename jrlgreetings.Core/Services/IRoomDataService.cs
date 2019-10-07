@@ -18,6 +18,21 @@ namespace jrlgreetings.Core.Services
         int UnCompleted { get; }
         IEnumerable<bool> RoomCompletionInfo { get; }
 
+        int CurrentLocation { get; }
+        IMvxViewModel CurrentLocationViewModel { get; }
+        bool CanGoNorth { get; }
+        bool CanGoEast { get; }
+        bool CanGoWest { get; }
+        bool CanGoSouth { get; }
+
+        Task GoNorthAsync();
+        Task GoEastAsync();
+        Task GoWestAsync();
+        Task GoSouthAsync();
+        Task GoToRoomNoAsync(int roomNo);
+
         IMvxViewModel GetViewModelForRoomNo(int roomNo);
+
+        event EventHandler CurrentLocationChanged;
     }
 }

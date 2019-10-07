@@ -66,6 +66,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceImpl\AndroidSoundPlayerService.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\NorthView.cs" />
+    <Compile Include="Views\TempleView.cs" />
     <Compile Include="Views\EntranceView.cs" />
     <Compile Include="Views\NorthWestView.cs" />
   </ItemGroup>
@@ -136,6 +138,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\raw\footsteps.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\TempleView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\NorthView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

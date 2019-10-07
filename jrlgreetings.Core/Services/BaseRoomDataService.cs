@@ -141,5 +141,36 @@ namespace jrlgreetings.Core.Services
         public int UnCompleted => rooms.Values.Where(r => r.Completed == false).Count();
         public IMvxViewModel GetViewModelForRoomNo(int roomNo) => ViewModels[roomNo];
         public IEnumerable<bool> RoomCompletionInfo => rooms.Values.OrderBy(r => r.RoomNo).Select(r => r.Completed);
+
+        int currentLocation = 0;
+        public int CurrentLocation => currentLocation;
+        public IMvxViewModel CurrentLocationViewModel => GetViewModelForRoomNo(this.currentLocation);
+
+        public bool CanGoNorth => currentLocation == 9 ? false : currentLocation > 2;
+        public bool CanGoWest => currentLocation == 9 ? false : currentLocation % 3 > 0;
+        public bool CanGoEast => currentLocation == 9 ? false : currentLocation % 3 < 2;
+        public bool CanGoSouth => currentLocation == 9 ? false : currentLocation < 6;
+
+        public Task GoNorthAsync() => GoToRoomNoAsync(currentLocation - 3);
+        public Task GoWestAsync() => GoToRoomNoAsync(currentLocation - 1);
+        public Task GoSouthAsync() => GoToRoomNoAsync(currentLocation + 3);
+        public Task GoEastAsync() => GoToRoomNoAsync(currentLocation + 1);
+        public async Task GoToRoomNoAsync(int destinationRoomNo)
+        {
+            if (currentLocation != destinationRoomNo)
+            {
+                if (currentLocation == 9 || destinationRoomNo == 9)
+                    Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayThunder();
+                else
+                    Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayFootsteps();
+
+                await Task.Delay(500);
+            }
+            await Mvx.IoCProvider.Resolve<IMvxNavigationService>().Navigate(GetViewModelForRoomNo(destinationRoomNo));
+            currentLocation = destinationRoomNo;
+            CurrentLocationChanged?.Invoke(this, new EventArgs());
+        }
+
+        public event EventHandler CurrentLocationChanged;
     }
 }

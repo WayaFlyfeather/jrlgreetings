@@ -11,21 +11,19 @@ using Android.Views;
 using Android.Widget;
 using jrlgreetings.Core.ViewModels;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
-using MvvmCross.Platforms.Android.Views;
 using MvvmCross.Platforms.Android.Views.Fragments;
 using MvvmCross.Platforms.Android.Binding.BindingContext;
-
 
 namespace jrlgreetings.Native.Droid.Views
 {
     [MvxFragmentPresentation(typeof(TempleViewModel), Resource.Id.roomcontent_frame, true)]
-    public class NorthWestView : MvxFragment<NorthWestViewModel>
+    public class NorthView : MvxFragment<NorthViewModel>
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
 
-            var view = this.BindingInflate(Resource.Layout.NorthWestView, null);
+            var view = this.BindingInflate(Resource.Layout.NorthView, null);
 
             return view;
         }

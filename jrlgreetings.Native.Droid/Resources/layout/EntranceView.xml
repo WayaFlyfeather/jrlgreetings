@@ -18,5 +18,5 @@
         android:layout_height="wrap_content"
         android:text="Enter Temple"
         local:MvxBind="Click EnterTemple_Command; Clickable IsTempleReady"
-        android:background="#40ec4747" />
+        android:background="#40303030" />
 </LinearLayout>
