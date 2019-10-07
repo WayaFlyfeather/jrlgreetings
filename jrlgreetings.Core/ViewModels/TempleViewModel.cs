@@ -18,8 +18,18 @@ namespace jrlgreetings.Core.ViewModels
         {
             this.roomDataService = roomDataService;
             this.navigationService = navigationService;
+        }
 
+        public override void ViewAppearing()
+        {
+            base.ViewAppearing();
             this.roomDataService.CurrentLocationChanged += RoomDataService_CurrentLocationChanged;
+        }
+
+        public override void ViewDisappeared()
+        {
+            this.roomDataService.CurrentLocationChanged -= RoomDataService_CurrentLocationChanged;
+            base.ViewDisappeared();
         }
 
         private void RoomDataService_CurrentLocationChanged(object sender, EventArgs e)
