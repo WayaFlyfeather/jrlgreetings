@@ -61,6 +61,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidDependentConverters\MvxAnnoyanceToBackgroundColorConverter.cs" />
+    <Compile Include="AndroidDependentConverters\MvxAnnoyanceToForegroundColorConverter.cs" />
     <Compile Include="MainApp.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Views\NorthEastView.cs" />
     <Compile Include="Views\NorthView.cs" />
+    <Compile Include="Views\SouthWestView.cs" />
     <Compile Include="Views\TempleView.cs" />
     <Compile Include="Views\EntranceView.cs" />
     <Compile Include="Views\NorthWestView.cs" />
@@ -108,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
+      <Version>6.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Color">
       <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Visibility">
@@ -160,6 +166,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\WestView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SouthWestView.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
