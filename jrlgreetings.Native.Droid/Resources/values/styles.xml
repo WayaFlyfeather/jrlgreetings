@@ -17,8 +17,10 @@
   </style>
     <style name="DescriptionTextView">
       <item name="android:fontFamily">@font/immortal</item>
+      <item name="android:layout_margin">3dp</item>
     </style>
     <style name="RoomContentTextView">
       <item name="android:fontFamily">@font/monospacetypewriter</item>
+      <item name="android:layout_margin">4dp</item>
     </style>
 </resources>

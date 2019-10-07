@@ -1,6 +1,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -40,20 +41,27 @@
                 android:text="W"
                 local:MvxBind="Click GoWest_Command"
                 style="@style/DirectionButton" />
-            <ScrollView
+            <android.support.v7.widget.CardView
+                android:layout_margin="4dp"
                 android:layout_columnWeight="8"
                 android:layout_rowWeight="2"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_column="1"
                 android:layout_row="1"
-                android:scrollbars="vertical">
-                <TextView
+                card_view:cardBackgroundColor="#ffffff"
+                card_view:cardCornerRadius="4dp">
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    local:MvxBind="Text CurrentRoom.RoomDescription"
-                    style="@style/DescriptionTextView" />
-            </ScrollView>
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        local:MvxBind="Text CurrentRoom.RoomDescription"
+                        style="@style/DescriptionTextView" />
+                </ScrollView>
+            </android.support.v7.widget.CardView>
             
             <FrameLayout
                 android:id="@+id/roomcontent_frame"
