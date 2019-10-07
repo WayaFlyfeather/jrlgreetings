@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        local:MvxBind="Text RoomContentText; Alpha 1.0 - AnnoyanceFactor / 100" />
+        android:layout_height="match_parent"        
+        local:MvxBind="Text RoomContentText; Alpha 1.0 - AnnoyanceFactor / 100"
+        style="@style/RoomContentTextView" />
 </LinearLayout>

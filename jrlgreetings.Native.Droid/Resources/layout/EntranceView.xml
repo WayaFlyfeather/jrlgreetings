@@ -7,16 +7,18 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        local:MvxBind="Text Title" />
+        local:MvxBind="Text Title"
+        style="@style/TitleTextView" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        local:MvxBind="Text EntranceText" />
+        local:MvxBind="Text EntranceText"
+        style="@style/DescriptionTextView" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Enter Temple"
         local:MvxBind="Click EnterTemple_Command; Clickable IsTempleReady"
-        android:background="#40303030" />
+        style="@style/DirectionButton" />
 </LinearLayout>
