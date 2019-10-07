@@ -7,7 +7,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical">
+        android:scrollbars="vertical"
+        local:MvxBind="Rotation AnnoyanceFactor / 0.8; RotationX AnnoyanceFactor / 1.6; RotationY AnnoyanceFactor / 2.7">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
