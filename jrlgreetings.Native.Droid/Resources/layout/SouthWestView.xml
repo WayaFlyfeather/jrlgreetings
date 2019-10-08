@@ -6,13 +6,22 @@
     android:layout_height="match_parent">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:scrollbars="vertical"
-        local:MvxBind="BackgroundColor AnnoyanceFactor, Converter=AnnoyanceToBackgroundColor">
+        >
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            local:MvxBind="Text RoomContentText; TextColor AnnoyanceFactor, Converter=AnnoyanceToForegroundColor"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text RoomContentText; TextColor AnnoyanceFactor, Converter=AnnoyanceToForegroundColor; BackgroundColor AnnoyanceFactor, Converter=AnnoyanceToBackgroundColor"
             style="@style/RoomContentTextView" />
     </ScrollView>
+    <ImageView
+        android:id="@+id/cert_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_weight="0"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/xamarin_mobile_developer"
+        local:MvxBind="Visibility Visibility(Completed)"/>
 </LinearLayout>

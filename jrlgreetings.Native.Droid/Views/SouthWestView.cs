@@ -24,7 +24,13 @@ namespace jrlgreetings.Native.Droid.Views
             base.OnCreateView(inflater, container, savedInstanceState);
 
             var view = this.BindingInflate(Resource.Layout.SouthWestView, null);
-
+            ImageView certImage = view.FindViewById<ImageView>(Resource.Id.cert_image);
+            certImage.Click += (sender, e) =>
+            {
+                var uri = Android.Net.Uri.Parse("https://devconnect.xamarin.com/profile/861");
+                var intent = new Intent(Intent.ActionView, uri);
+                StartActivity(intent);
+            };
             return view;
         }
     }
