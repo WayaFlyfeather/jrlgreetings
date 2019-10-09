@@ -3235,13 +3235,16 @@ namespace jrlgreetings.Native.Droid
 			public const int notify_panel_notification_icon_bg = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int tooltip_frame_dark = 2131165300;
+			public const int purple_violet_gradient = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int tooltip_frame_light = 2131165301;
+			public const int tooltip_frame_dark = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int xamarin_mobile_developer = 2131165302;
+			public const int tooltip_frame_light = 2131165302;
+			
+			// aapt resource value: 0x7F070077
+			public const int xamarin_mobile_developer = 2131165303;
 			
 			static Drawable()
 			{
@@ -4131,16 +4134,19 @@ namespace jrlgreetings.Native.Droid
 			public const int select_dialog_singlechoice_material = 2131492922;
 			
 			// aapt resource value: 0x7F0C003B
-			public const int SouthWestView = 2131492923;
+			public const int SouthView = 2131492923;
 			
 			// aapt resource value: 0x7F0C003C
-			public const int support_simple_spinner_dropdown_item = 2131492924;
+			public const int SouthWestView = 2131492924;
 			
 			// aapt resource value: 0x7F0C003D
-			public const int TempleView = 2131492925;
+			public const int support_simple_spinner_dropdown_item = 2131492925;
 			
 			// aapt resource value: 0x7F0C003E
-			public const int WestView = 2131492926;
+			public const int TempleView = 2131492926;
+			
+			// aapt resource value: 0x7F0C003F
+			public const int WestView = 2131492927;
 			
 			static Layout()
 			{

@@ -70,6 +70,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Views\NorthEastView.cs" />
     <Compile Include="Views\NorthView.cs" />
+    <Compile Include="Views\SouthView.cs" />
     <Compile Include="Views\SouthWestView.cs" />
     <Compile Include="Views\TempleView.cs" />
     <Compile Include="Views\EntranceView.cs" />
@@ -106,7 +107,11 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\purple_violet_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross">
       <Version>6.2.2</Version>
@@ -174,6 +179,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\xamarin_mobile_developer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SouthView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
