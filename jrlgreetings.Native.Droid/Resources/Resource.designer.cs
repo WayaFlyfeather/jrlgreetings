@@ -4155,19 +4155,22 @@ namespace jrlgreetings.Native.Droid
 			public const int select_dialog_singlechoice_material = 2131492923;
 			
 			// aapt resource value: 0x7F0C003C
-			public const int SouthView = 2131492924;
+			public const int SouthEastView = 2131492924;
 			
 			// aapt resource value: 0x7F0C003D
-			public const int SouthWestView = 2131492925;
+			public const int SouthView = 2131492925;
 			
 			// aapt resource value: 0x7F0C003E
-			public const int support_simple_spinner_dropdown_item = 2131492926;
+			public const int SouthWestView = 2131492926;
 			
 			// aapt resource value: 0x7F0C003F
-			public const int TempleView = 2131492927;
+			public const int support_simple_spinner_dropdown_item = 2131492927;
 			
 			// aapt resource value: 0x7F0C0040
-			public const int WestView = 2131492928;
+			public const int TempleView = 2131492928;
+			
+			// aapt resource value: 0x7F0C0041
+			public const int WestView = 2131492929;
 			
 			static Layout()
 			{

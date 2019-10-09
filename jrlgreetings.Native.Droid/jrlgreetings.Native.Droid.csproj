@@ -72,6 +72,7 @@
     <Compile Include="Views\EastView.cs" />
     <Compile Include="Views\NorthEastView.cs" />
     <Compile Include="Views\NorthView.cs" />
+    <Compile Include="Views\SouthEastView.cs" />
     <Compile Include="Views\SouthView.cs" />
     <Compile Include="Views\SouthWestView.cs" />
     <Compile Include="Views\TempleView.cs" />
@@ -219,6 +220,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\EastView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\SouthEastView.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
