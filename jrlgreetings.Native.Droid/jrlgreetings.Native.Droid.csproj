@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AndroidDependentConverters\MvxAnnoyanceToBackgroundColorConverter.cs" />
     <Compile Include="AndroidDependentConverters\MvxAnnoyanceToForegroundColorConverter.cs" />
+    <Compile Include="AndroidDependentConverters\MvxAnnoyanceToVeilVisibilityConverter.cs" />
     <Compile Include="MainApp.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,6 +183,36 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\SouthView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\blue_purple_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\turquoise_blue_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\green_turquoise_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\yellow_green_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\orange_yellow_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\semi_transparent_red_orange_gradient.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

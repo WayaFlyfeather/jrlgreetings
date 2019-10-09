@@ -16,6 +16,36 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/semi_transparent_red_orange_gradient"
+        local:MvxBind="Visibility AnnoyanceFactor, Converter=AnnoyanceToVeilVisibility, ConverterParameter='7'"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/orange_yellow_gradient"
+        local:MvxBind="Visibility AnnoyanceFactor, Converter=AnnoyanceToVeilVisibility, ConverterParameter='6'"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/yellow_green_gradient"
+        local:MvxBind="Visibility AnnoyanceFactor, Converter=AnnoyanceToVeilVisibility, ConverterParameter='5'"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/green_turquoise_gradient"
+        local:MvxBind="Visibility AnnoyanceFactor, Converter=AnnoyanceToVeilVisibility, ConverterParameter='4'"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/turquoise_blue_gradient"
+        local:MvxBind="Visibility AnnoyanceFactor, Converter=AnnoyanceToVeilVisibility, ConverterParameter='3'"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_purple_gradient"
+        local:MvxBind="Visibility AnnoyanceFactor, Converter=AnnoyanceToVeilVisibility, ConverterParameter='2'"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@drawable/purple_violet_gradient"
-        local:MvxBind="Visibility Visibility(AnnoyanceToVisibility(AnnoyanceFactor))"/>
+        local:MvxBind="Visibility AnnoyanceFactor, Converter=AnnoyanceToVeilVisibility, ConverterParameter='1'"/>
 </FrameLayout>
