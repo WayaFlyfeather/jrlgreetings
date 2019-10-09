@@ -24,17 +24,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="20"
                     android:textSize="30sp"
-                    android:gravity="center_horizontal"/>
+                    android:gravity="center_horizontal"
+                    local:MvxBind="Text Operand1"/>
                 <SeekBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:max="30"
-                    android:min="10"
-                    android:progress="20"
-                    />
+                    local:MvxBind="Max OperandMax; Min OperandMin; Progress Operand1, Mode=TwoWay"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -45,8 +42,7 @@
                 <mvvmcross.platforms.android.binding.views.MvxSpinner
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    local:MvxBind="ItemsSource Operators; HandleItemSelected ItemSelected"
-                    />
+                    local:MvxBind="ItemsSource Operators; SelectedItemPosition SelectedOperatorIndex, Mode=TwoWay"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -56,10 +52,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="20"
                     android:textSize="30sp"
-                    android:gravity="center_horizontal"/>
-
+                    android:gravity="center_horizontal"
+                    local:MvxBind="Text Result"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
@@ -69,17 +64,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="20"
                     android:textSize="30sp"
-                    android:gravity="center_horizontal"/>
+                    android:gravity="center_horizontal"
+                    local:MvxBind="Text Operand2"/>
                 <SeekBar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:max="30"
-                    android:min="10"
-                    android:progress="20"
-                    />
+                    local:MvxBind="Max OperandMax; Min OperandMin; Progress Operand2, Mode=TwoWay"/>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
