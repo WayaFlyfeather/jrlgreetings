@@ -69,6 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceImpl\AndroidSoundPlayerService.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\CentralView.cs" />
     <Compile Include="Views\EastView.cs" />
     <Compile Include="Views\NorthEastView.cs" />
     <Compile Include="Views\NorthView.cs" />
@@ -225,6 +226,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\SouthEastView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\CentralView.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
