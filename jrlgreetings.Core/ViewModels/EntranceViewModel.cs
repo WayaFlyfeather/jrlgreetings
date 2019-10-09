@@ -23,7 +23,7 @@ namespace jrlgreetings.Core.ViewModels
             "\n" +
             "You have heard that solving the puzzles of the temple can cure your world - your world, which has lost all colors.\n" +
             "\n" +
-            "But first you need to pull levers and overcome several annoyances to read the epic story. And find The Exceptional Room \u2014 which involves doing illegal calculations!\n" +
+            "But first you need to pull levers and overcome several annoyances to read the epic story. And find The Exceptional Room \u2014 which involves doing prohibited calculations!\n" +
             "\n" +
             "Do you dare to enter?";
 
