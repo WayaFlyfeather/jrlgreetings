@@ -21,7 +21,7 @@ namespace jrlgreetings.Native.Droid.AndroidDependentConverters
         protected override ColorDrawable Convert(bool value, Type targetType, object parameter, CultureInfo culture)
         {
             return value
-                ? new ColorDrawable(new Color(0x7f, 0xff, 0xd4, 0x40))
+                ? new ColorDrawable(new Color(0x7f, 0xff, 0xd4, 0xff))
                 : new ColorDrawable(new Color(0x30, 0x30, 0x30, 0x40));
         }
     }
