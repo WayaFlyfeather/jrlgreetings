@@ -23,7 +23,7 @@ namespace jrlgreetings.Native.Droid.Views
         {
             base.OnCreateView(inflater, container, savedInstanceState);
 
-            var view = this.BindingInflate(Resource.Layout.NorthEastView, null);
+            var view = this.BindingInflate(Resource.Layout.ExceptionalView, null);
 
             return view;
         }
