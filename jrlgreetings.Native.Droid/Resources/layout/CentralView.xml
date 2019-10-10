@@ -42,6 +42,8 @@
                 <mvvmcross.platforms.android.binding.views.MvxSpinner
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    local:MvxItemTemplate="@layout/operator_spinner_item_template"
+                    local:MvxDropDownItemTemplate="@layout/operator_spinner_dropdown_item_template"
                     local:MvxBind="ItemsSource Operators; SelectedItemPosition SelectedOperatorIndex, Mode=TwoWay"/>
                 <TextView
                     android:layout_width="match_parent"

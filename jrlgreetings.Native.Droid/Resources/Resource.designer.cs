@@ -4152,31 +4152,37 @@ namespace jrlgreetings.Native.Droid
 			public const int notification_template_part_time = 2131492922;
 			
 			// aapt resource value: 0x7F0C003B
-			public const int select_dialog_item_material = 2131492923;
+			public const int operator_spinner_dropdown_item_template = 2131492923;
 			
 			// aapt resource value: 0x7F0C003C
-			public const int select_dialog_multichoice_material = 2131492924;
+			public const int operator_spinner_item_template = 2131492924;
 			
 			// aapt resource value: 0x7F0C003D
-			public const int select_dialog_singlechoice_material = 2131492925;
+			public const int select_dialog_item_material = 2131492925;
 			
 			// aapt resource value: 0x7F0C003E
-			public const int SouthEastView = 2131492926;
+			public const int select_dialog_multichoice_material = 2131492926;
 			
 			// aapt resource value: 0x7F0C003F
-			public const int SouthView = 2131492927;
+			public const int select_dialog_singlechoice_material = 2131492927;
 			
 			// aapt resource value: 0x7F0C0040
-			public const int SouthWestView = 2131492928;
+			public const int SouthEastView = 2131492928;
 			
 			// aapt resource value: 0x7F0C0041
-			public const int support_simple_spinner_dropdown_item = 2131492929;
+			public const int SouthView = 2131492929;
 			
 			// aapt resource value: 0x7F0C0042
-			public const int TempleView = 2131492930;
+			public const int SouthWestView = 2131492930;
 			
 			// aapt resource value: 0x7F0C0043
-			public const int WestView = 2131492931;
+			public const int support_simple_spinner_dropdown_item = 2131492931;
+			
+			// aapt resource value: 0x7F0C0044
+			public const int TempleView = 2131492932;
+			
+			// aapt resource value: 0x7F0C0045
+			public const int WestView = 2131492933;
 			
 			static Layout()
 			{
