@@ -64,6 +64,7 @@
     <Compile Include="AndroidDependentConverters\MvxAnnoyanceToBackgroundColorConverter.cs" />
     <Compile Include="AndroidDependentConverters\MvxAnnoyanceToForegroundColorConverter.cs" />
     <Compile Include="AndroidDependentConverters\MvxAnnoyanceToVeilVisibilityConverter.cs" />
+    <Compile Include="AndroidDependentConverters\MvxCompletionToTeleportBackgroundConverter.cs" />
     <Compile Include="MainApp.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
