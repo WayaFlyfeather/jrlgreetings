@@ -116,7 +116,7 @@ namespace jrlgreetings.Core.ViewModels
                 operand2 = 10;
                 selectedOperatorIndex = 0;
                 result = 20;
-                await goToRoomNoAsync(9);
+                await roomDataService.GoToRoomNoAsync(9);
                 await RaisePropertyChanged(nameof(Operand2));
                 await RaisePropertyChanged(nameof(Operand1));
                 await RaisePropertyChanged(nameof(SelectedOperatorIndex));

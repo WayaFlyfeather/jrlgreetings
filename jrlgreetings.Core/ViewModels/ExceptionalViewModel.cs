@@ -46,6 +46,6 @@ namespace jrlgreetings.Core.ViewModels
             return false;
         }
 
-        public ICommand GoToRoom_Command => new MvxAsyncCommand<short>(rNo => goToRoomNoAsync(rNo), rNo => canGoToRoom(rNo));
+        public ICommand GoToRoom_Command => new MvxAsyncCommand<short>(roomNo => roomDataService.GoToRoomNoAsync(roomNo), roomNo => canGoToRoom(roomNo));
     }
 }

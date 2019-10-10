@@ -97,35 +97,17 @@ namespace jrlgreetings.Core.ViewModels
         protected Room thisRoom => roomDataService.GetRoomForRoomNo(roomNo);
         public string RoomDescription => thisRoom.Description;
         public virtual string RoomContentText => thisRoom.ContentText;
-        private bool canGoNorth => roomNo == 9 ? false : roomNo > 2;
-        private bool canGoWest => roomNo == 9 ? false : roomNo % 3 > 0;
-        private bool canGoEast => roomNo == 9 ? false : roomNo % 3 < 2;
-        private bool canGoSouth => roomNo == 9 ? false : roomNo < 6;
-
-        protected async Task goToRoomNoAsync(int destinationRoomNo)
-        {
-            if (roomNo != destinationRoomNo)
-            {
-                if (roomNo == 9 || destinationRoomNo == 9)
-                    Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayThunder();
-                else
-                    Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayFootsteps();
-
-                await Task.Delay(500);
-            }
-            await navigationService.Navigate(roomDataService.GetViewModelForRoomNo(destinationRoomNo));
-        }
 
         private MvxAsyncCommand goNorth_Command = null;
-        public ICommand GoNorth_Command => goNorth_Command ?? (goNorth_Command = new MvxAsyncCommand(() => goToRoomNoAsync(roomNo - 3), () => canGoNorth));
+        public ICommand GoNorth_Command => goNorth_Command ?? (goNorth_Command = new MvxAsyncCommand(roomDataService.GoNorthAsync, () => roomDataService.CanGoNorth));
 
         private MvxAsyncCommand goWest_Command = null;
-        public ICommand GoWest_Command => goWest_Command ?? (goWest_Command = new MvxAsyncCommand(() => goToRoomNoAsync(roomNo - 1), () => canGoWest));
+        public ICommand GoWest_Command => goWest_Command ?? (goWest_Command = new MvxAsyncCommand(roomDataService.GoWestAsync, () => roomDataService.CanGoWest));
 
         private MvxAsyncCommand goEast_Command = null;
-        public ICommand GoEast_Command => goEast_Command ?? (goEast_Command = new MvxAsyncCommand(() => goToRoomNoAsync(roomNo + 1), () => canGoEast));
+        public ICommand GoEast_Command => goEast_Command ?? (goEast_Command = new MvxAsyncCommand(roomDataService.GoEastAsync, () => roomDataService.CanGoEast));
 
         private MvxAsyncCommand goSouth_Command = null;
-        public ICommand GoSouth_Command => goSouth_Command ?? (goSouth_Command = new MvxAsyncCommand(() => goToRoomNoAsync(roomNo + 3), () => canGoSouth));
+        public ICommand GoSouth_Command => goSouth_Command ?? (goSouth_Command = new MvxAsyncCommand(roomDataService.GoSouthAsync, () => roomDataService.CanGoSouth));
     }
 }
