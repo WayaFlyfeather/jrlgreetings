@@ -29,7 +29,7 @@
                 android:layout_column="1"
                 android:layout_row="0"
                 android:text="N"                
-                local:MvxBind="Click GoNorth_Command"
+                local:MvxBind="Click GoNorth_Command; Background IsTempleCompleted, Converter=TempleCompletionToNorthButtonBackground"
                 style="@style/DirectionButton" />
             <Button
                 android:layout_width="0dp"
@@ -40,7 +40,7 @@
                 android:layout_row="1"
                 android:layout_rowSpan="3"
                 android:text="W"
-                local:MvxBind="Click GoWest_Command"
+                local:MvxBind="Click GoWest_Command; Background IsTempleCompleted, Converter=TempleCompletionToWestButtonBackground"
                 style="@style/DirectionButton" />
             <android.support.v7.widget.CardView
                 android:layout_margin="4dp"
@@ -91,7 +91,7 @@
                 android:layout_row="1"
                 android:layout_rowSpan="3"
                 android:text="E"
-                local:MvxBind="Click GoEast_Command"
+                local:MvxBind="Click GoEast_Command; Background IsTempleCompleted, Converter=TempleCompletionToEastButtonBackground"
                 style="@style/DirectionButton" />
             <Button
                 android:layout_width="0dp"
@@ -101,7 +101,7 @@
                 android:layout_column="1"
                 android:layout_row="4"
                 android:text="S"
-                local:MvxBind="Click GoSouth_Command"
+                local:MvxBind="Click GoSouth_Command; Background IsTempleCompleted, Converter=TempleCompletionToSouthButtonBackground"
                 style="@style/DirectionButton" />
         </GridLayout>
         <FrameLayout

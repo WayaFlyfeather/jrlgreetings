@@ -65,7 +65,11 @@
     <Compile Include="AndroidDependentConverters\MvxAnnoyanceToForegroundColorConverter.cs" />
     <Compile Include="AndroidDependentConverters\MvxAnnoyanceToVeilVisibilityConverter.cs" />
     <Compile Include="AndroidDependentConverters\MvxCompletionToTeleportBackgroundConverter.cs" />
+    <Compile Include="AndroidDependentConverters\MvxTempleCompletionToEastButtonBackgroundConverter.cs" />
+    <Compile Include="AndroidDependentConverters\MvxTempleCompletionToNorthButtonBackgroundConverter.cs" />
+    <Compile Include="AndroidDependentConverters\MvxTempleCompletionToSouthButtonBackgroundConverter.cs" />
     <Compile Include="AndroidDependentConverters\MvxTempleCompletionToTempleBackgroundConverter.cs" />
+    <Compile Include="AndroidDependentConverters\MvxTempleCompletionToWestButtonBackgroundConverter.cs" />
     <Compile Include="MainApp.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -254,6 +258,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\tlbr_red_green_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lr_red_blue_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lr_yellow_green_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tb_red_yellow_gradient.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tb_blue_green_gradient.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
