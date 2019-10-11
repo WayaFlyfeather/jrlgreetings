@@ -41,6 +41,9 @@ namespace jrlgreetings.Core.ViewModels
             this.goWest_Command?.RaiseCanExecuteChanged();
         }
 
+        public int TotalUnCompleted => roomDataService.UnCompleted;
+        public bool IsTempleCompleted => TotalUnCompleted == 0;
+
         public IMvxViewModel CurrentRoom => this.roomDataService.CurrentLocationViewModel;
 
         private MvxAsyncCommand goNorth_Command = null;
