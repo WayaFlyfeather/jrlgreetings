@@ -24,10 +24,12 @@ namespace jrlgreetings.Core.ViewModels
         {
             base.ViewAppearing();
             this.roomDataService.CurrentLocationChanged += RoomDataService_CurrentLocationChanged;
+            this.roomDataService.TempleIsCompleted += RoomDataService_TempleIsCompleted;
         }
 
         public override void ViewDisappeared()
         {
+            this.roomDataService.TempleIsCompleted -= RoomDataService_TempleIsCompleted;
             this.roomDataService.CurrentLocationChanged -= RoomDataService_CurrentLocationChanged;
             base.ViewDisappeared();
         }
@@ -39,6 +41,12 @@ namespace jrlgreetings.Core.ViewModels
             this.goEast_Command?.RaiseCanExecuteChanged();
             this.goSouth_Command?.RaiseCanExecuteChanged();
             this.goWest_Command?.RaiseCanExecuteChanged();
+        }
+
+        private void RoomDataService_TempleIsCompleted(object sender, EventArgs e)
+        {
+            this.RaiseAllPropertiesChanged();
+            //roomDataService.GoToRoomNoAsync(roomDataService.CurrentLocation); // This is hacky
         }
 
         public int TotalUnCompleted => roomDataService.UnCompleted;

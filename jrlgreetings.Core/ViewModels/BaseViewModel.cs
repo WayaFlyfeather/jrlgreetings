@@ -33,17 +33,12 @@ namespace jrlgreetings.Core.ViewModels
                 {
                     if (value == 0.0 && thisRoom.Completed==false)
                     {
-                        thisRoom.Completed = true;
+                        roomDataService.MarkRoomCompleted(this.roomNo);
 
                         Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayClick();
                         RaisePropertyChanged(nameof(Completed));
                         RaisePropertyChanged(nameof(TotalUnCompleted));
                         RaisePropertyChanged(nameof(Title));
-                        if (IsTempleCompleted)
-                        {
-                            RaisePropertyChanged(nameof(IsTempleCompleted));
-                            navigationService.Navigate(this); // This is hacky
-                        }
                     }
                     OnAnnoyanceFactorChanged();
                 }

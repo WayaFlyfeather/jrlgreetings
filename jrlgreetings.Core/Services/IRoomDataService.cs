@@ -18,6 +18,8 @@ namespace jrlgreetings.Core.Services
         int UnCompleted { get; }
         IEnumerable<bool> RoomCompletionInfo { get; }
 
+        Task MarkRoomCompleted(int roomNo);
+
         int CurrentLocation { get; }
         IMvxViewModel CurrentLocationViewModel { get; }
         bool CanGoNorth { get; }
@@ -34,5 +36,6 @@ namespace jrlgreetings.Core.Services
         IMvxViewModel GetViewModelForRoomNo(int roomNo);
 
         event EventHandler CurrentLocationChanged;
+        event EventHandler TempleIsCompleted;
     }
 }
