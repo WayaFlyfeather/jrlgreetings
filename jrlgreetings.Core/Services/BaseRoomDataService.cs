@@ -171,17 +171,18 @@ namespace jrlgreetings.Core.Services
             CurrentLocationChanged?.Invoke(this, new EventArgs());
         }
 
-        public Task MarkRoomCompleted(int roomNo)
+        public Task<bool> MarkRoomCompleted(int roomNo)
         {
-            bool isCompletedNow = !rooms[roomNo].Completed;
-            if (isCompletedNow)
+            bool notAlreadyCompleted = !rooms[roomNo].Completed;
+            if (notAlreadyCompleted)
             {
                 rooms[roomNo].Completed = true;
                 if (this.UnCompleted == 0)
                     TempleIsCompleted?.Invoke(this, new EventArgs());
+                return Task.FromResult<bool>(true);
             }
-
-            return Task.CompletedTask;
+            else
+                return Task.FromResult<bool>(false);
         }
 
         public event EventHandler CurrentLocationChanged;

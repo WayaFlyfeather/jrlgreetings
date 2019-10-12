@@ -18,7 +18,7 @@ namespace jrlgreetings.Core.Services
         int UnCompleted { get; }
         IEnumerable<bool> RoomCompletionInfo { get; }
 
-        Task MarkRoomCompleted(int roomNo);
+        Task<bool> MarkRoomCompleted(int roomNo);
 
         int CurrentLocation { get; }
         IMvxViewModel CurrentLocationViewModel { get; }

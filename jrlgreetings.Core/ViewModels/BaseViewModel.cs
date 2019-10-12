@@ -31,17 +31,23 @@ namespace jrlgreetings.Core.ViewModels
             {
                 if (SetProperty(ref annoyanceFactor, value))
                 {
-                    if (value == 0.0 && thisRoom.Completed==false)
-                    {
-                        roomDataService.MarkRoomCompleted(this.roomNo);
+                    if (value == 0.0)
+                        handleRoomCompletion();                        
 
-                        Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayClick();
-                        RaisePropertyChanged(nameof(Completed));
-                        RaisePropertyChanged(nameof(TotalUnCompleted));
-                        RaisePropertyChanged(nameof(Title));
-                    }
                     OnAnnoyanceFactorChanged();
                 }
+            }
+        }
+
+        async void handleRoomCompletion()
+        {
+            if (await roomDataService.MarkRoomCompleted(this.roomNo))
+            {
+                Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayClick();
+
+                await RaisePropertyChanged(nameof(Completed));
+                await RaisePropertyChanged(nameof(TotalUnCompleted));
+                await RaisePropertyChanged(nameof(Title));
             }
         }
 

@@ -20,13 +20,19 @@ namespace jrlgreetings.Core.ViewModels
         {
             get
             {
+                if (AnnoyanceFactor < 0.5)
+                    return thisRoom.ContentText;
+
                 StringBuilder sb = new StringBuilder();
                 foreach (char c in thisRoom.ContentText)
                 {
                     if (char.IsWhiteSpace(c))
                         sb.Append(c);
                     else
-                        sb.Append((char)(c ^ ((short)AnnoyanceFactor * (short)AnnoyanceFactor)));
+                    {
+                        byte b = (byte)((byte)c ^ (byte)((annoyanceFactor * 0.96) + 32));
+                        sb.Append((char)b);
+                    }
                 }
 
                 return sb.ToString();
