@@ -19,7 +19,7 @@
       <item name="android:layout_margin">3dp</item>
     </style>
     <style name="RoomContentTextView">
-      <item name="android:fontFamily">@font/monospacetypewriter</item>
+      <item name="android:typeface">monospace</item>
       <item name="android:layout_margin">4dp</item>
     </style>
 </resources>
