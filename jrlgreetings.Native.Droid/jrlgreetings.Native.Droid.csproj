@@ -93,7 +93,6 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\font\IMMORTAL.ttf" />
-    <AndroidResource Include="Resources\font\MonospaceTypewriter.ttf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml" />

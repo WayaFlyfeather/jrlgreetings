@@ -3295,9 +3295,6 @@ namespace jrlgreetings.Native.Droid
 			// aapt resource value: 0x7F080000
 			public const int IMMORTAL = 2131230720;
 			
-			// aapt resource value: 0x7F080001
-			public const int MonospaceTypewriter = 2131230721;
-			
 			static Font()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
