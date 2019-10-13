@@ -14,7 +14,7 @@ using MvvmCross.Platforms.Android.Views;
 
 namespace jrlgreetings.Native.Droid.Views
 {
-    [Activity(Label = "Temple Entrance", MainLauncher = true)]
+    [Activity(Label = "Temple Entrance", Theme = "@style/AppTheme")]
     public class EntranceView : MvxActivity<EntranceViewModel>
     {
         protected override void OnCreate(Bundle bundle)
