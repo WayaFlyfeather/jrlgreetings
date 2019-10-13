@@ -56,6 +56,43 @@ namespace jrlgreetings.Core.ViewModels
             RaisePropertyChanged(nameof(IsTempleCompleted));
         }
 
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
+
+            this.RaiseAllPropertiesChanged();
+            this.goNorth_Command?.RaiseCanExecuteChanged();
+            this.goEast_Command?.RaiseCanExecuteChanged();
+            this.goSouth_Command?.RaiseCanExecuteChanged();
+            this.goWest_Command?.RaiseCanExecuteChanged();
+            if (IsTempleCompleted)
+                AnnoyanceFactor = 0.0;
+
+            this.roomDataService.CurrentLocationChanged += RoomDataService_CurrentLocationChanged;
+            this.roomDataService.TempleIsCompleted += RoomDataService_TempleIsCompleted;
+        }
+
+        public override void ViewDisappeared()
+        {
+            this.roomDataService.TempleIsCompleted -= RoomDataService_TempleIsCompleted;
+            this.roomDataService.CurrentLocationChanged -= RoomDataService_CurrentLocationChanged;
+            base.ViewDisappeared();
+        }
+
+        private void RoomDataService_CurrentLocationChanged(object sender, EventArgs e)
+        {
+            this.RaiseAllPropertiesChanged();
+            this.goNorth_Command?.RaiseCanExecuteChanged();
+            this.goEast_Command?.RaiseCanExecuteChanged();
+            this.goSouth_Command?.RaiseCanExecuteChanged();
+            this.goWest_Command?.RaiseCanExecuteChanged();
+        }
+
+        private void RoomDataService_TempleIsCompleted(object sender, EventArgs e)
+        {
+            this.RaiseAllPropertiesChanged();
+        }
+
         protected virtual void OnAnnoyanceFactorChanged()
         {
         }
@@ -84,15 +121,6 @@ namespace jrlgreetings.Core.ViewModels
             this.navigationService = navigationService;
 
             this.roomNo = roomNo;
-        }
-
-        public override void ViewAppearing()
-        {
-            base.ViewAppearing();
-            RaisePropertyChanged(nameof(TotalUnCompleted));
-            RaisePropertyChanged(nameof(Title));
-            if (IsTempleCompleted)
-                AnnoyanceFactor = 0.0;
         }
 
         protected Room thisRoom => roomDataService.GetRoomForRoomNo(roomNo);
