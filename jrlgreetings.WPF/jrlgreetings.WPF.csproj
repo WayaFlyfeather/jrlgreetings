@@ -126,6 +126,9 @@
     <Compile Include="Views\EastView.xaml.cs">
       <DependentUpon>EastView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EntranceView.xaml.cs">
+      <DependentUpon>EntranceView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ExceptionalView.xaml.cs">
       <DependentUpon>ExceptionalView.xaml</DependentUpon>
     </Compile>
@@ -182,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EastView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EntranceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
