@@ -40,7 +40,7 @@
                 <StackPanel>
                     <TextBlock Text="{Binding RoomContentText}" Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}"/>
                     <TextBlock Visibility="{Binding Completed, Converter={StaticResource TrueToVisibility}}"  Style="{Binding IsTempleCompleted, Converter={StaticResource TempleCompletionToContentTextBlockStyle}}" Margin="0,4,0,0">
-                    See The source code for the application in <Hyperlink NavigateUri="https://devconnect.xamarin.com/profile/861" RequestNavigate="GitHubLinkClicked">this GitHub repo</Hyperlink>.
+                    See The source code for the application in <Hyperlink NavigateUri="https://github.com/WayaFlyfeather/jrlgreetings" RequestNavigate="GitHubLinkClicked">this GitHub repo</Hyperlink>.
                     </TextBlock>
                 </StackPanel>
             </ScrollViewer>

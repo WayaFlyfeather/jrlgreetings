@@ -27,7 +27,7 @@ namespace jrlgreetings.Native.Droid.Views
             ImageView certImage = view.FindViewById<ImageView>(Resource.Id.cert_image);
             certImage.Click += (sender, e) =>
             {
-                var uri = Android.Net.Uri.Parse("https://devconnect.xamarin.com/profile/861");
+                var uri = Android.Net.Uri.Parse("https://greetingsfromjrl.azurewebsites.net/jrlxamcert.pdf");
                 var intent = new Intent(Intent.ActionView, uri);
                 StartActivity(intent);
             };

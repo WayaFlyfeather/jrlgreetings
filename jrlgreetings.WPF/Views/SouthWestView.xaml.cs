@@ -28,7 +28,7 @@ namespace jrlgreetings.WPF.Views
 
         private void XamarinImageClicked(object sender, MouseEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://devconnect.xamarin.com/profile/861");
+            System.Diagnostics.Process.Start("https://greetingsfromjrl.azurewebsites.net/jrlxamcert.pdf");
         }
     }
 }

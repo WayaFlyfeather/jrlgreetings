@@ -23,7 +23,7 @@ namespace jrlgreetings.FormsUI.Pages
 
         private void certImageButton_Clicked(object sender, EventArgs e)
         {
-            Device.OpenUri(new Uri("https://devconnect.xamarin.com/profile/861"));
+            Device.OpenUri(new Uri("https://greetingsfromjrl.azurewebsites.net/jrlxamcert.pdf"));
         }
     }
 }
