@@ -1,6 +1,6 @@
 <div *ngIf="room" class="room-content-border" [style.color]="annoyanceColor" [style.background-color]="annoyanceBackgroundColor">
   <div class="room-content" style="height: auto">{{ room.contentText }}</div>
-  <a href="https://devconnect.xamarin.com/profile/861" target="xamarindev">
-    <img *ngIf="room.completed" style="display: block; width:20%; margin: auto" src="/images/xamarin_mobile_developer.png" alt="Xamarin Mobile Developer Certificate logo" />
+  <a *ngIf="room.completed" href="/jrlxamcert.pdf" target="xamarindev">
+    <img style="display: block; width:20%; margin: auto" src="/images/xamarin_mobile_developer.png" alt="Xamarin Mobile Developer Certificate logo" />
   </a>
 </div>
