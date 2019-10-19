@@ -178,7 +178,10 @@ namespace jrlgreetings.Core.Services
             {
                 rooms[roomNo].Completed = true;
                 if (this.UnCompleted == 0)
+                {
+                    Mvx.IoCProvider.Resolve<ISoundPlayerService>().PlayFireworks();
                     TempleIsCompleted?.Invoke(this, new EventArgs());
+                }
                 return Task.FromResult<bool>(true);
             }
             else
