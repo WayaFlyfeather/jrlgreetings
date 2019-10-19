@@ -13,6 +13,7 @@ namespace jrlgreetings.FormsUI.ServiceImpl
         readonly ISimpleAudioPlayer thunderPlayer;
         readonly ISimpleAudioPlayer footstepsPlayer;
         readonly ISimpleAudioPlayer clickPlayer;
+        readonly ISimpleAudioPlayer fireworksPlayer;
 
         public SoundPlayerService()
         {
@@ -29,6 +30,10 @@ namespace jrlgreetings.FormsUI.ServiceImpl
             Stream clickStream = assembly.GetManifestResourceStream("jrlgreetings.FormsUI.click.mp3");
             clickPlayer = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
             clickPlayer.Load(clickStream);
+
+            Stream fireworksStream = assembly.GetManifestResourceStream("jrlgreetings.FormsUI.fireworks.mp3");
+            fireworksPlayer = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+            fireworksPlayer.Load(fireworksStream);
         }
 
         public void PlayFootsteps()
@@ -44,6 +49,11 @@ namespace jrlgreetings.FormsUI.ServiceImpl
         public void PlayClick()
         {
             clickPlayer.Play();
+        }
+
+        public void PlayFireworks()
+        {
+            fireworksPlayer.Play();
         }
     }
 }
