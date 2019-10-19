@@ -9,5 +9,6 @@ namespace jrlgreetings.Core.Services
         void PlayFootsteps();
         void PlayThunder();
         void PlayClick();
+        void PlayFireworks();
     }
 }
