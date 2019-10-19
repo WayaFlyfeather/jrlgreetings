@@ -14,12 +14,14 @@
   <ItemGroup>
     <None Remove="Application.xaml" />
     <None Remove="click.mp3" />
+    <None Remove="fireworks.mp3" />
     <None Remove="footsteps.mp3" />
     <None Remove="thunder.mp3" />
     <None Remove="xamarin_mobile_developer.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="click.mp3" />
+    <EmbeddedResource Include="fireworks.mp3" />
     <EmbeddedResource Include="footsteps.mp3" />
     <EmbeddedResource Include="thunder.mp3" />
     <EmbeddedResource Include="xamarin_mobile_developer.png" />
