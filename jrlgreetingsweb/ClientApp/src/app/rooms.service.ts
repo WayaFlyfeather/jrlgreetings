@@ -4,14 +4,17 @@ import { Temple } from './temple';
 import { Observable ,  of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap, count } from 'rxjs/operators';
+import { TempleAudioService } from './temple-audio.service';
 
 @Injectable()
 export class RoomsService {
 
+  private isTempleCompleted = false;
   private fetchedRooms: Room[] = null;
   private temple = new Temple();
   private roomsUrl = 'api/rooms';
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient, private templeAudioService: TempleAudioService) { }
 
   getRooms(): Observable<Room[]> {
     if (this.fetchedRooms == null)
@@ -35,10 +38,15 @@ export class RoomsService {
   }
 
   updateRoom(room: Room): Observable<Room> {
-    if (room != null)
+    if (room != null) {
       this.fetchedRooms[room.roomNo] = room;
-
+    }
+    const wasCompleted = this.isTempleCompleted;
     this.countCompleted();
+    if (this.isTempleCompleted && !wasCompleted) {
+      this.templeAudioService.playFireworks();
+    }
+
     return of(room);
   }
 
@@ -60,6 +68,9 @@ export class RoomsService {
     }
     this.temple.completedRoomsCount = countComplete;
     this.temple.notCompletedRoomsCount = countNotComplete;
+    if (this.temple.notCompletedRoomsCount == 0) {
+      this.isTempleCompleted = true;
+    }
   }
 
   /**

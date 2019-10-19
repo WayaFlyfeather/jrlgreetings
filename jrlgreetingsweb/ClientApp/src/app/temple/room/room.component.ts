@@ -33,9 +33,6 @@ export class RoomComponent implements OnInit {
     if (this.room.annoyanceFactor == 0.0 && !this.room.completed) {
       this.templeAudioService.playClick();
       this.room.completed = true;
-      if (this.templeCompleted) {
-        this.templeAudioService.playFireworks();
-      }
     }
     this.roomsService.updateRoom(this.room);
   }
