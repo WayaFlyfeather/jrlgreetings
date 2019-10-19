@@ -33,6 +33,7 @@
     <None Remove="ClientApp\src\app\temple\temple.component.ts" />
     <None Remove="ClientApp\src\app\temple\temple.module.ts" />
     <None Remove="ClientApp\src\assets\click.mp3" />
+    <None Remove="ClientApp\src\assets\fireworks.mp3" />
     <None Remove="ClientApp\src\assets\footsteps.mp3" />
     <None Remove="ClientApp\src\assets\thunder.mp3" />
     <None Remove="ClientApp\tsconfig.json" />
@@ -42,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ClientApp\src\assets\click.mp3" />
+    <EmbeddedResource Include="ClientApp\src\assets\fireworks.mp3" />
     <EmbeddedResource Include="ClientApp\src\assets\footsteps.mp3" />
     <EmbeddedResource Include="ClientApp\src\assets\thunder.mp3" />
   </ItemGroup>

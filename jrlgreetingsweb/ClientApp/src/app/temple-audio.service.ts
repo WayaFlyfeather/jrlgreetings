@@ -5,6 +5,7 @@ export class TempleAudioService {
   private footsteps: HTMLAudioElement;
   private click: HTMLAudioElement;
   private thunder: HTMLAudioElement;
+  private fireworks: HTMLAudioElement;
   constructor() { }
 
   initialize(): void {
@@ -21,6 +22,10 @@ export class TempleAudioService {
       this.thunder.src = '/assets/thunder.mp3';
       this.thunder.load();
 
+      this.fireworks = new Audio();
+      this.fireworks.src = '/assets/fireworks.mp3';
+      this.fireworks.load();
+
     }, 10);
   }
 
@@ -34,5 +39,9 @@ export class TempleAudioService {
 
   playClick(): void {
     this.click.play();
+  }
+
+  playFireworks(): void {
+    this.fireworks.play();
   }
 }
