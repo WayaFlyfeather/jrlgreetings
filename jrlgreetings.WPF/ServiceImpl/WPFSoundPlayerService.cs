@@ -13,6 +13,7 @@ namespace jrlgreetings.WPF.ServiceImpl
         MediaPlayer clickPlayer;
         MediaPlayer footstepsPlayer;
         MediaPlayer thunderPlayer;
+        MediaPlayer fireworksPlayer;
 
         public WPFSoundPlayerService()
         {
@@ -24,6 +25,9 @@ namespace jrlgreetings.WPF.ServiceImpl
 
             thunderPlayer = new MediaPlayer();
             thunderPlayer.Open(new Uri("Resources/thunder.mp3", UriKind.Relative));
+
+            fireworksPlayer = new MediaPlayer();
+            fireworksPlayer.Open(new Uri("Resources/fireworks.mp3", UriKind.Relative));
         }
 
         public void PlayClick()
@@ -42,6 +46,11 @@ namespace jrlgreetings.WPF.ServiceImpl
         {
             thunderPlayer.Stop();
             thunderPlayer.Play();
+        }
+        public void PlayFireworks()
+        {
+            fireworksPlayer.Stop();
+            fireworksPlayer.Play();
         }
     }
 }
