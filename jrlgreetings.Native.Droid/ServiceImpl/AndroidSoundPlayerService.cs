@@ -19,10 +19,12 @@ namespace jrlgreetings.Native.Droid.ServiceImpl
         readonly int thunderResource = Resource.Raw.thunder;
         readonly int footstepsResource = Resource.Raw.footsteps;
         readonly int clickResource = Resource.Raw.click;
+        readonly int fireworksResource = Resource.Raw.fireworks;
 
         readonly int thunderSound;
         readonly int footstepsSound;
         readonly int clickSound;
+        readonly int fireworksSound;
 
         SoundPool soundPool;
 
@@ -39,7 +41,7 @@ namespace jrlgreetings.Native.Droid.ServiceImpl
             footstepsSound = soundPool.Load(Application.Context, footstepsResource, 1);
             thunderSound = soundPool.Load(Application.Context, thunderResource, 1);
             clickSound = soundPool.Load(Application.Context, clickResource, 1);
-
+            fireworksSound = soundPool.Load(Application.Context, fireworksResource, 1);
         }
 
         public void PlayFootsteps()
@@ -55,6 +57,11 @@ namespace jrlgreetings.Native.Droid.ServiceImpl
         public void PlayClick()
         {
             soundPool.Play(clickSound, 0.5f, 0.5f, 1, 0, 1.0f);
+        }
+
+        public void PlayFireworks()
+        {
+            soundPool.Play(fireworksSound, 0.5f, 0.5f, 1, 0, 1.0f);
         }
     }
 }
