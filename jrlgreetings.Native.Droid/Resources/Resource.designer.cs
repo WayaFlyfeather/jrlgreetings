@@ -4241,10 +4241,13 @@ namespace jrlgreetings.Native.Droid
 			public const int click = 2131623936;
 			
 			// aapt resource value: 0x7F0E0001
-			public const int footsteps = 2131623937;
+			public const int fireworks = 2131623937;
 			
 			// aapt resource value: 0x7F0E0002
-			public const int thunder = 2131623938;
+			public const int footsteps = 2131623938;
+			
+			// aapt resource value: 0x7F0E0003
+			public const int thunder = 2131623939;
 			
 			static Raw()
 			{
