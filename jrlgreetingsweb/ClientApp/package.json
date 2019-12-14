@@ -31,7 +31,7 @@
     "core-js": "^2.6.9",
     "cryptiles": "^4.1.3",
     "hoek": "^5.0.4",
-    "https-proxy-agent": "^2.2.2",
+    "https-proxy-agent": "^2.2.4",
     "rxjs": "^6.5.3",
     "rxjs-compat": "^6.5.3",
     "sshpk": "^1.16.1",
